@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <KubaiUpstreamVersion>0.14.0</KubaiUpstreamVersion>
+    <KubaiUpstreamVersion>0.15.0</KubaiUpstreamVersion>
   </PropertyGroup>
   <ItemGroup>
     <KubaiId Include="None" Value="0" Doc="No artwork." />
@@ -3078,5 +3078,12 @@
     <KubaiId Include="YogaMat" Doc="The yoga-mat icon." Source="yoga-mat" Value="3072" UpstreamLayered="true" Layered="true" />
     <KubaiId Include="ZoomIn" Value="3073" Doc="The zoom-in icon." Source="zoom-in" Duotone="true" UpstreamLayered="true" Layered="true" />
     <KubaiId Include="ZoomOut" Value="3074" Doc="The zoom-out icon." Source="zoom-out" Duotone="true" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="CloudMoonRain" Value="3075" Doc="The cloud-moon-rain icon." Source="cloud-moon-rain" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="CloudSunRain" Value="3076" Doc="The cloud-sun-rain icon." Source="cloud-sun-rain" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="Clouds" Value="3077" Doc="The clouds icon." Source="clouds" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="Snowman" Value="3078" Doc="The snowman icon." Source="snowman" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="Windsock" Value="3079" Doc="The windsock icon." Source="windsock" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="Zap" Value="3080" Doc="The zap icon." Source="zap" UpstreamLayered="true" Layered="true" />
+    <KubaiId Include="ZapOff" Value="3081" Doc="The zap-off icon." Source="zap-off" UpstreamLayered="true" Layered="true" />
   </ItemGroup>
 </Project>

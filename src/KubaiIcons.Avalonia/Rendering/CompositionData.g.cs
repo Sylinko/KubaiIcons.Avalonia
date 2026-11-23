@@ -2109,6 +2109,7 @@ internal static class CompositionData
         KubaiIconKind.WristwatchCheck => new(KubaiIconKind.Wristwatch, "check", 22.6, 18.4),
         KubaiIconKind.WristwatchX => new(KubaiIconKind.Wristwatch, "x", 22.6, 18.4),
         KubaiIconKind.YarnBallHeart => new(KubaiIconKind.YarnBall, "heart", 22.6, 18.4),
+        KubaiIconKind.ZapOff => new(KubaiIconKind.Zap, "overlay-slash", 0, 0, true),
         _ => null
     };
 
