@@ -193,7 +193,7 @@ dotnet run --project samples/IconStudio
   **AXAML** 或 **C#** 示例。
 - **虚拟化与按需解码**：列表采用行级虚拟化，搜索仅检索元数据不加载任何图形，仅当前可视区域内的图块会触发 `.kbi` 懒加载。
 
-Studio 基于 [TKCode.Arc](https://github.com/AIDotNet/TKCode.Arc) `1.3.0`（Avalonia `12.1.6`）构建；核心图标库 `KubaiIcons.Avalonia` **完全不依赖 Arc**，保持
+Studio 基于 [TKCode.Arc](https://github.com/AIDotNet/TKCode.Arc) `1.3.0`（Avalonia `12.2.0`）构建；核心图标库 `KubaiIcons.Avalonia` **完全不依赖 Arc**，保持
 **Avalonia 12.0.0** 最低兼容版本。
 
 ---

@@ -5,8 +5,8 @@ palettes, and copy ready-to-paste **AXAML** or **C#**.
 
 ## Layout & UX
 
-- **Docked search header & floating inspector**: The gallery scrolls beneath a full-width search bar; selecting a tile opens a solid rounded inspector card at
-  the bottom. Only the search header blurs tiles scrolling underneath (`ReduceTransparency` turns it opaque).
+- **Docked search header & floating inspector**: The gallery scrolls beneath the search bar. Selecting a tile opens a rounded inspector with a subtler blur
+  and a denser tint than the header. The code block stays opaque. Arc’s `ReduceTransparency` setting makes both surfaces solid and disables their blur.
 - **Direct toolbar controls**: Artwork family (`Layered` / `Duotone`), Layered palette (`Color` / `Soft`), deterministic **Mixed** color wheel (seamless conic
   gradient keyed by upstream icon name), five solid swatches, custom color picker (`+`), and a single-row **Size** slider (`16–64` DIP, updating realized tiles
   and code snippets live without resizing the fixed inspector preview).
@@ -18,7 +18,7 @@ palettes, and copy ready-to-paste **AXAML** or **C#**.
 
 ## `TKCode.Arc` Integration
 
-Icon Studio pins `TKCode.Arc`, `TKCode.Arc.Blocks`, and `TKCode.Arc.Fonts` to **1.3.0** on **Avalonia 12.1.6**, while the core `KubaiIcons.Avalonia` library
+Icon Studio pins `TKCode.Arc`, `TKCode.Arc.Blocks`, and `TKCode.Arc.Fonts` to **1.3.0** on **Avalonia 12.2.0**, while the core `KubaiIcons.Avalonia` library
 keeps its **Avalonia 12.0.0** floor and **zero Arc dependency**.
 
 Following [Arc guidance](https://docs.tkcode.si/skills/tkcode-arc/SKILL.md) and [Arc 1.3.0](https://github.com/AIDotNet/TKCode.Arc/tree/v1.3.0):

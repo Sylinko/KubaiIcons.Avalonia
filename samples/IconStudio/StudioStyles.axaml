@@ -2,26 +2,14 @@
   xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:arc="https://github.com/AIDotNet/TKCode.Arc" xmlns:i="using:KubaiIcons.Avalonia"
   xmlns:local="using:IconStudio">
-  <!--  Tint the surface only: text, buttons and artwork keep their full contrast.  -->
-  <Style Selector="local|StudioGlass">
-    <Setter Property="IsOpaque" Value="{arc:ArcDesignTokenResource ReduceTransparency}"/>
-    <Setter Property="Template">
-      <ControlTemplate>
-        <Border
-          Name="Tint"
-          Background="{TemplateBinding Background}"
-          BorderBrush="{TemplateBinding BorderBrush}"
-          BorderThickness="{TemplateBinding BorderThickness}"
-          CornerRadius="{TemplateBinding CornerRadius}"/>
-      </ControlTemplate>
+  <!--  Blur the gallery behind the header; only the tint is translucent.  -->
+  <Style Selector="Panel#SearchHeader:not(.opaque)">
+    <Setter Property="BackdropEffect">
+      <BlurEffect Radius="19"/>
     </Setter>
-    <Setter Property="CornerRadius" Value="0"/>
-    <Setter Property="BorderThickness" Value="{arc:ArcDesignTokenResource EdgeThicknessBottom}"/>
-    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource BorderSubtle}"/>
-    <Setter Property="Background" Value="{arc:ArcDesignTokenResource Background}"/>
-  </Style>
-  <Style Selector="local|StudioGlass[IsOpaque=False] /template/ Border#Tint">
-    <Setter Property="Opacity" Value="0.91"/>
+    <Style Selector="^ > Border.header-tint">
+      <Setter Property="Opacity" Value="0.91"/>
+    </Style>
   </Style>
   <Style Selector="TextBlock.secondary">
     <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}"/>

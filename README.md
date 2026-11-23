@@ -200,7 +200,7 @@ dotnet run --project samples/IconStudio
   `Active`, `LoopMode`, `SpeedRatio`, and `RepeatDelay`, then copy ready-to-paste **AXAML** or **C#**.
 - **Virtualized & Lazy**: Searching filters metadata only; only visible gallery tiles decode `.kbi` artwork, and closing the inspector detaches its player.
 
-Built with [TKCode.Arc](https://github.com/AIDotNet/TKCode.Arc) `1.3.0` (on Avalonia `12.1.6`). The core `KubaiIcons.Avalonia` library has **no Arc dependency**
+Built with [TKCode.Arc](https://github.com/AIDotNet/TKCode.Arc) `1.3.0` (on Avalonia `12.2.0`). The core `KubaiIcons.Avalonia` library has **no Arc dependency**
 and retains its **Avalonia 12.0.0** compatibility floor.
 
 ---

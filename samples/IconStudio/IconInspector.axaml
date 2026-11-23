@@ -4,6 +4,14 @@
   xmlns:i="using:KubaiIcons.Avalonia" xmlns:l="using:IconStudio.Localization"
   xmlns:local="using:IconStudio">
   <UserControl.Styles>
+    <Style Selector="Border#DrawerSurface:not(.opaque)">
+      <Setter Property="BackdropEffect">
+        <BlurEffect Radius="12"/>
+      </Setter>
+      <Style Selector="^ > Border">
+        <Setter Property="Opacity" Value="0.96"/>
+      </Style>
+    </Style>
     <Style Selector="arc|Switch#Active[IsEnabled=False]">
       <Setter Property="arc:Tooltip.Tip" Value="{l:StudioLangResource NoActive}"/>
       <Setter Property="AutomationProperties.HelpText" Value="{l:StudioLangResource NoActive}"/>
@@ -11,11 +19,15 @@
   </UserControl.Styles>
   <Panel>
     <Border
-      x:Name="DrawerSurface"
-      Background="{arc:ArcDesignTokenResource Surface}"
-      BorderBrush="{arc:ArcDesignTokenResource BorderStrong}"
-      BorderThickness="{arc:ArcDesignTokenResource EdgeThickness}"
-      CornerRadius="{arc:ArcDesignTokenResource RadiusPanel}"/>
+      x:Name="DrawerSurface" ClipToBounds="True"
+      Classes.opaque="{DynamicResource {x:Static arc:ArcDesignTokenKind.ReduceTransparency}}"
+      CornerRadius="{arc:ArcDesignTokenResource RadiusPanel}">
+      <Border
+        Background="{arc:ArcDesignTokenResource Surface}"
+        BorderBrush="{arc:ArcDesignTokenResource BorderStrong}"
+        BorderThickness="{arc:ArcDesignTokenResource EdgeThickness}"
+        CornerRadius="{Binding #DrawerSurface.CornerRadius}"/>
+    </Border>
     <Grid
       local:Spacing.Margin="{arc:ArcDesignTokenResource Space4}"
       ColumnDefinitions="288,*"

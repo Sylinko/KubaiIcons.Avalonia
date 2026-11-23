@@ -204,8 +204,13 @@
           </arc:EmptyState.Action>
         </arc:EmptyState>
         <Panel
-          x:Name="SearchHeader" VerticalAlignment="Top">
-          <local:StudioGlass/>
+          x:Name="SearchHeader" VerticalAlignment="Top"
+          Classes.opaque="{DynamicResource {x:Static arc:ArcDesignTokenKind.ReduceTransparency}}">
+          <Border
+            Classes="header-tint"
+            Background="{arc:ArcDesignTokenResource Background}"
+            BorderBrush="{arc:ArcDesignTokenResource BorderSubtle}"
+            BorderThickness="{arc:ArcDesignTokenResource EdgeThicknessBottom}"/>
           <StackPanel
             Margin="24,24,24,12"
             Spacing="{arc:ArcDesignTokenResource Space4}">

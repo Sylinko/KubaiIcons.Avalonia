@@ -6,7 +6,7 @@
     <LangVersion>preview</LangVersion>
     <AvaloniaVersion>12.0.0</AvaloniaVersion>
     <!-- Studio hosts Arc; the icon package keeps its original Avalonia compatibility floor. -->
-    <StudioAvaloniaVersion>12.1.6</StudioAvaloniaVersion>
+    <StudioAvaloniaVersion>12.2.0</StudioAvaloniaVersion>
     <ArcVersion>1.3.0</ArcVersion>
   </PropertyGroup>
 </Project>

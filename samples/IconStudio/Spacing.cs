@@ -8,20 +8,8 @@ namespace IconStudio;
 /// Applies Arc's scalar spacing tokens to uniform Thickness properties without taking a snapshot.
 /// Dynamic resources keep updating these attached properties when the theme changes.
 /// </summary>
-public sealed class Spacing : AvaloniaObject
+public sealed partial class Spacing : AvaloniaObject
 {
-    /// <summary>
-    /// Identifies a uniform margin in device-independent pixels.
-    /// </summary>
-    public static readonly AttachedProperty<double> MarginProperty =
-        AvaloniaProperty.RegisterAttached<Spacing, Control, double>("Margin");
-
-    /// <summary>
-    /// Identifies uniform padding for Border and TemplatedControl hosts.
-    /// </summary>
-    public static readonly AttachedProperty<double> PaddingProperty =
-        AvaloniaProperty.RegisterAttached<Spacing, Control, double>("Padding");
-
     static Spacing()
     {
         MarginProperty.Changed.AddClassHandler<Control>((control, change) =>
@@ -45,22 +33,14 @@ public sealed class Spacing : AvaloniaObject
     }
 
     /// <summary>
-    /// Reads the scalar margin.
+    /// Gets the uniform margin in device-independent pixels.
     /// </summary>
-    public static double GetMargin(Control control) => control.GetValue(MarginProperty);
+    [GeneratedAttachedProperty]
+    public static partial double GetMargin(Control control);
 
     /// <summary>
-    /// Applies the scalar margin uniformly.
+    /// Gets the uniform padding for Border and TemplatedControl hosts.
     /// </summary>
-    public static void SetMargin(Control control, double value) => control.SetValue(MarginProperty, value);
-
-    /// <summary>
-    /// Reads the scalar padding.
-    /// </summary>
-    public static double GetPadding(Control control) => control.GetValue(PaddingProperty);
-
-    /// <summary>
-    /// Applies scalar padding to Border and TemplatedControl hosts.
-    /// </summary>
-    public static void SetPadding(Control control, double value) => control.SetValue(PaddingProperty, value);
+    [GeneratedAttachedProperty]
+    public static partial double GetPadding(Control control);
 }
