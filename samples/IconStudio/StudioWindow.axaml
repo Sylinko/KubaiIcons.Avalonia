@@ -1,0 +1,364 @@
+<arc:ArcWindow
+  x:Class="IconStudio.StudioWindow" xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+  xmlns:i="using:KubaiIcons.Avalonia" xmlns:l="using:IconStudio.Localization"
+  xmlns:local="using:IconStudio" Title="Kubai Icons Avalonia"
+  Width="1450" Height="960"
+  MinWidth="1100" MinHeight="740"
+  Background="{arc:SidebarTokenResource PaneFill}"
+  FontFamily="{arc:ArcDesignTokenResource BodyFontFamily}"
+  FontSize="{arc:ArcDesignTokenResource TypeSM}"
+  Foreground="{arc:ArcDesignTokenResource Foreground}"
+  Icon="/Assets/studio.ico" WindowStartupLocation="CenterScreen">
+  <arc:ArcWindow.TitleBar>
+    <arc:TitleBar
+      Title=""
+      Background="{arc:SidebarTokenResource PaneFill}"
+      BorderThickness="0">
+      <arc:TitleBar.LeftContent>
+        <StackPanel
+          x:Name="Brand" IsHitTestVisible="False"
+          Orientation="Horizontal"
+          Spacing="{arc:ArcDesignTokenResource Space2}">
+          <Image
+            Width="22" Height="22"
+            VerticalAlignment="Center" Source="/Assets/folder.png"/>
+          <TextBlock
+            VerticalAlignment="Center"
+            FontFamily="{arc:ArcDesignTokenResource DisplayFontFamily}"
+            FontSize="{arc:ArcDesignTokenResource TypeBase}"
+            FontWeight="SemiBold" Text="Kubai Icons"/>
+        </StackPanel>
+      </arc:TitleBar.LeftContent>
+      <arc:TitleBar.RightContent>
+        <StackPanel
+          Orientation="Horizontal"
+          Spacing="{arc:TitleBarTokenResource ButtonSpacing}">
+          <HyperlinkButton
+            x:Name="RepositoryLink" Classes="studio-link repo-link"
+            arc:Tooltip.Tip="{l:StudioLangResource Repository}"
+            AutomationProperties.Name="{l:StudioLangResource RepositoryName}"
+            NavigateUri="https://github.com/Sylinko/KubaiIcons.Avalonia">
+            <PathIcon
+              x:Name="RepositoryMark" Width="16"
+              Height="16" RenderTransform="translate(0px, 1px)"/>
+          </HyperlinkButton>
+          <arc:DropdownMenu
+            x:Name="LanguageMenu" Alignment="End"
+            Label="{l:StudioLangResource Language}">
+            <arc:DropdownMenu.Trigger>
+              <arc:Button
+                x:Name="LanguageButton" Classes="language"
+                arc:Tooltip.Tip="{l:StudioLangResource Language}"
+                AutomationProperties.Name="{l:StudioLangResource Language}"
+                Variant="Ghost">
+                <arc:ArcGlyph
+                  Data="{x:Static arc:ArcIcons.Languages}"
+                  Size="19"/>
+              </arc:Button>
+            </arc:DropdownMenu.Trigger>
+            <arc:MenuEntry
+              CommandParameter="en-US" GroupName="language"
+              Header="English" ToggleType="Radio"/>
+            <arc:MenuEntry
+              CommandParameter="zh-CN" GroupName="language"
+              Header="简体中文" ToggleType="Radio"/>
+          </arc:DropdownMenu>
+          <arc:ThemeSwitcher
+            x:Name="ThemeToggle" Classes="chrome"
+            VerticalAlignment="Center" IsIconOnly="True"
+            Label="{l:StudioLangResource Theme}"/>
+        </StackPanel>
+      </arc:TitleBar.RightContent>
+    </arc:TitleBar>
+  </arc:ArcWindow.TitleBar>
+  <DockPanel>
+    <arc:Sidebar
+      x:Name="Categories" DockPanel.Dock="Left"
+      BorderThickness="0" IsCollapseButtonVisible="False"
+      Label="{l:StudioLangResource Categories}"
+      ResizeMode="Push">
+      <arc:Sidebar.Footer>
+        <arc:Popover
+          x:Name="About"
+          AutomationProperties.Name="{l:StudioLangResource About}"
+          Placement="Top">
+          <arc:Popover.Trigger>
+            <arc:Button
+              x:Name="AboutTrigger"
+              Content="{l:StudioLangResource About}"
+              Size="Small" Variant="Ghost"/>
+          </arc:Popover.Trigger>
+          <StackPanel Spacing="{arc:ArcDesignTokenResource Space3}">
+            <TextBlock
+              FontFamily="{arc:ArcDesignTokenResource DisplayFontFamily}"
+              FontSize="{arc:ArcDesignTokenResource TypeBase}"
+              FontWeight="SemiBold" Text="Kubai Icons Avalonia"/>
+            <Grid
+              HorizontalAlignment="Left" ColumnDefinitions="Auto,Auto"
+              ColumnSpacing="{arc:ArcDesignTokenResource Space3}"
+              RowDefinitions="Auto,Auto"
+              RowSpacing="{arc:ArcDesignTokenResource Space1}">
+              <TextBlock
+                Classes="secondary"
+                Text="{l:StudioLangResource ArtworkBy}"/>
+              <HyperlinkButton
+                Classes="studio-link credit" Grid.Row="0"
+                Grid.Column="1" NavigateUri="https://github.com/kubai087">
+                <TextBlock
+                  Text="Kubai087" TextDecorations="Underline"/>
+              </HyperlinkButton>
+              <TextBlock
+                Classes="secondary" Grid.Row="1"
+                Grid.Column="0"
+                Text="{l:StudioLangResource PortBy}"/>
+              <HyperlinkButton
+                Classes="studio-link credit" Grid.Row="1"
+                Grid.Column="1" NavigateUri="https://github.com/Sylinko">
+                <TextBlock
+                  Text="Sylinko" TextDecorations="Underline"/>
+              </HyperlinkButton>
+            </Grid>
+            <HyperlinkButton
+              Classes="studio-link credit" NavigateUri="https://github.com/Sylinko/KubaiIcons.Avalonia/blob/main/LICENSE">
+              <TextBlock
+                Text="{l:StudioLangResource License}"
+                TextDecorations="Underline"/>
+            </HyperlinkButton>
+          </StackPanel>
+        </arc:Popover>
+      </arc:Sidebar.Footer>
+    </arc:Sidebar>
+    <Border
+      Background="{arc:ArcDesignTokenResource Background}"
+      ClipToBounds="True" CornerRadius="12,0,0,0">
+      <Panel>
+        <ListBox
+          x:Name="Library" Classes="catalog"
+          Padding="16,0"
+          AutomationProperties.Name="{l:StudioLangResource Grid}"
+          Tapped="OnGalleryTapped">
+          <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+              <VirtualizingStackPanel/>
+            </ItemsPanelTemplate>
+          </ListBox.ItemsPanel>
+          <ListBox.ItemTemplate>
+            <DataTemplate x:DataType="local:StudioRow">
+              <ItemsControl
+                Height="{x:Static local:StudioRow.Height}"
+                ItemsSource="{Binding Icons}">
+                <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate>
+                    <UniformGrid Columns="{Binding Columns}"/>
+                  </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate x:DataType="local:StudioEntry">
+                    <Button
+                      Classes="tile"
+                      arc:Tooltip.Tip="{Binding AlternateName}"
+                      AutomationProperties.Name="{Binding DisplayName}"
+                      Classes.selected="{Binding IsSelected}"
+                      Click="OnIconClick">
+                      <Grid
+                        RowDefinitions="*,32"
+                        RowSpacing="{arc:ArcDesignTokenResource Space1}">
+                        <i:KubaiIcon
+                          Width="64" Height="64"
+                          HorizontalAlignment="Center" VerticalAlignment="Center"
+                          AccentColor="{Binding Color}"
+                          ColorVariant="{Binding ColorVariant}"
+                          IconStyle="{Binding Style}"
+                          Kind="{Binding Kind}"
+                          Size="{Binding #IconSize.Value}"/>
+                        <TextBlock
+                          Classes="caption" Grid.Row="1"
+                          VerticalAlignment="Top" LineHeight="16"
+                          MaxLines="2"
+                          Text="{Binding DisplayName}"
+                          TextAlignment="Center" TextTrimming="CharacterEllipsis"
+                          TextWrapping="Wrap"/>
+                      </Grid>
+                    </Button>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+        <arc:EmptyState
+          x:Name="NoResults"
+          Title="{l:StudioLangResource NoMatches}"
+          Margin="{Binding #Library.Padding}"
+          VerticalAlignment="Center"
+          Description="{l:StudioLangResource TrySearch}"
+          IsVisible="False"
+          Label="{l:StudioLangResource SearchResults}"
+          Size="Small">
+          <arc:EmptyState.Action>
+            <arc:Button
+              x:Name="ClearSearch"
+              Content="{l:StudioLangResource ClearFilters}"
+              Size="Small" Variant="Primary"/>
+          </arc:EmptyState.Action>
+        </arc:EmptyState>
+        <Panel
+          x:Name="SearchHeader" VerticalAlignment="Top">
+          <local:StudioGlass/>
+          <StackPanel
+            Margin="24,24,24,12"
+            Spacing="{arc:ArcDesignTokenResource Space4}">
+            <TextBlock
+              x:Name="Heading"
+              FontFamily="{arc:ArcDesignTokenResource DisplayFontFamily}"
+              FontSize="{arc:ArcDesignTokenResource Type2XL}"
+              FontWeight="{arc:ArcDesignTokenResource WeightMedium}"
+              Text="{l:StudioLangResource AllIcons}"/>
+            <Panel>
+              <arc:SearchField
+                x:Name="Search" AutomationProperties.AcceleratorKey="/"
+                ClearText="{l:StudioLangResource ClearSearch}"
+                IsLabelVisible="False"
+                Label="{l:StudioLangResource SearchIcons}"
+                Placeholder="{l:StudioLangResource SearchHint}"/>
+              <Border
+                x:Name="SearchShortcut" Classes="keycap"
+                Margin="0,0,12,0" HorizontalAlignment="Right"
+                VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw"
+                IsHitTestVisible="False">
+                <Border.IsVisible>
+                  <MultiBinding Converter="{x:Static BoolConverters.And}">
+                    <Binding
+                      ElementName="Search" Path="!IsKeyboardFocusWithin"/>
+                    <Binding
+                      Converter="{x:Static StringConverters.IsNullOrEmpty}"
+                      ElementName="Search" Path="Text"/>
+                  </MultiBinding>
+                </Border.IsVisible>
+                <TextBlock Text="/"/>
+              </Border>
+            </Panel>
+            <Grid
+              ColumnDefinitions="Auto,Auto,*,Auto"
+              ColumnSpacing="{arc:ArcDesignTokenResource Space3}">
+              <arc:SegmentedControl
+                x:Name="Family" VerticalAlignment="Center"
+                AutomationProperties.Name="{l:StudioLangResource Family}"
+                SelectedIndex="0">
+                <arc:SegmentedOption Value="layered"/>
+                <arc:SegmentedOption Value="duotone"/>
+              </arc:SegmentedControl>
+              <arc:SegmentedControl
+                x:Name="PaletteMode" Grid.Column="1"
+                VerticalAlignment="Center"
+                AutomationProperties.Name="{l:StudioLangResource Palette}"
+                SelectedIndex="0">
+                <arc:SegmentedOption Value="color"/>
+                <arc:SegmentedOption Value="soft"/>
+              </arc:SegmentedControl>
+              <StackPanel
+                Grid.Column="2" VerticalAlignment="Center"
+                Orientation="Horizontal"
+                Spacing="{arc:ArcDesignTokenResource Space1}">
+                <arc:Button
+                  x:Name="Mixed" Classes="swatch"
+                  AutomationProperties.Name="{l:StudioLangResource Mixed}"
+                  Click="OnMixedClick" Size="Small"
+                  Variant="Ghost">
+                  <Ellipse
+                    Width="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                    Height="{arc:ArcDesignTokenResource GlyphSizeMD}">
+                    <Ellipse.Fill>
+                      <ConicGradientBrush Center="50%,50%">
+                        <GradientStop Offset="0" Color="#669CFF"/>
+                        <GradientStop Offset="0.167" Color="#A78BFA"/>
+                        <GradientStop Offset="0.333" Color="#F472B6"/>
+                        <GradientStop Offset="0.5" Color="#FB923C"/>
+                        <GradientStop Offset="0.625" Color="#FACC15"/>
+                        <GradientStop Offset="0.75" Color="#4ADE80"/>
+                        <GradientStop Offset="0.875" Color="#22D3EE"/>
+                        <GradientStop Offset="1" Color="#669CFF"/>
+                      </ConicGradientBrush>
+                    </Ellipse.Fill>
+                  </Ellipse>
+                </arc:Button>
+                <ItemsControl
+                  x:Name="Swatches" VerticalAlignment="Top">
+                  <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                      <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                  </ItemsControl.ItemsPanel>
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="local:StudioSwatch">
+                      <arc:Button
+                        Classes="swatch"
+                        AutomationProperties.Name="{Binding Name}"
+                        Click="OnSwatchClick" Size="Small"
+                        Tag="{Binding Hex}"
+                        Variant="Ghost">
+                        <Ellipse
+                          Width="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                          Height="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                          Fill="{Binding Brush}"/>
+                      </arc:Button>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Panel>
+                  <arc:ColorPicker
+                    x:Name="CustomColor" Classes="swatch-picker"
+                    VerticalAlignment="Center"
+                    AgainstBackgroundText="{l:StudioLangResource AgainstBackground}"
+                    AutomationProperties.Name="{l:StudioLangResource CustomColor}"
+                    DoneText="{l:StudioLangResource Done}"
+                    InvalidColorText="{l:StudioLangResource InvalidColor}"
+                    Label="{l:StudioLangResource CustomColor}"
+                    Size="Small" Color="#A855F7"/>
+                  <Border
+                    x:Name="CustomHint"
+                    Width="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                    Height="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="{arc:ArcDesignTokenResource SurfaceMuted}"
+                    CornerRadius="{arc:ArcDesignTokenResource RadiusPill}"
+                    IsHitTestVisible="False">
+                    <arc:ArcGlyph
+                      Data="{x:Static arc:ArcIcons.Plus}"
+                      Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+                  </Border>
+                </Panel>
+              </StackPanel>
+              <arc:Slider
+                x:Name="IconSize" Classes="inline"
+                Grid.Column="3" Width="188"
+                VerticalAlignment="Center" IsValueVisible="False"
+                Label="{l:StudioLangResource Size}"
+                LargeChange="8" Maximum="64"
+                Minimum="16" SmallChange="1"
+                Value="32">
+                <arc:Slider.StartContent>
+                  <TextBlock
+                    x:Name="SizeLabel" VerticalAlignment="Center"
+                    Text="{l:StudioLangResource Size}"/>
+                </arc:Slider.StartContent>
+                <arc:Slider.EndContent>
+                  <TextBlock
+                    x:Name="SizeValue" Classes="secondary"
+                    Width="48" VerticalAlignment="Center"
+                    Text="{Binding #IconSize.Value, StringFormat='{}{0:0} DIP'}"
+                    TextAlignment="Right"/>
+                </arc:Slider.EndContent>
+              </arc:Slider>
+            </Grid>
+          </StackPanel>
+        </Panel>
+        <ContentControl
+          x:Name="DetailHost" Margin="24,0,24,24"
+          VerticalAlignment="Bottom" HorizontalContentAlignment="Stretch"
+          IsVisible="{Binding Content, RelativeSource={RelativeSource Self}, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+      </Panel>
+    </Border>
+  </DockPanel>
+</arc:ArcWindow>

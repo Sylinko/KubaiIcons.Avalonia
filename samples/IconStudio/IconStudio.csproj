@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ApplicationIcon>Assets/studio.ico</ApplicationIcon>
+    <OutputType>WinExe</OutputType>
+    <AvaloniaVersion>$(StudioAvaloniaVersion)</AvaloniaVersion>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/KubaiIcons.Avalonia/KubaiIcons.Avalonia.csproj"/>
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="TKCode.Arc" Version="$(ArcVersion)"/>
+    <PackageReference Include="TKCode.Arc.Blocks" Version="$(ArcVersion)"/>
+    <PackageReference Include="TKCode.Arc.Fonts" Version="$(ArcVersion)"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets/studio.ico"/>
+    <AvaloniaResource Include="../../media/folder.png" Link="Assets/folder.png"/>
+    <EmbeddedResource Include="Catalog/catalog.json" LogicalName="StudioCatalog"/>
+    <None Include="../../licenses/studio/**/*" Link="licenses/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/>
+  </ItemGroup>
+</Project>

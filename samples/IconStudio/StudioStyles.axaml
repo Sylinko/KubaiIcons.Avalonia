@@ -1,0 +1,263 @@
+<Styles
+  xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:arc="https://github.com/AIDotNet/TKCode.Arc" xmlns:i="using:KubaiIcons.Avalonia"
+  xmlns:local="using:IconStudio">
+  <!--  Tint the surface only: text, buttons and artwork keep their full contrast.  -->
+  <Style Selector="local|StudioGlass">
+    <Setter Property="IsOpaque" Value="{arc:ArcDesignTokenResource ReduceTransparency}"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border
+          Name="Tint"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          CornerRadius="{TemplateBinding CornerRadius}"/>
+      </ControlTemplate>
+    </Setter>
+    <Setter Property="CornerRadius" Value="0"/>
+    <Setter Property="BorderThickness" Value="{arc:ArcDesignTokenResource EdgeThicknessBottom}"/>
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource BorderSubtle}"/>
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource Background}"/>
+  </Style>
+  <Style Selector="local|StudioGlass[IsOpaque=False] /template/ Border#Tint">
+    <Setter Property="Opacity" Value="0.91"/>
+  </Style>
+  <Style Selector="TextBlock.secondary">
+    <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}"/>
+  </Style>
+  <Style Selector="TextBlock.caption">
+    <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}"/>
+    <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeXS}"/>
+  </Style>
+  <!--  Arc 1.3.0 has no public standalone keycap; reuse its recorder tokens for display-only hints.  -->
+  <Style Selector="Border.keycap">
+    <Setter Property="MinWidth" Value="{arc:ShortcutRecorderTokenResource KeyCapMinWidth}"/>
+    <Setter Property="Height" Value="{arc:ShortcutRecorderTokenResource KeyCapHeight}"/>
+    <Setter Property="Padding" Value="{arc:ShortcutRecorderTokenResource KeyCapPadding}"/>
+    <Setter Property="CornerRadius" Value="{arc:ShortcutRecorderTokenResource KeyCapRadius}"/>
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceRaised}"/>
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource BorderStrong}"/>
+    <Setter Property="BorderThickness" Value="{arc:ArcDesignTokenResource EdgeThickness}"/>
+  </Style>
+  <Style Selector="Border.keycap > TextBlock">
+    <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeXS}"/>
+    <Setter Property="FontWeight" Value="{arc:ArcDesignTokenResource WeightMedium}"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+  <!--  Keep Label for the thumb's accessible name; display the label and readout inline in Arc's content slots.  -->
+  <Style Selector="arc|Slider.inline /template/ DockPanel#PART_Header">
+    <Setter Property="IsVisible" Value="False"/>
+  </Style>
+  <Style Selector="arc|ThemeSwitcher.chrome /template/ arc|Button#PART_Button /template/ Border#PART_Frame">
+    <Setter Property="BoxShadow" Value="none"/>
+  </Style>
+  <!--  Scale the glyph slot, not the button or Arc's animated sun/moon wrapper.  -->
+  <Style Selector="arc|ThemeSwitcher.chrome /template/ :is(Control)#PART_Icon">
+    <Setter Property="RenderTransform" Value="scale(1.15)"/>
+  </Style>
+  <Style Selector="HyperlinkButton.studio-link">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+    <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}"/>
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter
+          HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+          Background="{TemplateBinding Background}"
+          Content="{TemplateBinding Content}"
+          CornerRadius="{TemplateBinding CornerRadius}"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="HyperlinkButton.studio-link:pointerover, HyperlinkButton.studio-link:focus-visible">
+    <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource Foreground}"/>
+  </Style>
+  <Style Selector="HyperlinkButton.repo-link, arc|Button.language, arc|ThemeSwitcher.chrome /template/ arc|Button#PART_Button">
+    <Setter Property="Width" Value="{arc:TitleBarTokenResource CaptionButtonSize}"/>
+    <Setter Property="Height" Value="{arc:TitleBarTokenResource CaptionButtonSize}"/>
+    <Setter Property="MinHeight" Value="0"/>
+    <Setter Property="Padding" Value="0"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="CornerRadius" Value="{arc:ArcDesignTokenResource RadiusPill}"/>
+    <Setter Property="Background" Value="Transparent"/>
+  </Style>
+  <Style Selector="HyperlinkButton.repo-link:pointerover, arc|Button.language:pointerover, arc|ThemeSwitcher.chrome /template/ arc|Button#PART_Button:pointerover">
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}"/>
+  </Style>
+  <!--  Use Arc's picker and keyboard/popup behavior; show only its chip in the toolbar.  -->
+  <Style Selector="arc|ColorPicker.swatch-picker /template/ Border#PART_Trigger">
+    <Setter Property="Width" Value="{arc:ArcDesignTokenResource ControlSizeSM}"/>
+    <Setter Property="Height" Value="{arc:ArcDesignTokenResource ControlSizeSM}"/>
+    <Setter Property="Padding" Value="0"/>
+    <Setter Property="CornerRadius" Value="{arc:ColorPickerTokenResource TriggerRadiusSM}"/>
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+    <Setter Property="BoxShadow" Value="none"/>
+  </Style>
+  <Style Selector="arc|ColorPicker.swatch-picker /template/ Border#PART_Trigger > StackPanel">
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="Spacing" Value="0"/>
+  </Style>
+  <Style Selector="arc|ColorPicker.swatch-picker /template/ Border#PART_Trigger > StackPanel > StackPanel">
+    <Setter Property="IsVisible" Value="False"/>
+  </Style>
+  <Style Selector="arc|ColorPicker.swatch-picker /template/ :is(Control)#PART_TriggerChip">
+    <Setter Property="Width" Value="{arc:ArcDesignTokenResource GlyphSizeMD}"/>
+    <Setter Property="Height" Value="{arc:ArcDesignTokenResource GlyphSizeMD}"/>
+  </Style>
+  <Style Selector="arc|ColorPicker.swatch-picker:not(.selected) /template/ :is(Control)#PART_TriggerChip">
+    <Setter Property="Opacity" Value="0"/>
+  </Style>
+  <Style Selector="arc|ColorPicker.swatch-picker.selected /template/ Border#PART_Trigger">
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Foreground}"/>
+  </Style>
+  <Style Selector="arc|Select">
+    <Setter Property="MinWidth" Value="0"/>
+  </Style>
+  <Style Selector="arc|Switch">
+    <Setter Property="MinHeight" Value="{arc:ArcDesignTokenResource ControlSizeSM}"/>
+  </Style>
+  <!--  The entire enum line is one copy target. Place Arc's animated glyph after the identifier.  -->
+  <Style Selector="arc|CopyButton.enum-copy /template/ Border#PART_Frame > StackPanel">
+    <Setter Property="HorizontalAlignment" Value="Right"/>
+    <Setter Property="Margin" Value="0,0,4,0"/>
+  </Style>
+  <!--  Studio keeps file/language/copy outside the code viewport; Arc still owns source rendering and selection.  -->
+  <Style Selector="Border.code-frame">
+    <Setter Property="Height" Value="248"/>
+  </Style>
+  <Style Selector="arc|CodeBlock.source">
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="CornerRadius" Value="0"/>
+    <Setter Property="Background" Value="Transparent"/>
+  </Style>
+  <Style Selector="arc|CodeBlock.source /template/ Border#PART_Header">
+    <Setter Property="IsVisible" Value="False"/>
+  </Style>
+  <!--  The outer list virtualizes fixed-height rows and keeps Arc's scroll bars.  -->
+  <Style Selector="ListBox.catalog">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ScrollViewer
+          Name="PART_ScrollViewer" HorizontalScrollBarVisibility="Disabled"
+          VerticalScrollBarVisibility="Auto">
+          <ItemsPresenter
+            Name="PART_ItemsPresenter"
+            Margin="{TemplateBinding Padding}"
+            ItemsPanel="{TemplateBinding ItemsPanel}"/>
+        </ScrollViewer>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="ListBox.catalog /template/ ScrollViewer /template/ ScrollBar#PART_VerticalScrollBar">
+    <Setter Property="Margin" Value="{DynamicResource GalleryTrackMargin}"/>
+  </Style>
+  <Style Selector="ListBox.catalog ListBoxItem">
+    <Setter Property="Padding" Value="0"/>
+    <Setter Property="Margin" Value="0"/>
+    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    <Setter Property="Focusable" Value="False"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter
+          HorizontalContentAlignment="Stretch"
+          Content="{TemplateBinding Content}"
+          ContentTemplate="{TemplateBinding ContentTemplate}"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <!--  Tiles change state immediately; only the artwork plays on hover or keyboard focus.  -->
+  <Style Selector="Button.tile">
+    <Setter Property="local:Spacing.Padding" Value="{arc:ArcDesignTokenResource Space2}"/>
+    <Setter Property="local:Spacing.Margin" Value="{arc:ArcDesignTokenResource Space1}"/>
+    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    <Setter Property="VerticalAlignment" Value="Stretch"/>
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource Surface}"/>
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Border}"/>
+    <Setter Property="BorderThickness" Value="{arc:ArcDesignTokenResource EdgeThickness}"/>
+    <Setter Property="CornerRadius" Value="{arc:ArcDesignTokenResource RadiusPanel}"/>
+    <Setter Property="FocusAdorner" Value="{x:Null}"/>
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter
+          Name="PART_ContentPresenter"
+          HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+          Padding="{TemplateBinding Padding}"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          Content="{TemplateBinding Content}"
+          CornerRadius="{TemplateBinding CornerRadius}"/>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="Button.tile:pointerover">
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}"/>
+  </Style>
+  <Style Selector="Button.tile.selected">
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Accent}"/>
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource AccentSubtle}"/>
+  </Style>
+  <Style Selector="Button.tile:pressed">
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceRaised}"/>
+  </Style>
+  <Style Selector="Button.tile:focus-visible">
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Foreground}"/>
+  </Style>
+  <Style Selector="Button.tile:pointerover i|KubaiIcon, Button.tile:focus-visible i|KubaiIcon">
+    <Setter Property="IsEngaged" Value="True"/>
+  </Style>
+  <Style Selector="arc|Button.swatch">
+    <Setter Property="Width" Value="{arc:ArcDesignTokenResource ControlSizeSM}"/>
+    <Setter Property="Padding" Value="0"/>
+    <Setter Property="CornerRadius" Value="{arc:ArcDesignTokenResource RadiusPill}"/>
+  </Style>
+  <Style Selector="arc|Button.swatch.selected">
+    <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Foreground}"/>
+  </Style>
+  <Style Selector="arc|Button.stage">
+    <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}"/>
+    <Setter Property="CornerRadius" Value="{arc:ArcDesignTokenResource RadiusPanel}"/>
+  </Style>
+  <Style Selector="arc|Button.stage.interactive:pointerover i|KubaiIcon, arc|Button.stage.interactive:focus-visible i|KubaiIcon">
+    <Setter Property="IsEngaged" Value="True"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.still">
+    <Setter Property="IsAnimationEnabled" Value="False"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.held">
+    <Setter Property="IsEngaged" Value="True"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.active">
+    <Setter Property="IsActive" Value="True"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.soft">
+    <Setter Property="ColorVariant" Value="Soft"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.repeat">
+    <Setter Property="LoopMode" Value="Repeat"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.play-request">
+    <Setter Property="IsPlaying" Value="True"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.slow">
+    <Setter Property="SpeedRatio" Value="0.5"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.fast">
+    <Setter Property="SpeedRatio" Value="2"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.faster">
+    <Setter Property="SpeedRatio" Value="4"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.gap-short">
+    <Setter Property="RepeatDelay" Value="0:0:0.3"/>
+  </Style>
+  <Style Selector="i|KubaiIcon.preview.gap-long">
+    <Setter Property="RepeatDelay" Value="0:0:1"/>
+  </Style>
+</Styles>

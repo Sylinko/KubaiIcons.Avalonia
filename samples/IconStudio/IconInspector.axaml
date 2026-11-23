@@ -1,0 +1,275 @@
+<UserControl
+  x:Class="IconStudio.IconInspector" xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+  xmlns:i="using:KubaiIcons.Avalonia" xmlns:l="using:IconStudio.Localization"
+  xmlns:local="using:IconStudio">
+  <UserControl.Styles>
+    <Style Selector="arc|Switch#Active[IsEnabled=False]">
+      <Setter Property="arc:Tooltip.Tip" Value="{l:StudioLangResource NoActive}"/>
+      <Setter Property="AutomationProperties.HelpText" Value="{l:StudioLangResource NoActive}"/>
+    </Style>
+  </UserControl.Styles>
+  <Panel>
+    <Border
+      x:Name="DrawerSurface"
+      Background="{arc:ArcDesignTokenResource Surface}"
+      BorderBrush="{arc:ArcDesignTokenResource BorderStrong}"
+      BorderThickness="{arc:ArcDesignTokenResource EdgeThickness}"
+      CornerRadius="{arc:ArcDesignTokenResource RadiusPanel}"/>
+    <Grid
+      local:Spacing.Margin="{arc:ArcDesignTokenResource Space4}"
+      ColumnDefinitions="288,*"
+      ColumnSpacing="{arc:ArcDesignTokenResource Space6}">
+      <DockPanel VerticalSpacing="{arc:ArcDesignTokenResource Space2}">
+        <StackPanel
+          DockPanel.Dock="Top"
+          Spacing="{arc:ArcDesignTokenResource Space1}">
+          <TextBlock
+            x:Name="IconName" VerticalAlignment="Center"
+            FontFamily="{arc:ArcDesignTokenResource DisplayFontFamily}"
+            FontSize="{arc:ArcDesignTokenResource TypeXL}"
+            FontWeight="{arc:ArcDesignTokenResource WeightMedium}"
+            TextTrimming="CharacterEllipsis"/>
+          <Panel HorizontalAlignment="Left">
+            <arc:CopyButton
+              x:Name="EnumCopy" Classes="enum-copy"
+              Width="NaN"
+              CopiedLabel="{l:StudioLangResource Copied}"
+              FailedLabel="{l:StudioLangResource CopyError}"
+              IsIconOnly="True" Variant="Plain"/>
+            <TextBlock
+              x:Name="EnumName" Margin="0,0,28,0"
+              VerticalAlignment="Center" AutomationProperties.AccessibilityView="Raw"
+              FontFamily="{Binding #IconName.FontFamily}"
+              FontSize="{Binding #IconName.FontSize}"
+              FontWeight="{Binding #IconName.FontWeight}"
+              Foreground="{Binding #EnumCopy.Foreground}"
+              IsHitTestVisible="False"
+              Text="{Binding #EnumCopy.Value}" TextWrapping="Wrap"/>
+          </Panel>
+          <arc:Badge
+            x:Name="CategoryBadge"
+            HorizontalAlignment="Left" Size="Medium"
+            Tone="Neutral"/>
+        </StackPanel>
+        <StackPanel
+          VerticalAlignment="Center"
+          Spacing="{arc:ArcDesignTokenResource Space6}">
+          <Grid
+            ColumnDefinitions="128,*"
+            ColumnSpacing="{arc:ArcDesignTokenResource Space4}">
+            <arc:Button
+              x:Name="Stage" Classes="stage interactive"
+              Width="{arc:ArcDesignTokenResource MediaSizeMD}"
+              Height="{arc:ArcDesignTokenResource MediaSizeMD}"
+              AutomationProperties.Name="{l:StudioLangResource Preview}"
+              Variant="Ghost">
+              <i:KubaiIcon
+                x:Name="Specimen" Classes="preview"
+                Size="{arc:ArcDesignTokenResource Space24}"/>
+            </arc:Button>
+            <StackPanel
+              x:Name="StateControls" Grid.Column="1"
+              VerticalAlignment="Center"
+              Spacing="{arc:ArcDesignTokenResource Space2}">
+              <arc:Switch
+                x:Name="Hold"
+                Content="{l:StudioLangResource Hold}"/>
+              <arc:Switch
+                x:Name="Active" arc:Tooltip.ShowOnDisabled="True"
+                Content="{l:StudioLangResource Active}"
+                IsEnabled="False"/>
+            </StackPanel>
+          </Grid>
+          <StackPanel
+            x:Name="PlaybackActions" HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Spacing="{arc:ArcDesignTokenResource Space2}">
+            <arc:Button
+              x:Name="PlayAgain"
+              AutomationProperties.Name="{l:StudioLangResource ReplayAnimation}"
+              Size="Small" Variant="Secondary">
+              <StackPanel
+                Orientation="Horizontal"
+                Spacing="{arc:ArcDesignTokenResource Space2}">
+                <arc:ArcGlyph
+                  VerticalAlignment="Center"
+                  Data="{x:Static arc:ArcIcons.RotateCcw}"
+                  Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+                <TextBlock Text="{l:StudioLangResource Replay}"/>
+              </StackPanel>
+            </arc:Button>
+            <arc:Button
+              x:Name="StopPlayback"
+              AutomationProperties.Name="{l:StudioLangResource StopAnimation}"
+              Size="Small" Variant="Ghost">
+              <StackPanel
+                Orientation="Horizontal"
+                Spacing="{arc:ArcDesignTokenResource Space2}">
+                <arc:ArcGlyph
+                  VerticalAlignment="Center"
+                  Data="{x:Static arc:ArcIcons.Square}"
+                  Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+                <TextBlock Text="{l:StudioLangResource Stop}"/>
+              </StackPanel>
+            </arc:Button>
+            <arc:Popover
+              x:Name="MotionSettings" Alignment="Start"
+              AutomationProperties.Name="{l:StudioLangResource AnimationSettings}"
+              Placement="Top">
+              <arc:Popover.Trigger>
+                <arc:Button
+                  x:Name="MotionOptions"
+                  AutomationProperties.Name="{l:StudioLangResource AnimationSettings}"
+                  Size="Small" Variant="Ghost">
+                  <arc:ArcGlyph
+                    Data="{x:Static arc:ArcIcons.Settings}"
+                    Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+                </arc:Button>
+              </arc:Popover.Trigger>
+              <StackPanel
+                Width="288"
+                Spacing="{arc:ArcDesignTokenResource Space4}">
+                <TextBlock
+                  FontWeight="{arc:ArcDesignTokenResource WeightMedium}"
+                  Text="{l:StudioLangResource Animation}"/>
+                <Grid
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="{arc:ArcDesignTokenResource Space4}">
+                  <arc:Switch
+                    x:Name="Animate"
+                    Content="{l:StudioLangResource Animate}"
+                    IsChecked="True"/>
+                  <arc:Switch
+                    x:Name="Playing" Grid.Column="1"
+                    Content="{l:StudioLangResource Play}"/>
+                </Grid>
+                <arc:Select
+                  x:Name="Loops"
+                  Label="{l:StudioLangResource Loop}"
+                  SelectedIndex="0" Size="Small">
+                  <arc:SelectItem
+                    Content="{l:StudioLangResource Once}"
+                    Value="once"/>
+                  <arc:SelectItem
+                    Content="{l:StudioLangResource Repeat}"
+                    Value="repeat"/>
+                </arc:Select>
+                <Grid
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="{arc:ArcDesignTokenResource Space4}">
+                  <arc:Select
+                    x:Name="Speeds"
+                    Label="{l:StudioLangResource Speed}"
+                    SelectedIndex="1" Size="Small">
+                    <arc:SelectItem
+                      Content="0.5×" Value="0.5"/>
+                    <arc:SelectItem
+                      Content="1×" Value="1"/>
+                    <arc:SelectItem
+                      Content="2×" Value="2"/>
+                    <arc:SelectItem
+                      Content="4×" Value="4"/>
+                  </arc:Select>
+                  <arc:Select
+                    x:Name="Gaps" Grid.Column="1"
+                    Label="{l:StudioLangResource Delay}"
+                    SelectedIndex="0" Size="Small">
+                    <arc:SelectItem
+                      Content="{l:StudioLangResource None}"
+                      Value="0"/>
+                    <arc:SelectItem
+                      Content="{l:StudioLangResource ShortDelay}"
+                      Value="300"/>
+                    <arc:SelectItem
+                      Content="{l:StudioLangResource LongDelay}"
+                      Value="1000"/>
+                  </arc:Select>
+                </Grid>
+              </StackPanel>
+            </arc:Popover>
+          </StackPanel>
+        </StackPanel>
+      </DockPanel>
+      <StackPanel
+        Grid.Column="1" VerticalAlignment="Bottom"
+        Spacing="{arc:ArcDesignTokenResource Space2}">
+        <DockPanel>
+          <arc:Button
+            x:Name="CloseDetail" DockPanel.Dock="Right"
+            VerticalAlignment="Top"
+            AutomationProperties.Name="{l:StudioLangResource CloseIconDetails}"
+            Size="Small" Variant="Ghost">
+            <arc:ArcGlyph
+              Data="{x:Static arc:ArcIcons.X}"
+              Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+          </arc:Button>
+          <arc:SegmentedControl
+            x:Name="CodeLanguage" HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            AutomationProperties.Name="{l:StudioLangResource CodeLanguage}"
+            SelectedIndex="0">
+            <arc:SegmentedOption
+              Label="AXAML" Value="axaml"/>
+            <arc:SegmentedOption
+              Label="C#" Value="csharp"/>
+          </arc:SegmentedControl>
+        </DockPanel>
+        <Border
+          x:Name="CodeFrame" Classes="code-frame"
+          Background="{arc:ArcDesignTokenResource Surface}"
+          BorderBrush="{arc:ArcDesignTokenResource Border}"
+          BorderThickness="{arc:ArcDesignTokenResource EdgeThickness}"
+          ClipToBounds="True"
+          CornerRadius="{arc:ArcDesignTokenResource RadiusStep10}">
+          <Grid RowDefinitions="Auto,*">
+            <Border
+              x:Name="CodeHeader"
+              Padding="{arc:CodeBlockTokenResource HeaderPadding}"
+              Background="{arc:ArcDesignTokenResource SurfaceRaised}"
+              BorderBrush="{arc:ArcDesignTokenResource BorderSubtle}"
+              BorderThickness="{arc:ArcDesignTokenResource EdgeThicknessBottom}"
+              CornerRadius="9,9,0,0">
+              <Grid
+                ColumnDefinitions="*,Auto"
+                ColumnSpacing="{arc:ArcDesignTokenResource Space2}">
+                <StackPanel
+                  VerticalAlignment="Center" Orientation="Horizontal"
+                  Spacing="{arc:ArcDesignTokenResource Space2}">
+                  <arc:ArcGlyph
+                    VerticalAlignment="Center"
+                    Data="{x:Static arc:ArcIcons.FileCode2}"
+                    Foreground="{arc:ArcDesignTokenResource TextMuted}"
+                    Size="{arc:ArcDesignTokenResource GlyphSizeSM}"/>
+                  <TextBlock
+                    x:Name="CodeFileName"
+                    FontWeight="{arc:ArcDesignTokenResource WeightMedium}"
+                    Text="{Binding #Snippet.FileName}"/>
+                </StackPanel>
+                <arc:CopyButton
+                  x:Name="CodeCopy"
+                  Grid.Column="1" VerticalAlignment="Center"
+                  AutomationProperties.Name="{l:StudioLangResource Copy}"
+                  CopiedLabel="{l:StudioLangResource Copied}"
+                  FailedLabel="{l:StudioLangResource CopyError}"
+                  IsIconOnly="True"
+                  Label="{l:StudioLangResource Copy}"
+                  Variant="Plain"
+                  Value="{Binding #Snippet.Code}"/>
+              </Grid>
+            </Border>
+            <ScrollViewer
+              x:Name="CodeScroll" Grid.Row="1"
+              HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+              <arc:CodeBlock
+                x:Name="Snippet" Classes="source"
+                arc:ArcMotion.Level="Off"
+                AutomationProperties.Name="{l:StudioLangResource Source}"
+                FileName="Icon.axaml" Language="axaml"/>
+            </ScrollViewer>
+          </Grid>
+        </Border>
+      </StackPanel>
+    </Grid>
+  </Panel>
+</UserControl>
