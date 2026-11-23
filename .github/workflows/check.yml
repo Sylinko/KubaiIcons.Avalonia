@@ -1,0 +1,124 @@
+name: Check
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Check committed output, or generate files for review
+        type: choice
+        options: [check, generate]
+        default: check
+
+permissions:
+  contents: read
+
+jobs:
+  catalog:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+          dotnet-version: 8.0.x
+      - name: Read the upstream pin and compatibility baseline
+        id: pin
+        shell: pwsh
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          $pin = Get-Content catalog/upstream.json -Raw | ConvertFrom-Json
+          "commit=$($pin.commit)" >> $env:GITHUB_OUTPUT
+          New-Item -ItemType Directory -Force artifacts | Out-Null
+          if ($env:BASE_REF -and $env:BASE_REF -notmatch '^0+$') {
+            git cat-file -e "$($env:BASE_REF):catalog/ids.props" 2>$null
+            if ($LASTEXITCODE -eq 0) {
+              $text = git show "$($env:BASE_REF):catalog/ids.props"
+              [IO.File]::WriteAllText((Join-Path $PWD 'artifacts/base-ids.props'), ($text -join "`n") + "`n")
+            }
+          }
+          exit 0
+      - uses: actions/checkout@v4
+        with:
+          repository: kubai087/kubai-icons
+          ref: ${{ steps.pin.outputs.commit }}
+          path: artifacts/upstream
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /icons-duotone/
+            /LICENSE-ICONS
+            /icons/
+            /badges/
+            /package.json
+            /packages/core/src/
+            /packages/core/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check Layered compiler boundaries
+        run: node --test tools/validation/scene-compiler.test.mjs
+      - name: Fetch pinned Studio metadata
+        shell: pwsh
+        run: |
+          $pin = Get-Content catalog/upstream.json -Raw | ConvertFrom-Json
+          New-Item -ItemType Directory -Force artifacts/studio-metadata | Out-Null
+          $url = "https://unpkg.com/$($pin.version)"
+          Invoke-WebRequest "$url/package.json" -OutFile artifacts/studio-metadata/package.json
+          Invoke-WebRequest "$url/dist/icons.json" -OutFile artifacts/studio-metadata/layered-icons.json
+          Invoke-WebRequest "$url/dist/duotone/icons.json" -OutFile artifacts/studio-metadata/duotone-icons.json
+      - name: Compile or verify the Layered catalog
+        shell: pwsh
+        env:
+          IMPORT_MODE: ${{ inputs.mode || 'check' }}
+        run: dotnet run --project tools/KubaiIcons.Importer -c Release -- "layered-$env:IMPORT_MODE" --source artifacts/upstream
+      - name: Import or verify deterministic output
+        shell: pwsh
+        env:
+          IMPORT_MODE: ${{ inputs.mode || 'check' }}
+        run: |
+          $parameters = @($env:IMPORT_MODE, '--source', 'artifacts/upstream', '--metadata', 'artifacts/studio-metadata')
+          if (Test-Path artifacts/base-ids.props) {
+            $parameters += @('--baseline', 'artifacts/base-ids.props')
+          }
+          dotnet run --project tools/KubaiIcons.Importer -c Release -- @parameters
+          exit $LASTEXITCODE
+      - name: Import or verify Studio catalog
+        shell: pwsh
+        env:
+          IMPORT_MODE: ${{ inputs.mode || 'check' }}
+        run: |
+          dotnet run --project tools/KubaiIcons.Importer -c Release --no-build -- "studio-$env:IMPORT_MODE" --source artifacts/upstream --metadata artifacts/studio-metadata
+          exit $LASTEXITCODE
+      - name: Render the published Layered inventory for visual comparison
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $browser = Join-Path ${env:ProgramFiles(x86)} 'Microsoft/Edge/Application/msedge.exe'
+          node tools/validation/layered-reference.mjs artifacts/upstream artifacts/studio-metadata/layered-icons.json artifacts/layered-validation $browser
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          "KUBAI_REFERENCE_DIR=$((Resolve-Path artifacts/layered-validation).Path)" >> $env:GITHUB_ENV
+      - run: dotnet test KubaiIcons.Avalonia.slnx -c Release
+      - run: dotnet pack src/KubaiIcons.Avalonia -c Release --no-restore -o artifacts/package
+      - name: Upload generated files for review
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'generate'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-catalog-${{ runner.os }}
+          path: |
+            catalog/ids.props
+            catalog/layered-bases.json
+            catalog/layered-compositions.json
+            catalog/layered-labels.json
+            src/KubaiIcons.Avalonia/CatalogData.g.cs
+            src/KubaiIcons.Avalonia/Art/Duotone/
+            src/KubaiIcons.Avalonia/Art/Scenes/
+            src/KubaiIcons.Avalonia/Art/Badges/
+            src/KubaiIcons.Avalonia/Rendering/CompositionData.g.cs
+            licenses/LICENSE-ICONS
+            samples/IconStudio/Catalog/catalog.json

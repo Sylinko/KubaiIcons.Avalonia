@@ -1,0 +1,16 @@
+<Solution>
+  <Project Path="src/KubaiIcons.Avalonia/KubaiIcons.Avalonia.csproj" />
+  <Folder Name="/Solution Files/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path="Settings.XamlStyler" />
+  </Folder>
+  <Project Path="samples/IconStudio/IconStudio.csproj" />
+  <Project Path="tests/KubaiIcons.Tests/KubaiIcons.Tests.csproj" />
+  <Project Path="tools/KubaiIcons.Importer/KubaiIcons.Importer.csproj" />
+</Solution>
