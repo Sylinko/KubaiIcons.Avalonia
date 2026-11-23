@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../catalog/ids.props"/>
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0;net11.0</TargetFrameworks>
+    <PackageId>KubaiIcons.Avalonia</PackageId>
+    <Version>$(KubaiUpstreamVersion)</Version>
+    <Authors>Sylinko</Authors>
+    <Description>An unofficial Avalonia port of Kubai Icons by Kubai087, maintained by Sylinko.</Description>
+    <RepositoryUrl>https://github.com/Sylinko/KubaiIcons.Avalonia</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
+    <EmbeddedResource Include="Art/Badges/*.kbi" LogicalName="KubaiArt.badge-%(Filename)"/>
+    <EmbeddedResource Include="Art/Scenes/*.kbi" LogicalName="KubaiArt.scene-%(Filename)"/>
+    <EmbeddedResource Include="Art/Duotone/*.kbi" LogicalName="KubaiArt.duotone-%(Filename)"/>
+    <None Include="../../LICENSE" Pack="true" PackagePath="/"/>
+    <None Include="../../docs/nuget.md" Pack="true" PackagePath="README.md"/>
+    <None Include="../../licenses/LICENSE-ICONS" Pack="true" PackagePath="licenses/"/>
+    <Compile Include="$(IntermediateOutputPath)KubaiIconKind.g.cs" Visible="false"/>
+  </ItemGroup>
+
+  <Target Name="GenerateKubaiIconKind"
+          BeforeTargets="CoreCompile"
+          Inputs="$(MSBuildThisFileFullPath);../../catalog/ids.props"
+          Outputs="$(IntermediateOutputPath)KubaiIconKind.g.cs">
+    <ItemGroup>
+      <_EnumLine Include="namespace KubaiIcons.Avalonia%3B"/>
+      <_EnumLine Include="/// &lt;summary&gt;Stable identifiers for the supported artwork.&lt;/summary&gt;"/>
+      <_EnumLine Include="public enum KubaiIconKind {"/>
+      <_EnumLine Include="@(KubaiId->'/// &lt;summary&gt;%(Doc)&lt;/summary&gt;%0A    %(Identity) = %(Value),')"/>
+      <_EnumLine Include="}"/>
+
+      <_Duotone Include="@(KubaiId)" Condition="'%(KubaiId.Duotone)' == 'true'"/>
+      <_EnumLine Include="/// &lt;summary&gt;Icons with shipped Duotone artwork.&lt;/summary&gt;"/>
+      <_EnumLine Include="public enum KubaiDuotoneIconKind {"/>
+      <_EnumLine Include="/// &lt;summary&gt;No artwork.&lt;/summary&gt;%0A    None = 0,"/>
+      <_EnumLine Include="@(_Duotone->'/// &lt;summary&gt;%(Doc)&lt;/summary&gt;%0A    %(Identity) = %(Value),')"/>
+      <_EnumLine Include="}"/>
+
+      <_Layered Include="@(KubaiId)" Condition="'%(KubaiId.Layered)' == 'true'"/>
+      <_EnumLine Include="/// &lt;summary&gt;Icons with shipped Layered artwork.&lt;/summary&gt;"/>
+      <_EnumLine Include="public enum KubaiLayeredIconKind {"/>
+      <_EnumLine Include="/// &lt;summary&gt;No artwork.&lt;/summary&gt;%0A    None = 0,"/>
+      <_EnumLine Include="@(_Layered->'/// &lt;summary&gt;%(Doc)&lt;/summary&gt;%0A    %(Identity) = %(Value),')"/>
+      <_EnumLine Include="}"/>
+    </ItemGroup>
+    <WriteLinesToFile File="$(IntermediateOutputPath)KubaiIconKind.g.cs" Lines="@(_EnumLine)" Overwrite="true"/>
+  </Target>
+</Project>

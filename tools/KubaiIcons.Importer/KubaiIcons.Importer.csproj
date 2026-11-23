@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
+    <Compile Include="../../src/KubaiIcons.Avalonia/Rendering/DuotoneData.cs" Link="Format/DuotoneData.cs"/>
+    <Compile Include="../../src/KubaiIcons.Avalonia/Rendering/ArtReader.cs" Link="Format/ArtReader.cs"/>
+    <Compile Include="../../src/KubaiIcons.Avalonia/Rendering/CompiledPath.cs" Link="Format/CompiledPath.cs"/>
+    <Compile Include="../../src/KubaiIcons.Avalonia/Rendering/RoundedPath.cs" Link="Format/RoundedPath.cs"/>
+  </ItemGroup>
+</Project>

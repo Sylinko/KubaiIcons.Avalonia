@@ -1,0 +1,12302 @@
+[
+  {
+    "name": "None",
+    "value": 0
+  },
+  {
+    "name": "Abacus",
+    "value": 1
+  },
+  {
+    "name": "Accessibility",
+    "value": 2
+  },
+  {
+    "name": "Accordion",
+    "value": 3
+  },
+  {
+    "name": "ActionCamera",
+    "value": 4
+  },
+  {
+    "name": "ActionCameraBolt",
+    "value": 5
+  },
+  {
+    "name": "ActionCameraCheck",
+    "value": 6
+  },
+  {
+    "name": "ActionCameraX",
+    "value": 7
+  },
+  {
+    "name": "Activity",
+    "value": 8
+  },
+  {
+    "name": "ActivityAlert",
+    "value": 9
+  },
+  {
+    "name": "ActivityCheck",
+    "value": 10
+  },
+  {
+    "name": "ActivityPlus",
+    "value": 11
+  },
+  {
+    "name": "ActivitySearch",
+    "value": 12
+  },
+  {
+    "name": "AirPurifier",
+    "value": 13
+  },
+  {
+    "name": "AirPurifierCheck",
+    "value": 14
+  },
+  {
+    "name": "AirPurifierClock",
+    "value": 15
+  },
+  {
+    "name": "AirPurifierCog",
+    "value": 16
+  },
+  {
+    "name": "AlarmClock",
+    "value": 17
+  },
+  {
+    "name": "AlarmClockCheck",
+    "value": 18
+  },
+  {
+    "name": "AlarmClockMinus",
+    "value": 19
+  },
+  {
+    "name": "AlarmClockOff",
+    "value": 20
+  },
+  {
+    "name": "AlarmClockPlus",
+    "value": 21
+  },
+  {
+    "name": "AlarmClockX",
+    "value": 22
+  },
+  {
+    "name": "Album",
+    "value": 23
+  },
+  {
+    "name": "AlbumCheck",
+    "value": 24
+  },
+  {
+    "name": "AlbumClock",
+    "value": 25
+  },
+  {
+    "name": "AlbumDown",
+    "value": 26
+  },
+  {
+    "name": "AlbumHeart",
+    "value": 27
+  },
+  {
+    "name": "AlbumPlus",
+    "value": 28
+  },
+  {
+    "name": "AlbumSearch",
+    "value": 29
+  },
+  {
+    "name": "AlbumStar",
+    "value": 30
+  },
+  {
+    "name": "AlbumX",
+    "value": 31
+  },
+  {
+    "name": "AlignCenter",
+    "value": 32
+  },
+  {
+    "name": "AlignJustify",
+    "value": 33
+  },
+  {
+    "name": "AlignLeft",
+    "value": 34
+  },
+  {
+    "name": "AlignRight",
+    "value": 35
+  },
+  {
+    "name": "AlphabetBlocks",
+    "value": 36
+  },
+  {
+    "name": "Ambulance",
+    "value": 37
+  },
+  {
+    "name": "AmericanFootball",
+    "value": 38
+  },
+  {
+    "name": "Anchor",
+    "value": 39
+  },
+  {
+    "name": "Angry",
+    "value": 40
+  },
+  {
+    "name": "Antenna",
+    "value": 41
+  },
+  {
+    "name": "AntennaOff",
+    "value": 42
+  },
+  {
+    "name": "Anvil",
+    "value": 43
+  },
+  {
+    "name": "Aperture",
+    "value": 44
+  },
+  {
+    "name": "AppWindow",
+    "value": 45
+  },
+  {
+    "name": "AppWindowCog",
+    "value": 46
+  },
+  {
+    "name": "AppWindowLock",
+    "value": 47
+  },
+  {
+    "name": "AppWindowPlus",
+    "value": 48
+  },
+  {
+    "name": "AppWindowX",
+    "value": 49
+  },
+  {
+    "name": "Appearance",
+    "value": 50
+  },
+  {
+    "name": "Apple",
+    "value": 51
+  },
+  {
+    "name": "AppleCheck",
+    "value": 52
+  },
+  {
+    "name": "AppleHeart",
+    "value": 53
+  },
+  {
+    "name": "ApplePlus",
+    "value": 54
+  },
+  {
+    "name": "ArcadeMachine",
+    "value": 55
+  },
+  {
+    "name": "ArcadeMachineStar",
+    "value": 56
+  },
+  {
+    "name": "Archive",
+    "value": 57
+  },
+  {
+    "name": "ArchiveAlert",
+    "value": 58
+  },
+  {
+    "name": "ArchiveCheck",
+    "value": 59
+  },
+  {
+    "name": "ArchiveClock",
+    "value": 60
+  },
+  {
+    "name": "ArchiveCog",
+    "value": 61
+  },
+  {
+    "name": "ArchiveDown",
+    "value": 62
+  },
+  {
+    "name": "ArchiveInfo",
+    "value": 63
+  },
+  {
+    "name": "ArchiveLock",
+    "value": 64
+  },
+  {
+    "name": "ArchiveMinus",
+    "value": 65
+  },
+  {
+    "name": "ArchivePlus",
+    "value": 66
+  },
+  {
+    "name": "ArchiveRight",
+    "value": 67
+  },
+  {
+    "name": "ArchiveSearch",
+    "value": 68
+  },
+  {
+    "name": "ArchiveSparkle",
+    "value": 69
+  },
+  {
+    "name": "ArchiveStar",
+    "value": 70
+  },
+  {
+    "name": "ArchiveSync",
+    "value": 71
+  },
+  {
+    "name": "ArchiveUp",
+    "value": 72
+  },
+  {
+    "name": "ArchiveX",
+    "value": 73
+  },
+  {
+    "name": "Armchair",
+    "value": 74
+  },
+  {
+    "name": "ArmchairCheck",
+    "value": 75
+  },
+  {
+    "name": "ArmchairPlus",
+    "value": 76
+  },
+  {
+    "name": "ArrowDown",
+    "value": 77
+  },
+  {
+    "name": "ArrowDownLeft",
+    "value": 78
+  },
+  {
+    "name": "ArrowDownRight",
+    "value": 79
+  },
+  {
+    "name": "ArrowLeft",
+    "value": 80
+  },
+  {
+    "name": "ArrowLeftRight",
+    "value": 81
+  },
+  {
+    "name": "ArrowRight",
+    "value": 82
+  },
+  {
+    "name": "ArrowUp",
+    "value": 83
+  },
+  {
+    "name": "ArrowUpDown",
+    "value": 84
+  },
+  {
+    "name": "ArrowUpLeft",
+    "value": 85
+  },
+  {
+    "name": "ArrowUpRight",
+    "value": 86
+  },
+  {
+    "name": "Astronaut",
+    "value": 87
+  },
+  {
+    "name": "AtSign",
+    "value": 88
+  },
+  {
+    "name": "Atm",
+    "value": 89
+  },
+  {
+    "name": "AtmCheck",
+    "value": 90
+  },
+  {
+    "name": "AtmClock",
+    "value": 91
+  },
+  {
+    "name": "AtmLock",
+    "value": 92
+  },
+  {
+    "name": "AtmX",
+    "value": 93
+  },
+  {
+    "name": "Atom",
+    "value": 94
+  },
+  {
+    "name": "AudioLines",
+    "value": 95
+  },
+  {
+    "name": "AudioLinesOff",
+    "value": 96
+  },
+  {
+    "name": "Avocado",
+    "value": 97
+  },
+  {
+    "name": "Award",
+    "value": 98
+  },
+  {
+    "name": "AwardCheck",
+    "value": 99
+  },
+  {
+    "name": "AwardPlus",
+    "value": 100
+  },
+  {
+    "name": "Axe",
+    "value": 101
+  },
+  {
+    "name": "Baby",
+    "value": 102
+  },
+  {
+    "name": "BabyBottle",
+    "value": 103
+  },
+  {
+    "name": "BabyBottleClock",
+    "value": 104
+  },
+  {
+    "name": "Backpack",
+    "value": 105
+  },
+  {
+    "name": "Bacteria",
+    "value": 106
+  },
+  {
+    "name": "Badge",
+    "value": 107
+  },
+  {
+    "name": "BadgePercent",
+    "value": 108
+  },
+  {
+    "name": "BadgePercentCheck",
+    "value": 109
+  },
+  {
+    "name": "BadgePercentClock",
+    "value": 110
+  },
+  {
+    "name": "BadgePercentPlus",
+    "value": 111
+  },
+  {
+    "name": "BadgePercentX",
+    "value": 112
+  },
+  {
+    "name": "BadgeVerified",
+    "value": 113
+  },
+  {
+    "name": "Badminton",
+    "value": 114
+  },
+  {
+    "name": "Bagel",
+    "value": 115
+  },
+  {
+    "name": "Balloon",
+    "value": 116
+  },
+  {
+    "name": "Ban",
+    "value": 117
+  },
+  {
+    "name": "Banana",
+    "value": 118
+  },
+  {
+    "name": "Bandage",
+    "value": 119
+  },
+  {
+    "name": "Banknote",
+    "value": 120
+  },
+  {
+    "name": "BanknoteCheck",
+    "value": 121
+  },
+  {
+    "name": "BanknoteClock",
+    "value": 122
+  },
+  {
+    "name": "BanknoteDown",
+    "value": 123
+  },
+  {
+    "name": "BanknoteMinus",
+    "value": 124
+  },
+  {
+    "name": "BanknotePlus",
+    "value": 125
+  },
+  {
+    "name": "BanknoteRight",
+    "value": 126
+  },
+  {
+    "name": "BanknoteSync",
+    "value": 127
+  },
+  {
+    "name": "BanknoteUp",
+    "value": 128
+  },
+  {
+    "name": "BanknoteX",
+    "value": 129
+  },
+  {
+    "name": "Barcode",
+    "value": 130
+  },
+  {
+    "name": "BarcodeCheck",
+    "value": 131
+  },
+  {
+    "name": "BarcodePlus",
+    "value": 132
+  },
+  {
+    "name": "BarcodeScanner",
+    "value": 133
+  },
+  {
+    "name": "BarcodeScannerCheck",
+    "value": 134
+  },
+  {
+    "name": "BarcodeScannerX",
+    "value": 135
+  },
+  {
+    "name": "BarcodeSearch",
+    "value": 136
+  },
+  {
+    "name": "BarcodeX",
+    "value": 137
+  },
+  {
+    "name": "Barn",
+    "value": 138
+  },
+  {
+    "name": "Baseball",
+    "value": 139
+  },
+  {
+    "name": "BaseballCap",
+    "value": 140
+  },
+  {
+    "name": "BaseballCapCheck",
+    "value": 141
+  },
+  {
+    "name": "BaseballCapHeart",
+    "value": 142
+  },
+  {
+    "name": "BaseballCapPlus",
+    "value": 143
+  },
+  {
+    "name": "Basket",
+    "value": 144
+  },
+  {
+    "name": "BasketCheck",
+    "value": 145
+  },
+  {
+    "name": "BasketClock",
+    "value": 146
+  },
+  {
+    "name": "BasketHeart",
+    "value": 147
+  },
+  {
+    "name": "BasketMinus",
+    "value": 148
+  },
+  {
+    "name": "BasketPlus",
+    "value": 149
+  },
+  {
+    "name": "BasketX",
+    "value": 150
+  },
+  {
+    "name": "Basketball",
+    "value": 151
+  },
+  {
+    "name": "Bath",
+    "value": 152
+  },
+  {
+    "name": "BatteryBackup",
+    "value": 153
+  },
+  {
+    "name": "BatteryBackupAlert",
+    "value": 154
+  },
+  {
+    "name": "BatteryBackupBolt",
+    "value": 155
+  },
+  {
+    "name": "BatteryBackupCheck",
+    "value": 156
+  },
+  {
+    "name": "BatteryBackupX",
+    "value": 157
+  },
+  {
+    "name": "BatteryCharging",
+    "value": 158
+  },
+  {
+    "name": "BatteryChargingAlert",
+    "value": 159
+  },
+  {
+    "name": "BatteryEmpty",
+    "value": 160
+  },
+  {
+    "name": "BatteryEmptyAlert",
+    "value": 161
+  },
+  {
+    "name": "BatteryEmptyBolt",
+    "value": 162
+  },
+  {
+    "name": "BatteryEmptyX",
+    "value": 163
+  },
+  {
+    "name": "BatteryFull",
+    "value": 164
+  },
+  {
+    "name": "BatteryFullBolt",
+    "value": 165
+  },
+  {
+    "name": "BatteryFullCheck",
+    "value": 166
+  },
+  {
+    "name": "BatteryLow",
+    "value": 167
+  },
+  {
+    "name": "BatteryLowAlert",
+    "value": 168
+  },
+  {
+    "name": "BatteryLowBolt",
+    "value": 169
+  },
+  {
+    "name": "BatteryMedium",
+    "value": 170
+  },
+  {
+    "name": "BatteryMediumBolt",
+    "value": 171
+  },
+  {
+    "name": "BeachUmbrella",
+    "value": 172
+  },
+  {
+    "name": "Beaker",
+    "value": 173
+  },
+  {
+    "name": "BeakerAlert",
+    "value": 174
+  },
+  {
+    "name": "BeakerCheck",
+    "value": 175
+  },
+  {
+    "name": "BeakerSparkle",
+    "value": 176
+  },
+  {
+    "name": "Bed",
+    "value": 177
+  },
+  {
+    "name": "BedCheck",
+    "value": 178
+  },
+  {
+    "name": "BedClock",
+    "value": 179
+  },
+  {
+    "name": "BedPlus",
+    "value": 180
+  },
+  {
+    "name": "Bee",
+    "value": 181
+  },
+  {
+    "name": "Beehive",
+    "value": 182
+  },
+  {
+    "name": "Beer",
+    "value": 183
+  },
+  {
+    "name": "BeerHeart",
+    "value": 184
+  },
+  {
+    "name": "BeerPlus",
+    "value": 185
+  },
+  {
+    "name": "Bell",
+    "value": 186
+  },
+  {
+    "name": "BellAlert",
+    "value": 187
+  },
+  {
+    "name": "BellCheck",
+    "value": 188
+  },
+  {
+    "name": "BellClock",
+    "value": 189
+  },
+  {
+    "name": "BellCog",
+    "value": 190
+  },
+  {
+    "name": "BellMinus",
+    "value": 191
+  },
+  {
+    "name": "BellOff",
+    "value": 192
+  },
+  {
+    "name": "BellPlus",
+    "value": 193
+  },
+  {
+    "name": "BellRing",
+    "value": 194
+  },
+  {
+    "name": "BellSparkle",
+    "value": 195
+  },
+  {
+    "name": "BellX",
+    "value": 196
+  },
+  {
+    "name": "Bench",
+    "value": 197
+  },
+  {
+    "name": "Bicycle",
+    "value": 198
+  },
+  {
+    "name": "BicycleCheck",
+    "value": 199
+  },
+  {
+    "name": "BicycleClock",
+    "value": 200
+  },
+  {
+    "name": "Binary",
+    "value": 201
+  },
+  {
+    "name": "Binder",
+    "value": 202
+  },
+  {
+    "name": "BinderAlert",
+    "value": 203
+  },
+  {
+    "name": "BinderCheck",
+    "value": 204
+  },
+  {
+    "name": "BinderClock",
+    "value": 205
+  },
+  {
+    "name": "BinderDown",
+    "value": 206
+  },
+  {
+    "name": "BinderLock",
+    "value": 207
+  },
+  {
+    "name": "BinderMinus",
+    "value": 208
+  },
+  {
+    "name": "BinderPlus",
+    "value": 209
+  },
+  {
+    "name": "BinderSearch",
+    "value": 210
+  },
+  {
+    "name": "BinderStar",
+    "value": 211
+  },
+  {
+    "name": "BinderSync",
+    "value": 212
+  },
+  {
+    "name": "BinderUp",
+    "value": 213
+  },
+  {
+    "name": "BinderX",
+    "value": 214
+  },
+  {
+    "name": "Binoculars",
+    "value": 215
+  },
+  {
+    "name": "Bird",
+    "value": 216
+  },
+  {
+    "name": "BirdCage",
+    "value": 217
+  },
+  {
+    "name": "BirdCageHeart",
+    "value": 218
+  },
+  {
+    "name": "Birdhouse",
+    "value": 219
+  },
+  {
+    "name": "Blender",
+    "value": 220
+  },
+  {
+    "name": "Blocks",
+    "value": 221
+  },
+  {
+    "name": "BlocksCheck",
+    "value": 222
+  },
+  {
+    "name": "BlocksPlus",
+    "value": 223
+  },
+  {
+    "name": "BlocksSearch",
+    "value": 224
+  },
+  {
+    "name": "BlocksX",
+    "value": 225
+  },
+  {
+    "name": "BloodBag",
+    "value": 226
+  },
+  {
+    "name": "BloodBagAlert",
+    "value": 227
+  },
+  {
+    "name": "BloodBagPlus",
+    "value": 228
+  },
+  {
+    "name": "BloodPressure",
+    "value": 229
+  },
+  {
+    "name": "Bluetooth",
+    "value": 230
+  },
+  {
+    "name": "BluetoothAlert",
+    "value": 231
+  },
+  {
+    "name": "BluetoothCheck",
+    "value": 232
+  },
+  {
+    "name": "BluetoothOff",
+    "value": 233
+  },
+  {
+    "name": "BluetoothSearch",
+    "value": 234
+  },
+  {
+    "name": "BluetoothSync",
+    "value": 235
+  },
+  {
+    "name": "BluetoothX",
+    "value": 236
+  },
+  {
+    "name": "BoardingPass",
+    "value": 237
+  },
+  {
+    "name": "BoardingPassCheck",
+    "value": 238
+  },
+  {
+    "name": "BoardingPassClock",
+    "value": 239
+  },
+  {
+    "name": "BoardingPassPlus",
+    "value": 240
+  },
+  {
+    "name": "BoardingPassX",
+    "value": 241
+  },
+  {
+    "name": "Bold",
+    "value": 242
+  },
+  {
+    "name": "Bomb",
+    "value": 243
+  },
+  {
+    "name": "BombAlert",
+    "value": 244
+  },
+  {
+    "name": "BombX",
+    "value": 245
+  },
+  {
+    "name": "Bone",
+    "value": 246
+  },
+  {
+    "name": "Book",
+    "value": 247
+  },
+  {
+    "name": "BookCheck",
+    "value": 248
+  },
+  {
+    "name": "BookClock",
+    "value": 249
+  },
+  {
+    "name": "BookDown",
+    "value": 250
+  },
+  {
+    "name": "BookHeart",
+    "value": 251
+  },
+  {
+    "name": "BookLock",
+    "value": 252
+  },
+  {
+    "name": "BookMarked",
+    "value": 253
+  },
+  {
+    "name": "BookMarkedCheck",
+    "value": 254
+  },
+  {
+    "name": "BookMarkedPlus",
+    "value": 255
+  },
+  {
+    "name": "BookMarkedX",
+    "value": 256
+  },
+  {
+    "name": "BookOpen",
+    "value": 257
+  },
+  {
+    "name": "BookOpenCheck",
+    "value": 258
+  },
+  {
+    "name": "BookOpenClock",
+    "value": 259
+  },
+  {
+    "name": "BookOpenPlus",
+    "value": 260
+  },
+  {
+    "name": "BookOpenStar",
+    "value": 261
+  },
+  {
+    "name": "BookPlus",
+    "value": 262
+  },
+  {
+    "name": "BookSearch",
+    "value": 263
+  },
+  {
+    "name": "BookSparkle",
+    "value": 264
+  },
+  {
+    "name": "BookStack",
+    "value": 265
+  },
+  {
+    "name": "BookStackCheck",
+    "value": 266
+  },
+  {
+    "name": "BookStackPlus",
+    "value": 267
+  },
+  {
+    "name": "BookStackStar",
+    "value": 268
+  },
+  {
+    "name": "BookStar",
+    "value": 269
+  },
+  {
+    "name": "BookX",
+    "value": 270
+  },
+  {
+    "name": "Bookmark",
+    "value": 271
+  },
+  {
+    "name": "BookmarkCheck",
+    "value": 272
+  },
+  {
+    "name": "BookmarkMinus",
+    "value": 273
+  },
+  {
+    "name": "BookmarkPlus",
+    "value": 274
+  },
+  {
+    "name": "BookmarkX",
+    "value": 275
+  },
+  {
+    "name": "Bookshelf",
+    "value": 276
+  },
+  {
+    "name": "Boombox",
+    "value": 277
+  },
+  {
+    "name": "Bot",
+    "value": 278
+  },
+  {
+    "name": "BotAlert",
+    "value": 279
+  },
+  {
+    "name": "BotBolt",
+    "value": 280
+  },
+  {
+    "name": "BotCheck",
+    "value": 281
+  },
+  {
+    "name": "BotCog",
+    "value": 282
+  },
+  {
+    "name": "BotHeart",
+    "value": 283
+  },
+  {
+    "name": "BotPlus",
+    "value": 284
+  },
+  {
+    "name": "BotSparkle",
+    "value": 285
+  },
+  {
+    "name": "BotX",
+    "value": 286
+  },
+  {
+    "name": "Bottle",
+    "value": 287
+  },
+  {
+    "name": "BottleCheck",
+    "value": 288
+  },
+  {
+    "name": "BottlePlus",
+    "value": 289
+  },
+  {
+    "name": "Bowling",
+    "value": 290
+  },
+  {
+    "name": "BoxingGlove",
+    "value": 291
+  },
+  {
+    "name": "Braces",
+    "value": 292
+  },
+  {
+    "name": "Brackets",
+    "value": 293
+  },
+  {
+    "name": "Brain",
+    "value": 294
+  },
+  {
+    "name": "Bread",
+    "value": 295
+  },
+  {
+    "name": "BreadPlus",
+    "value": 296
+  },
+  {
+    "name": "BrickPhone",
+    "value": 297
+  },
+  {
+    "name": "BrickPhoneCheck",
+    "value": 298
+  },
+  {
+    "name": "BrickPhoneSync",
+    "value": 299
+  },
+  {
+    "name": "BrickPhoneX",
+    "value": 300
+  },
+  {
+    "name": "BrickWall",
+    "value": 301
+  },
+  {
+    "name": "Bridge",
+    "value": 302
+  },
+  {
+    "name": "Briefcase",
+    "value": 303
+  },
+  {
+    "name": "BriefcaseCheck",
+    "value": 304
+  },
+  {
+    "name": "BriefcaseClock",
+    "value": 305
+  },
+  {
+    "name": "BriefcaseCog",
+    "value": 306
+  },
+  {
+    "name": "BriefcaseLock",
+    "value": 307
+  },
+  {
+    "name": "BriefcasePlus",
+    "value": 308
+  },
+  {
+    "name": "BriefcaseSearch",
+    "value": 309
+  },
+  {
+    "name": "BriefcaseStar",
+    "value": 310
+  },
+  {
+    "name": "BriefcaseX",
+    "value": 311
+  },
+  {
+    "name": "Broccoli",
+    "value": 312
+  },
+  {
+    "name": "Broom",
+    "value": 313
+  },
+  {
+    "name": "BroomCheck",
+    "value": 314
+  },
+  {
+    "name": "Bucket",
+    "value": 315
+  },
+  {
+    "name": "Bug",
+    "value": 316
+  },
+  {
+    "name": "Building",
+    "value": 317
+  },
+  {
+    "name": "BuildingCheck",
+    "value": 318
+  },
+  {
+    "name": "BuildingCog",
+    "value": 319
+  },
+  {
+    "name": "BuildingLock",
+    "value": 320
+  },
+  {
+    "name": "BuildingOffice",
+    "value": 321
+  },
+  {
+    "name": "BuildingOfficeCheck",
+    "value": 322
+  },
+  {
+    "name": "BuildingOfficeCog",
+    "value": 323
+  },
+  {
+    "name": "BuildingOfficeLock",
+    "value": 324
+  },
+  {
+    "name": "BuildingOfficePlus",
+    "value": 325
+  },
+  {
+    "name": "BuildingOfficeSearch",
+    "value": 326
+  },
+  {
+    "name": "BuildingOfficeX",
+    "value": 327
+  },
+  {
+    "name": "BuildingPlus",
+    "value": 328
+  },
+  {
+    "name": "BuildingSearch",
+    "value": 329
+  },
+  {
+    "name": "BuildingX",
+    "value": 330
+  },
+  {
+    "name": "Bulldozer",
+    "value": 331
+  },
+  {
+    "name": "BunsenBurner",
+    "value": 332
+  },
+  {
+    "name": "Burger",
+    "value": 333
+  },
+  {
+    "name": "BurgerClock",
+    "value": 334
+  },
+  {
+    "name": "BurgerHeart",
+    "value": 335
+  },
+  {
+    "name": "BurgerPlus",
+    "value": 336
+  },
+  {
+    "name": "Bus",
+    "value": 337
+  },
+  {
+    "name": "BusAlert",
+    "value": 338
+  },
+  {
+    "name": "BusCheck",
+    "value": 339
+  },
+  {
+    "name": "BusClock",
+    "value": 340
+  },
+  {
+    "name": "Butterfly",
+    "value": 341
+  },
+  {
+    "name": "Cable",
+    "value": 342
+  },
+  {
+    "name": "CableCar",
+    "value": 343
+  },
+  {
+    "name": "CableCarCheck",
+    "value": 344
+  },
+  {
+    "name": "CableCarClock",
+    "value": 345
+  },
+  {
+    "name": "CableCheck",
+    "value": 346
+  },
+  {
+    "name": "CableX",
+    "value": 347
+  },
+  {
+    "name": "Cactus",
+    "value": 348
+  },
+  {
+    "name": "Cake",
+    "value": 349
+  },
+  {
+    "name": "CakeClock",
+    "value": 350
+  },
+  {
+    "name": "CakeHeart",
+    "value": 351
+  },
+  {
+    "name": "CakePlus",
+    "value": 352
+  },
+  {
+    "name": "CakeStar",
+    "value": 353
+  },
+  {
+    "name": "Calculator",
+    "value": 354
+  },
+  {
+    "name": "Calendar",
+    "value": 355
+  },
+  {
+    "name": "CalendarAlert",
+    "value": 356
+  },
+  {
+    "name": "CalendarCheck",
+    "value": 357
+  },
+  {
+    "name": "CalendarClock",
+    "value": 358
+  },
+  {
+    "name": "CalendarCog",
+    "value": 359
+  },
+  {
+    "name": "CalendarDays",
+    "value": 360
+  },
+  {
+    "name": "CalendarDaysAlert",
+    "value": 361
+  },
+  {
+    "name": "CalendarDaysCheck",
+    "value": 362
+  },
+  {
+    "name": "CalendarDaysClock",
+    "value": 363
+  },
+  {
+    "name": "CalendarDaysHeart",
+    "value": 364
+  },
+  {
+    "name": "CalendarDaysLock",
+    "value": 365
+  },
+  {
+    "name": "CalendarDaysMinus",
+    "value": 366
+  },
+  {
+    "name": "CalendarDaysPlus",
+    "value": 367
+  },
+  {
+    "name": "CalendarDaysSearch",
+    "value": 368
+  },
+  {
+    "name": "CalendarDaysStar",
+    "value": 369
+  },
+  {
+    "name": "CalendarDaysSync",
+    "value": 370
+  },
+  {
+    "name": "CalendarDaysX",
+    "value": 371
+  },
+  {
+    "name": "CalendarHeart",
+    "value": 372
+  },
+  {
+    "name": "CalendarLock",
+    "value": 373
+  },
+  {
+    "name": "CalendarMinus",
+    "value": 374
+  },
+  {
+    "name": "CalendarPlus",
+    "value": 375
+  },
+  {
+    "name": "CalendarSearch",
+    "value": 376
+  },
+  {
+    "name": "CalendarStar",
+    "value": 377
+  },
+  {
+    "name": "CalendarSync",
+    "value": 378
+  },
+  {
+    "name": "CalendarWeek",
+    "value": 379
+  },
+  {
+    "name": "CalendarWeekCheck",
+    "value": 380
+  },
+  {
+    "name": "CalendarWeekClock",
+    "value": 381
+  },
+  {
+    "name": "CalendarWeekPlus",
+    "value": 382
+  },
+  {
+    "name": "CalendarWeekStar",
+    "value": 383
+  },
+  {
+    "name": "CalendarWeekSync",
+    "value": 384
+  },
+  {
+    "name": "CalendarX",
+    "value": 385
+  },
+  {
+    "name": "Camcorder",
+    "value": 386
+  },
+  {
+    "name": "CamcorderClock",
+    "value": 387
+  },
+  {
+    "name": "CamcorderLock",
+    "value": 388
+  },
+  {
+    "name": "CamcorderOff",
+    "value": 389
+  },
+  {
+    "name": "CamcorderX",
+    "value": 390
+  },
+  {
+    "name": "Camera",
+    "value": 391
+  },
+  {
+    "name": "CameraBolt",
+    "value": 392
+  },
+  {
+    "name": "CameraCheck",
+    "value": 393
+  },
+  {
+    "name": "CameraCog",
+    "value": 394
+  },
+  {
+    "name": "CameraLock",
+    "value": 395
+  },
+  {
+    "name": "CameraOff",
+    "value": 396
+  },
+  {
+    "name": "CameraPlus",
+    "value": 397
+  },
+  {
+    "name": "CameraRetro",
+    "value": 398
+  },
+  {
+    "name": "CameraSparkle",
+    "value": 399
+  },
+  {
+    "name": "CameraSync",
+    "value": 400
+  },
+  {
+    "name": "CameraX",
+    "value": 401
+  },
+  {
+    "name": "CampStove",
+    "value": 402
+  },
+  {
+    "name": "CamperVan",
+    "value": 403
+  },
+  {
+    "name": "Campfire",
+    "value": 404
+  },
+  {
+    "name": "Candle",
+    "value": 405
+  },
+  {
+    "name": "CandleHeart",
+    "value": 406
+  },
+  {
+    "name": "Candy",
+    "value": 407
+  },
+  {
+    "name": "CandyCane",
+    "value": 408
+  },
+  {
+    "name": "CandyCaneHeart",
+    "value": 409
+  },
+  {
+    "name": "CandyCaneStar",
+    "value": 410
+  },
+  {
+    "name": "CandyHeart",
+    "value": 411
+  },
+  {
+    "name": "CandyJar",
+    "value": 412
+  },
+  {
+    "name": "CandyJarHeart",
+    "value": 413
+  },
+  {
+    "name": "CandyJarPlus",
+    "value": 414
+  },
+  {
+    "name": "CandyStar",
+    "value": 415
+  },
+  {
+    "name": "Canoe",
+    "value": 416
+  },
+  {
+    "name": "Car",
+    "value": 417
+  },
+  {
+    "name": "CarAlert",
+    "value": 418
+  },
+  {
+    "name": "CarCheck",
+    "value": 419
+  },
+  {
+    "name": "CarClock",
+    "value": 420
+  },
+  {
+    "name": "CarCrash",
+    "value": 421
+  },
+  {
+    "name": "CarFront",
+    "value": 422
+  },
+  {
+    "name": "CarFrontCheck",
+    "value": 423
+  },
+  {
+    "name": "CarFrontLock",
+    "value": 424
+  },
+  {
+    "name": "CarFrontPlus",
+    "value": 425
+  },
+  {
+    "name": "CarFrontX",
+    "value": 426
+  },
+  {
+    "name": "CarKey",
+    "value": 427
+  },
+  {
+    "name": "CarKeyCheck",
+    "value": 428
+  },
+  {
+    "name": "CarKeyLock",
+    "value": 429
+  },
+  {
+    "name": "CarKeyX",
+    "value": 430
+  },
+  {
+    "name": "CarLock",
+    "value": 431
+  },
+  {
+    "name": "CarPlus",
+    "value": 432
+  },
+  {
+    "name": "CarSearch",
+    "value": 433
+  },
+  {
+    "name": "CarX",
+    "value": 434
+  },
+  {
+    "name": "Carabiner",
+    "value": 435
+  },
+  {
+    "name": "Carrot",
+    "value": 436
+  },
+  {
+    "name": "CarrotHeart",
+    "value": 437
+  },
+  {
+    "name": "CarrotPlus",
+    "value": 438
+  },
+  {
+    "name": "Cars",
+    "value": 439
+  },
+  {
+    "name": "CarsCheck",
+    "value": 440
+  },
+  {
+    "name": "CarsPlus",
+    "value": 441
+  },
+  {
+    "name": "CarsSearch",
+    "value": 442
+  },
+  {
+    "name": "CarsX",
+    "value": 443
+  },
+  {
+    "name": "CashRegister",
+    "value": 444
+  },
+  {
+    "name": "CashRegisterCheck",
+    "value": 445
+  },
+  {
+    "name": "CashRegisterClock",
+    "value": 446
+  },
+  {
+    "name": "CashRegisterCog",
+    "value": 447
+  },
+  {
+    "name": "CashRegisterPlus",
+    "value": 448
+  },
+  {
+    "name": "CashRegisterX",
+    "value": 449
+  },
+  {
+    "name": "Cassette",
+    "value": 450
+  },
+  {
+    "name": "CassettePlayer",
+    "value": 451
+  },
+  {
+    "name": "CassettePlayerHeart",
+    "value": 452
+  },
+  {
+    "name": "Cast",
+    "value": 453
+  },
+  {
+    "name": "CastAlert",
+    "value": 454
+  },
+  {
+    "name": "CastCheck",
+    "value": 455
+  },
+  {
+    "name": "CastOff",
+    "value": 456
+  },
+  {
+    "name": "CastX",
+    "value": 457
+  },
+  {
+    "name": "Castle",
+    "value": 458
+  },
+  {
+    "name": "Cat",
+    "value": 459
+  },
+  {
+    "name": "CatHeart",
+    "value": 460
+  },
+  {
+    "name": "CatTree",
+    "value": 461
+  },
+  {
+    "name": "CatTreeHeart",
+    "value": 462
+  },
+  {
+    "name": "Cctv",
+    "value": 463
+  },
+  {
+    "name": "CctvOff",
+    "value": 464
+  },
+  {
+    "name": "CdPlayer",
+    "value": 465
+  },
+  {
+    "name": "CdPlayerCheck",
+    "value": 466
+  },
+  {
+    "name": "CdPlayerHeart",
+    "value": 467
+  },
+  {
+    "name": "CdPlayerX",
+    "value": 468
+  },
+  {
+    "name": "CeilingFan",
+    "value": 469
+  },
+  {
+    "name": "Certificate",
+    "value": 470
+  },
+  {
+    "name": "CertificateCheck",
+    "value": 471
+  },
+  {
+    "name": "CertificateLock",
+    "value": 472
+  },
+  {
+    "name": "CertificateSearch",
+    "value": 473
+  },
+  {
+    "name": "CertificateSparkle",
+    "value": 474
+  },
+  {
+    "name": "CertificateStar",
+    "value": 475
+  },
+  {
+    "name": "CertificateX",
+    "value": 476
+  },
+  {
+    "name": "Chain",
+    "value": 477
+  },
+  {
+    "name": "Chair",
+    "value": 478
+  },
+  {
+    "name": "ChairCheck",
+    "value": 479
+  },
+  {
+    "name": "ChairPlus",
+    "value": 480
+  },
+  {
+    "name": "Chandelier",
+    "value": 481
+  },
+  {
+    "name": "Charger",
+    "value": 482
+  },
+  {
+    "name": "ChargerAlert",
+    "value": 483
+  },
+  {
+    "name": "ChargerCheck",
+    "value": 484
+  },
+  {
+    "name": "ChargerX",
+    "value": 485
+  },
+  {
+    "name": "ChartArea",
+    "value": 486
+  },
+  {
+    "name": "ChartAreaPlus",
+    "value": 487
+  },
+  {
+    "name": "ChartAreaSearch",
+    "value": 488
+  },
+  {
+    "name": "ChartAreaSparkle",
+    "value": 489
+  },
+  {
+    "name": "ChartAreaX",
+    "value": 490
+  },
+  {
+    "name": "ChartBar",
+    "value": 491
+  },
+  {
+    "name": "ChartBarCheck",
+    "value": 492
+  },
+  {
+    "name": "ChartBarCog",
+    "value": 493
+  },
+  {
+    "name": "ChartBarDown",
+    "value": 494
+  },
+  {
+    "name": "ChartBarPlus",
+    "value": 495
+  },
+  {
+    "name": "ChartBarSearch",
+    "value": 496
+  },
+  {
+    "name": "ChartBarSparkle",
+    "value": 497
+  },
+  {
+    "name": "ChartBarUp",
+    "value": 498
+  },
+  {
+    "name": "ChartBarX",
+    "value": 499
+  },
+  {
+    "name": "ChartCandlestick",
+    "value": 500
+  },
+  {
+    "name": "ChartCandlestickDown",
+    "value": 501
+  },
+  {
+    "name": "ChartCandlestickPlus",
+    "value": 502
+  },
+  {
+    "name": "ChartCandlestickSearch",
+    "value": 503
+  },
+  {
+    "name": "ChartCandlestickUp",
+    "value": 504
+  },
+  {
+    "name": "ChartCandlestickX",
+    "value": 505
+  },
+  {
+    "name": "ChartColumnStacked",
+    "value": 506
+  },
+  {
+    "name": "ChartColumnStackedPlus",
+    "value": 507
+  },
+  {
+    "name": "ChartColumnStackedSearch",
+    "value": 508
+  },
+  {
+    "name": "ChartColumnStackedSparkle",
+    "value": 509
+  },
+  {
+    "name": "ChartColumnStackedX",
+    "value": 510
+  },
+  {
+    "name": "ChartDonut",
+    "value": 511
+  },
+  {
+    "name": "ChartDonutCog",
+    "value": 512
+  },
+  {
+    "name": "ChartDonutPlus",
+    "value": 513
+  },
+  {
+    "name": "ChartDonutSearch",
+    "value": 514
+  },
+  {
+    "name": "ChartDonutX",
+    "value": 515
+  },
+  {
+    "name": "ChartFunnel",
+    "value": 516
+  },
+  {
+    "name": "ChartFunnelPlus",
+    "value": 517
+  },
+  {
+    "name": "ChartFunnelSearch",
+    "value": 518
+  },
+  {
+    "name": "ChartFunnelSparkle",
+    "value": 519
+  },
+  {
+    "name": "ChartFunnelX",
+    "value": 520
+  },
+  {
+    "name": "ChartGantt",
+    "value": 521
+  },
+  {
+    "name": "ChartGanttCheck",
+    "value": 522
+  },
+  {
+    "name": "ChartGanttClock",
+    "value": 523
+  },
+  {
+    "name": "ChartGanttPlus",
+    "value": 524
+  },
+  {
+    "name": "ChartGanttSearch",
+    "value": 525
+  },
+  {
+    "name": "ChartLine",
+    "value": 526
+  },
+  {
+    "name": "ChartLinePlus",
+    "value": 527
+  },
+  {
+    "name": "ChartLineSearch",
+    "value": 528
+  },
+  {
+    "name": "ChartLineSparkle",
+    "value": 529
+  },
+  {
+    "name": "ChartLineX",
+    "value": 530
+  },
+  {
+    "name": "ChartPie",
+    "value": 531
+  },
+  {
+    "name": "ChartPieCog",
+    "value": 532
+  },
+  {
+    "name": "ChartPiePlus",
+    "value": 533
+  },
+  {
+    "name": "ChartPieSearch",
+    "value": 534
+  },
+  {
+    "name": "ChartPieX",
+    "value": 535
+  },
+  {
+    "name": "ChartRadar",
+    "value": 536
+  },
+  {
+    "name": "ChartRadarPlus",
+    "value": 537
+  },
+  {
+    "name": "ChartRadarSearch",
+    "value": 538
+  },
+  {
+    "name": "ChartRadarSparkle",
+    "value": 539
+  },
+  {
+    "name": "ChartRadarX",
+    "value": 540
+  },
+  {
+    "name": "ChartScatter",
+    "value": 541
+  },
+  {
+    "name": "ChartScatterPlus",
+    "value": 542
+  },
+  {
+    "name": "ChartScatterSearch",
+    "value": 543
+  },
+  {
+    "name": "ChartScatterSparkle",
+    "value": 544
+  },
+  {
+    "name": "ChartScatterX",
+    "value": 545
+  },
+  {
+    "name": "ChartWaterfall",
+    "value": 546
+  },
+  {
+    "name": "ChartWaterfallPlus",
+    "value": 547
+  },
+  {
+    "name": "ChartWaterfallSearch",
+    "value": 548
+  },
+  {
+    "name": "ChartWaterfallSparkle",
+    "value": 549
+  },
+  {
+    "name": "ChartWaterfallX",
+    "value": 550
+  },
+  {
+    "name": "Checkbox",
+    "value": 551
+  },
+  {
+    "name": "Cheese",
+    "value": 552
+  },
+  {
+    "name": "ChefHat",
+    "value": 553
+  },
+  {
+    "name": "ChefHatCheck",
+    "value": 554
+  },
+  {
+    "name": "ChefHatPlus",
+    "value": 555
+  },
+  {
+    "name": "ChefHatStar",
+    "value": 556
+  },
+  {
+    "name": "Cherry",
+    "value": 557
+  },
+  {
+    "name": "CherryHeart",
+    "value": 558
+  },
+  {
+    "name": "ChessKing",
+    "value": 559
+  },
+  {
+    "name": "ChessPawn",
+    "value": 560
+  },
+  {
+    "name": "ChevronDown",
+    "value": 561
+  },
+  {
+    "name": "ChevronLeft",
+    "value": 562
+  },
+  {
+    "name": "ChevronRight",
+    "value": 563
+  },
+  {
+    "name": "ChevronUp",
+    "value": 564
+  },
+  {
+    "name": "ChevronsDown",
+    "value": 565
+  },
+  {
+    "name": "ChevronsLeft",
+    "value": 566
+  },
+  {
+    "name": "ChevronsRight",
+    "value": 567
+  },
+  {
+    "name": "ChevronsUp",
+    "value": 568
+  },
+  {
+    "name": "Chisel",
+    "value": 569
+  },
+  {
+    "name": "ChocolateBar",
+    "value": 570
+  },
+  {
+    "name": "ChocolateBarHeart",
+    "value": 571
+  },
+  {
+    "name": "ChocolateBarPlus",
+    "value": 572
+  },
+  {
+    "name": "Circle",
+    "value": 573
+  },
+  {
+    "name": "CircleAlert",
+    "value": 574
+  },
+  {
+    "name": "CircleCheck",
+    "value": 575
+  },
+  {
+    "name": "CircleDot",
+    "value": 576
+  },
+  {
+    "name": "CircleHelp",
+    "value": 577
+  },
+  {
+    "name": "CircleMinus",
+    "value": 578
+  },
+  {
+    "name": "CirclePlus",
+    "value": 579
+  },
+  {
+    "name": "CircleX",
+    "value": 580
+  },
+  {
+    "name": "Clapperboard",
+    "value": 581
+  },
+  {
+    "name": "ClapperboardCheck",
+    "value": 582
+  },
+  {
+    "name": "ClapperboardPlus",
+    "value": 583
+  },
+  {
+    "name": "ClawMachine",
+    "value": 584
+  },
+  {
+    "name": "ClawMachineHeart",
+    "value": 585
+  },
+  {
+    "name": "ClawMachineStar",
+    "value": 586
+  },
+  {
+    "name": "Clipboard",
+    "value": 587
+  },
+  {
+    "name": "ClipboardAlert",
+    "value": 588
+  },
+  {
+    "name": "ClipboardCheck",
+    "value": 589
+  },
+  {
+    "name": "ClipboardClock",
+    "value": 590
+  },
+  {
+    "name": "ClipboardDown",
+    "value": 591
+  },
+  {
+    "name": "ClipboardInfo",
+    "value": 592
+  },
+  {
+    "name": "ClipboardLock",
+    "value": 593
+  },
+  {
+    "name": "ClipboardMinus",
+    "value": 594
+  },
+  {
+    "name": "ClipboardPaste",
+    "value": 595
+  },
+  {
+    "name": "ClipboardPlus",
+    "value": 596
+  },
+  {
+    "name": "ClipboardRight",
+    "value": 597
+  },
+  {
+    "name": "ClipboardSearch",
+    "value": 598
+  },
+  {
+    "name": "ClipboardSparkle",
+    "value": 599
+  },
+  {
+    "name": "ClipboardStar",
+    "value": 600
+  },
+  {
+    "name": "ClipboardSync",
+    "value": 601
+  },
+  {
+    "name": "ClipboardUp",
+    "value": 602
+  },
+  {
+    "name": "ClipboardX",
+    "value": 603
+  },
+  {
+    "name": "Clock",
+    "value": 604
+  },
+  {
+    "name": "ClockAlert",
+    "value": 605
+  },
+  {
+    "name": "ClockCheck",
+    "value": 606
+  },
+  {
+    "name": "ClockMinus",
+    "value": 607
+  },
+  {
+    "name": "ClockPlus",
+    "value": 608
+  },
+  {
+    "name": "ClockX",
+    "value": 609
+  },
+  {
+    "name": "Cloud",
+    "value": 610
+  },
+  {
+    "name": "CloudAlert",
+    "value": 611
+  },
+  {
+    "name": "CloudBolt",
+    "value": 612
+  },
+  {
+    "name": "CloudCheck",
+    "value": 613
+  },
+  {
+    "name": "CloudCog",
+    "value": 614
+  },
+  {
+    "name": "CloudDown",
+    "value": 615
+  },
+  {
+    "name": "CloudDrizzle",
+    "value": 616
+  },
+  {
+    "name": "CloudFog",
+    "value": 617
+  },
+  {
+    "name": "CloudHail",
+    "value": 618
+  },
+  {
+    "name": "CloudLightning",
+    "value": 619
+  },
+  {
+    "name": "CloudLock",
+    "value": 620
+  },
+  {
+    "name": "CloudMinus",
+    "value": 621
+  },
+  {
+    "name": "CloudMoon",
+    "value": 622
+  },
+  {
+    "name": "CloudOff",
+    "value": 623
+  },
+  {
+    "name": "CloudPlus",
+    "value": 624
+  },
+  {
+    "name": "CloudRain",
+    "value": 625
+  },
+  {
+    "name": "CloudSearch",
+    "value": 626
+  },
+  {
+    "name": "CloudSnow",
+    "value": 627
+  },
+  {
+    "name": "CloudSun",
+    "value": 628
+  },
+  {
+    "name": "CloudSunAlert",
+    "value": 629
+  },
+  {
+    "name": "CloudSync",
+    "value": 630
+  },
+  {
+    "name": "CloudUp",
+    "value": 631
+  },
+  {
+    "name": "CloudUpload",
+    "value": 632
+  },
+  {
+    "name": "CloudUploadAlert",
+    "value": 633
+  },
+  {
+    "name": "CloudUploadCheck",
+    "value": 634
+  },
+  {
+    "name": "CloudUploadClock",
+    "value": 635
+  },
+  {
+    "name": "CloudUploadLock",
+    "value": 636
+  },
+  {
+    "name": "CloudUploadX",
+    "value": 637
+  },
+  {
+    "name": "CloudX",
+    "value": 638
+  },
+  {
+    "name": "Clover",
+    "value": 639
+  },
+  {
+    "name": "Club",
+    "value": 640
+  },
+  {
+    "name": "Cocktail",
+    "value": 641
+  },
+  {
+    "name": "CocktailHeart",
+    "value": 642
+  },
+  {
+    "name": "CocktailStar",
+    "value": 643
+  },
+  {
+    "name": "Code",
+    "value": 644
+  },
+  {
+    "name": "CodeCheck",
+    "value": 645
+  },
+  {
+    "name": "CodeLock",
+    "value": 646
+  },
+  {
+    "name": "CodePlus",
+    "value": 647
+  },
+  {
+    "name": "CodeSearch",
+    "value": 648
+  },
+  {
+    "name": "CodeSparkle",
+    "value": 649
+  },
+  {
+    "name": "CodeX",
+    "value": 650
+  },
+  {
+    "name": "Coffee",
+    "value": 651
+  },
+  {
+    "name": "CoffeeCheck",
+    "value": 652
+  },
+  {
+    "name": "CoffeeClock",
+    "value": 653
+  },
+  {
+    "name": "CoffeeHeart",
+    "value": 654
+  },
+  {
+    "name": "CoffeeMachine",
+    "value": 655
+  },
+  {
+    "name": "CoffeeMachineCheck",
+    "value": 656
+  },
+  {
+    "name": "CoffeeMachineClock",
+    "value": 657
+  },
+  {
+    "name": "CoffeePlus",
+    "value": 658
+  },
+  {
+    "name": "CoffeeStar",
+    "value": 659
+  },
+  {
+    "name": "Coin",
+    "value": 660
+  },
+  {
+    "name": "CoinCheck",
+    "value": 661
+  },
+  {
+    "name": "CoinMinus",
+    "value": 662
+  },
+  {
+    "name": "CoinPlus",
+    "value": 663
+  },
+  {
+    "name": "CoinStar",
+    "value": 664
+  },
+  {
+    "name": "Coins",
+    "value": 665
+  },
+  {
+    "name": "CoinsCheck",
+    "value": 666
+  },
+  {
+    "name": "CoinsClock",
+    "value": 667
+  },
+  {
+    "name": "CoinsDown",
+    "value": 668
+  },
+  {
+    "name": "CoinsMinus",
+    "value": 669
+  },
+  {
+    "name": "CoinsPlus",
+    "value": 670
+  },
+  {
+    "name": "CoinsSync",
+    "value": 671
+  },
+  {
+    "name": "CoinsUp",
+    "value": 672
+  },
+  {
+    "name": "CoinsX",
+    "value": 673
+  },
+  {
+    "name": "Columns",
+    "value": 674
+  },
+  {
+    "name": "Comb",
+    "value": 675
+  },
+  {
+    "name": "Command",
+    "value": 676
+  },
+  {
+    "name": "Compass",
+    "value": 677
+  },
+  {
+    "name": "CompassDrawing",
+    "value": 678
+  },
+  {
+    "name": "Component",
+    "value": 679
+  },
+  {
+    "name": "ComponentCheck",
+    "value": 680
+  },
+  {
+    "name": "ComponentPlus",
+    "value": 681
+  },
+  {
+    "name": "ComponentX",
+    "value": 682
+  },
+  {
+    "name": "ConstructionCrane",
+    "value": 683
+  },
+  {
+    "name": "ContactBook",
+    "value": 684
+  },
+  {
+    "name": "ContactBookCheck",
+    "value": 685
+  },
+  {
+    "name": "ContactBookCog",
+    "value": 686
+  },
+  {
+    "name": "ContactBookDown",
+    "value": 687
+  },
+  {
+    "name": "ContactBookHeart",
+    "value": 688
+  },
+  {
+    "name": "ContactBookLock",
+    "value": 689
+  },
+  {
+    "name": "ContactBookMinus",
+    "value": 690
+  },
+  {
+    "name": "ContactBookPlus",
+    "value": 691
+  },
+  {
+    "name": "ContactBookSearch",
+    "value": 692
+  },
+  {
+    "name": "ContactBookStar",
+    "value": 693
+  },
+  {
+    "name": "ContactBookSync",
+    "value": 694
+  },
+  {
+    "name": "ContactBookUp",
+    "value": 695
+  },
+  {
+    "name": "ContactBookX",
+    "value": 696
+  },
+  {
+    "name": "Container",
+    "value": 697
+  },
+  {
+    "name": "ContainerCheck",
+    "value": 698
+  },
+  {
+    "name": "ContainerDown",
+    "value": 699
+  },
+  {
+    "name": "ContainerLock",
+    "value": 700
+  },
+  {
+    "name": "ContainerMinus",
+    "value": 701
+  },
+  {
+    "name": "ContainerPlus",
+    "value": 702
+  },
+  {
+    "name": "ContainerSync",
+    "value": 703
+  },
+  {
+    "name": "ContainerUp",
+    "value": 704
+  },
+  {
+    "name": "ContainerX",
+    "value": 705
+  },
+  {
+    "name": "Contract",
+    "value": 706
+  },
+  {
+    "name": "ContractAlert",
+    "value": 707
+  },
+  {
+    "name": "ContractCheck",
+    "value": 708
+  },
+  {
+    "name": "ContractClock",
+    "value": 709
+  },
+  {
+    "name": "ContractInfo",
+    "value": 710
+  },
+  {
+    "name": "ContractLock",
+    "value": 711
+  },
+  {
+    "name": "ContractPlus",
+    "value": 712
+  },
+  {
+    "name": "ContractSearch",
+    "value": 713
+  },
+  {
+    "name": "ContractSparkle",
+    "value": 714
+  },
+  {
+    "name": "ContractSync",
+    "value": 715
+  },
+  {
+    "name": "ContractX",
+    "value": 716
+  },
+  {
+    "name": "ControlUnit",
+    "value": 717
+  },
+  {
+    "name": "ControlUnitAlert",
+    "value": 718
+  },
+  {
+    "name": "ControlUnitCheck",
+    "value": 719
+  },
+  {
+    "name": "ControlUnitCog",
+    "value": 720
+  },
+  {
+    "name": "ControlUnitX",
+    "value": 721
+  },
+  {
+    "name": "Cookie",
+    "value": 722
+  },
+  {
+    "name": "CookieCheck",
+    "value": 723
+  },
+  {
+    "name": "CookieCog",
+    "value": 724
+  },
+  {
+    "name": "CookieX",
+    "value": 725
+  },
+  {
+    "name": "CookingPot",
+    "value": 726
+  },
+  {
+    "name": "CookingPotClock",
+    "value": 727
+  },
+  {
+    "name": "Cooler",
+    "value": 728
+  },
+  {
+    "name": "Copy",
+    "value": 729
+  },
+  {
+    "name": "CopyCheck",
+    "value": 730
+  },
+  {
+    "name": "CopyPlus",
+    "value": 731
+  },
+  {
+    "name": "CopyX",
+    "value": 732
+  },
+  {
+    "name": "Corn",
+    "value": 733
+  },
+  {
+    "name": "CornerDownRight",
+    "value": 734
+  },
+  {
+    "name": "CornerUpLeft",
+    "value": 735
+  },
+  {
+    "name": "CottonCandy",
+    "value": 736
+  },
+  {
+    "name": "CottonCandyHeart",
+    "value": 737
+  },
+  {
+    "name": "Cpu",
+    "value": 738
+  },
+  {
+    "name": "CpuAlert",
+    "value": 739
+  },
+  {
+    "name": "CpuBolt",
+    "value": 740
+  },
+  {
+    "name": "CpuCheck",
+    "value": 741
+  },
+  {
+    "name": "CpuCog",
+    "value": 742
+  },
+  {
+    "name": "CpuSparkle",
+    "value": 743
+  },
+  {
+    "name": "CrashSensor",
+    "value": 744
+  },
+  {
+    "name": "CrashSensorAlert",
+    "value": 745
+  },
+  {
+    "name": "CrashSensorCheck",
+    "value": 746
+  },
+  {
+    "name": "CrashSensorX",
+    "value": 747
+  },
+  {
+    "name": "CreditCard",
+    "value": 748
+  },
+  {
+    "name": "CreditCardAlert",
+    "value": 749
+  },
+  {
+    "name": "CreditCardCheck",
+    "value": 750
+  },
+  {
+    "name": "CreditCardClock",
+    "value": 751
+  },
+  {
+    "name": "CreditCardCog",
+    "value": 752
+  },
+  {
+    "name": "CreditCardLock",
+    "value": 753
+  },
+  {
+    "name": "CreditCardMinus",
+    "value": 754
+  },
+  {
+    "name": "CreditCardPlus",
+    "value": 755
+  },
+  {
+    "name": "CreditCardSync",
+    "value": 756
+  },
+  {
+    "name": "CreditCardX",
+    "value": 757
+  },
+  {
+    "name": "Crib",
+    "value": 758
+  },
+  {
+    "name": "Croissant",
+    "value": 759
+  },
+  {
+    "name": "CroissantHeart",
+    "value": 760
+  },
+  {
+    "name": "Crop",
+    "value": 761
+  },
+  {
+    "name": "Crowbar",
+    "value": 762
+  },
+  {
+    "name": "Crown",
+    "value": 763
+  },
+  {
+    "name": "CrtMonitor",
+    "value": 764
+  },
+  {
+    "name": "CrtMonitorAlert",
+    "value": 765
+  },
+  {
+    "name": "CrtMonitorCheck",
+    "value": 766
+  },
+  {
+    "name": "CrtMonitorOff",
+    "value": 767
+  },
+  {
+    "name": "CrtMonitorX",
+    "value": 768
+  },
+  {
+    "name": "Crutch",
+    "value": 769
+  },
+  {
+    "name": "Cube",
+    "value": 770
+  },
+  {
+    "name": "CubeCheck",
+    "value": 771
+  },
+  {
+    "name": "CubeMinus",
+    "value": 772
+  },
+  {
+    "name": "CubePlus",
+    "value": 773
+  },
+  {
+    "name": "CubeSearch",
+    "value": 774
+  },
+  {
+    "name": "CubeSparkle",
+    "value": 775
+  },
+  {
+    "name": "CubeX",
+    "value": 776
+  },
+  {
+    "name": "CupSoda",
+    "value": 777
+  },
+  {
+    "name": "CupSodaPlus",
+    "value": 778
+  },
+  {
+    "name": "CupSodaStar",
+    "value": 779
+  },
+  {
+    "name": "CurrencyDollar",
+    "value": 780
+  },
+  {
+    "name": "CurrencyDollarCheck",
+    "value": 781
+  },
+  {
+    "name": "CurrencyDollarMinus",
+    "value": 782
+  },
+  {
+    "name": "CurrencyDollarPlus",
+    "value": 783
+  },
+  {
+    "name": "CurrencyDollarSync",
+    "value": 784
+  },
+  {
+    "name": "CurrencyDollarX",
+    "value": 785
+  },
+  {
+    "name": "CurrencyEuro",
+    "value": 786
+  },
+  {
+    "name": "CurrencyEuroCheck",
+    "value": 787
+  },
+  {
+    "name": "CurrencyEuroMinus",
+    "value": 788
+  },
+  {
+    "name": "CurrencyEuroPlus",
+    "value": 789
+  },
+  {
+    "name": "CurrencyEuroSync",
+    "value": 790
+  },
+  {
+    "name": "CurrencyEuroX",
+    "value": 791
+  },
+  {
+    "name": "CurrencyYuan",
+    "value": 792
+  },
+  {
+    "name": "CurrencyYuanCheck",
+    "value": 793
+  },
+  {
+    "name": "CurrencyYuanMinus",
+    "value": 794
+  },
+  {
+    "name": "CurrencyYuanPlus",
+    "value": 795
+  },
+  {
+    "name": "CurrencyYuanSync",
+    "value": 796
+  },
+  {
+    "name": "CurrencyYuanX",
+    "value": 797
+  },
+  {
+    "name": "Cursor",
+    "value": 798
+  },
+  {
+    "name": "Curtains",
+    "value": 799
+  },
+  {
+    "name": "CuttingBoard",
+    "value": 800
+  },
+  {
+    "name": "Dartboard",
+    "value": 801
+  },
+  {
+    "name": "DartboardCheck",
+    "value": 802
+  },
+  {
+    "name": "DartboardStar",
+    "value": 803
+  },
+  {
+    "name": "Database",
+    "value": 804
+  },
+  {
+    "name": "DatabaseAlert",
+    "value": 805
+  },
+  {
+    "name": "DatabaseCheck",
+    "value": 806
+  },
+  {
+    "name": "DatabaseCog",
+    "value": 807
+  },
+  {
+    "name": "DatabaseLock",
+    "value": 808
+  },
+  {
+    "name": "DatabaseMinus",
+    "value": 809
+  },
+  {
+    "name": "DatabasePlus",
+    "value": 810
+  },
+  {
+    "name": "DatabaseSearch",
+    "value": 811
+  },
+  {
+    "name": "DatabaseSync",
+    "value": 812
+  },
+  {
+    "name": "DatabaseX",
+    "value": 813
+  },
+  {
+    "name": "DentalChair",
+    "value": 814
+  },
+  {
+    "name": "DeskLamp",
+    "value": 815
+  },
+  {
+    "name": "DeskLampOff",
+    "value": 816
+  },
+  {
+    "name": "Desktop",
+    "value": 817
+  },
+  {
+    "name": "DesktopAlert",
+    "value": 818
+  },
+  {
+    "name": "DesktopCheck",
+    "value": 819
+  },
+  {
+    "name": "DesktopCog",
+    "value": 820
+  },
+  {
+    "name": "DesktopDown",
+    "value": 821
+  },
+  {
+    "name": "DesktopLock",
+    "value": 822
+  },
+  {
+    "name": "DesktopPlus",
+    "value": 823
+  },
+  {
+    "name": "DesktopSearch",
+    "value": 824
+  },
+  {
+    "name": "DesktopSparkle",
+    "value": 825
+  },
+  {
+    "name": "DesktopSync",
+    "value": 826
+  },
+  {
+    "name": "DesktopX",
+    "value": 827
+  },
+  {
+    "name": "Detective",
+    "value": 828
+  },
+  {
+    "name": "DialPad",
+    "value": 829
+  },
+  {
+    "name": "DialPadX",
+    "value": 830
+  },
+  {
+    "name": "Diamond",
+    "value": 831
+  },
+  {
+    "name": "Dice",
+    "value": 832
+  },
+  {
+    "name": "DigitalPet",
+    "value": 833
+  },
+  {
+    "name": "DigitalPetHeart",
+    "value": 834
+  },
+  {
+    "name": "DigitalPetPlus",
+    "value": 835
+  },
+  {
+    "name": "Disc",
+    "value": 836
+  },
+  {
+    "name": "DiscCheck",
+    "value": 837
+  },
+  {
+    "name": "DiscDown",
+    "value": 838
+  },
+  {
+    "name": "DiscLock",
+    "value": 839
+  },
+  {
+    "name": "DiscPlus",
+    "value": 840
+  },
+  {
+    "name": "DiscUp",
+    "value": 841
+  },
+  {
+    "name": "DiscX",
+    "value": 842
+  },
+  {
+    "name": "Dishwasher",
+    "value": 843
+  },
+  {
+    "name": "DishwasherCheck",
+    "value": 844
+  },
+  {
+    "name": "DishwasherClock",
+    "value": 845
+  },
+  {
+    "name": "DishwasherCog",
+    "value": 846
+  },
+  {
+    "name": "Dna",
+    "value": 847
+  },
+  {
+    "name": "Dock",
+    "value": 848
+  },
+  {
+    "name": "Dog",
+    "value": 849
+  },
+  {
+    "name": "DogHeart",
+    "value": 850
+  },
+  {
+    "name": "Donut",
+    "value": 851
+  },
+  {
+    "name": "DonutHeart",
+    "value": 852
+  },
+  {
+    "name": "Door",
+    "value": 853
+  },
+  {
+    "name": "DoorCheck",
+    "value": 854
+  },
+  {
+    "name": "DoorLock",
+    "value": 855
+  },
+  {
+    "name": "DoorX",
+    "value": 856
+  },
+  {
+    "name": "Doorbell",
+    "value": 857
+  },
+  {
+    "name": "DoorbellCheck",
+    "value": 858
+  },
+  {
+    "name": "DoorbellOff",
+    "value": 859
+  },
+  {
+    "name": "DoorbellX",
+    "value": 860
+  },
+  {
+    "name": "Download",
+    "value": 861
+  },
+  {
+    "name": "DrawingTablet",
+    "value": 862
+  },
+  {
+    "name": "DrawingTabletCheck",
+    "value": 863
+  },
+  {
+    "name": "DrawingTabletCog",
+    "value": 864
+  },
+  {
+    "name": "DrawingTabletX",
+    "value": 865
+  },
+  {
+    "name": "Dress",
+    "value": 866
+  },
+  {
+    "name": "DressCheck",
+    "value": 867
+  },
+  {
+    "name": "DressHeart",
+    "value": 868
+  },
+  {
+    "name": "DressPlus",
+    "value": 869
+  },
+  {
+    "name": "DressStar",
+    "value": 870
+  },
+  {
+    "name": "Drill",
+    "value": 871
+  },
+  {
+    "name": "Drone",
+    "value": 872
+  },
+  {
+    "name": "DroneAlert",
+    "value": 873
+  },
+  {
+    "name": "DroneCheck",
+    "value": 874
+  },
+  {
+    "name": "DroneCog",
+    "value": 875
+  },
+  {
+    "name": "DronePlus",
+    "value": 876
+  },
+  {
+    "name": "DroneX",
+    "value": 877
+  },
+  {
+    "name": "Droplet",
+    "value": 878
+  },
+  {
+    "name": "DropletAlert",
+    "value": 879
+  },
+  {
+    "name": "DropletMinus",
+    "value": 880
+  },
+  {
+    "name": "DropletOff",
+    "value": 881
+  },
+  {
+    "name": "DropletPlus",
+    "value": 882
+  },
+  {
+    "name": "Drum",
+    "value": 883
+  },
+  {
+    "name": "Drumstick",
+    "value": 884
+  },
+  {
+    "name": "Dumbbell",
+    "value": 885
+  },
+  {
+    "name": "EReader",
+    "value": 886
+  },
+  {
+    "name": "EReaderCheck",
+    "value": 887
+  },
+  {
+    "name": "EReaderDown",
+    "value": 888
+  },
+  {
+    "name": "EReaderPlus",
+    "value": 889
+  },
+  {
+    "name": "Ear",
+    "value": 890
+  },
+  {
+    "name": "Earbuds",
+    "value": 891
+  },
+  {
+    "name": "EarbudsBolt",
+    "value": 892
+  },
+  {
+    "name": "EarbudsCheck",
+    "value": 893
+  },
+  {
+    "name": "EarbudsPlus",
+    "value": 894
+  },
+  {
+    "name": "EarbudsX",
+    "value": 895
+  },
+  {
+    "name": "Egg",
+    "value": 896
+  },
+  {
+    "name": "EggPlus",
+    "value": 897
+  },
+  {
+    "name": "Eject",
+    "value": 898
+  },
+  {
+    "name": "Equalizer",
+    "value": 899
+  },
+  {
+    "name": "EqualizerCheck",
+    "value": 900
+  },
+  {
+    "name": "EqualizerCog",
+    "value": 901
+  },
+  {
+    "name": "Eraser",
+    "value": 902
+  },
+  {
+    "name": "EthernetPort",
+    "value": 903
+  },
+  {
+    "name": "EthernetPortAlert",
+    "value": 904
+  },
+  {
+    "name": "EthernetPortCheck",
+    "value": 905
+  },
+  {
+    "name": "EthernetPortX",
+    "value": 906
+  },
+  {
+    "name": "EvCharger",
+    "value": 907
+  },
+  {
+    "name": "EvChargerAlert",
+    "value": 908
+  },
+  {
+    "name": "EvChargerCheck",
+    "value": 909
+  },
+  {
+    "name": "EvChargerClock",
+    "value": 910
+  },
+  {
+    "name": "Expand",
+    "value": 911
+  },
+  {
+    "name": "Export",
+    "value": 912
+  },
+  {
+    "name": "ExternalLink",
+    "value": 913
+  },
+  {
+    "name": "Eye",
+    "value": 914
+  },
+  {
+    "name": "EyeDrops",
+    "value": 915
+  },
+  {
+    "name": "EyeOff",
+    "value": 916
+  },
+  {
+    "name": "FaceMask",
+    "value": 917
+  },
+  {
+    "name": "Factory",
+    "value": 918
+  },
+  {
+    "name": "FactoryCheck",
+    "value": 919
+  },
+  {
+    "name": "FactoryCog",
+    "value": 920
+  },
+  {
+    "name": "FactoryPlus",
+    "value": 921
+  },
+  {
+    "name": "FactoryX",
+    "value": 922
+  },
+  {
+    "name": "Fan",
+    "value": 923
+  },
+  {
+    "name": "FanClock",
+    "value": 924
+  },
+  {
+    "name": "FanCog",
+    "value": 925
+  },
+  {
+    "name": "FanOff",
+    "value": 926
+  },
+  {
+    "name": "FastForward",
+    "value": 927
+  },
+  {
+    "name": "Faucet",
+    "value": 928
+  },
+  {
+    "name": "Fax",
+    "value": 929
+  },
+  {
+    "name": "FaxAlert",
+    "value": 930
+  },
+  {
+    "name": "FaxCheck",
+    "value": 931
+  },
+  {
+    "name": "FaxClock",
+    "value": 932
+  },
+  {
+    "name": "FaxX",
+    "value": 933
+  },
+  {
+    "name": "Feather",
+    "value": 934
+  },
+  {
+    "name": "Fence",
+    "value": 935
+  },
+  {
+    "name": "FerrisWheel",
+    "value": 936
+  },
+  {
+    "name": "File",
+    "value": 937
+  },
+  {
+    "name": "FileAlert",
+    "value": 938
+  },
+  {
+    "name": "FileArchive",
+    "value": 939
+  },
+  {
+    "name": "FileArchiveAlert",
+    "value": 940
+  },
+  {
+    "name": "FileArchiveCheck",
+    "value": 941
+  },
+  {
+    "name": "FileArchiveClock",
+    "value": 942
+  },
+  {
+    "name": "FileArchiveDown",
+    "value": 943
+  },
+  {
+    "name": "FileArchiveHeart",
+    "value": 944
+  },
+  {
+    "name": "FileArchiveInfo",
+    "value": 945
+  },
+  {
+    "name": "FileArchiveLock",
+    "value": 946
+  },
+  {
+    "name": "FileArchiveMinus",
+    "value": 947
+  },
+  {
+    "name": "FileArchivePlus",
+    "value": 948
+  },
+  {
+    "name": "FileArchiveRight",
+    "value": 949
+  },
+  {
+    "name": "FileArchiveSearch",
+    "value": 950
+  },
+  {
+    "name": "FileArchiveSparkle",
+    "value": 951
+  },
+  {
+    "name": "FileArchiveStar",
+    "value": 952
+  },
+  {
+    "name": "FileArchiveSync",
+    "value": 953
+  },
+  {
+    "name": "FileArchiveUp",
+    "value": 954
+  },
+  {
+    "name": "FileArchiveX",
+    "value": 955
+  },
+  {
+    "name": "FileAudio",
+    "value": 956
+  },
+  {
+    "name": "FileAudioAlert",
+    "value": 957
+  },
+  {
+    "name": "FileAudioCheck",
+    "value": 958
+  },
+  {
+    "name": "FileAudioClock",
+    "value": 959
+  },
+  {
+    "name": "FileAudioDown",
+    "value": 960
+  },
+  {
+    "name": "FileAudioHeart",
+    "value": 961
+  },
+  {
+    "name": "FileAudioInfo",
+    "value": 962
+  },
+  {
+    "name": "FileAudioLock",
+    "value": 963
+  },
+  {
+    "name": "FileAudioMinus",
+    "value": 964
+  },
+  {
+    "name": "FileAudioPlus",
+    "value": 965
+  },
+  {
+    "name": "FileAudioRight",
+    "value": 966
+  },
+  {
+    "name": "FileAudioSearch",
+    "value": 967
+  },
+  {
+    "name": "FileAudioSparkle",
+    "value": 968
+  },
+  {
+    "name": "FileAudioStar",
+    "value": 969
+  },
+  {
+    "name": "FileAudioSync",
+    "value": 970
+  },
+  {
+    "name": "FileAudioUp",
+    "value": 971
+  },
+  {
+    "name": "FileAudioX",
+    "value": 972
+  },
+  {
+    "name": "FileBolt",
+    "value": 973
+  },
+  {
+    "name": "FileChart",
+    "value": 974
+  },
+  {
+    "name": "FileChartAlert",
+    "value": 975
+  },
+  {
+    "name": "FileChartCheck",
+    "value": 976
+  },
+  {
+    "name": "FileChartClock",
+    "value": 977
+  },
+  {
+    "name": "FileChartDown",
+    "value": 978
+  },
+  {
+    "name": "FileChartHeart",
+    "value": 979
+  },
+  {
+    "name": "FileChartInfo",
+    "value": 980
+  },
+  {
+    "name": "FileChartLock",
+    "value": 981
+  },
+  {
+    "name": "FileChartMinus",
+    "value": 982
+  },
+  {
+    "name": "FileChartPlus",
+    "value": 983
+  },
+  {
+    "name": "FileChartRight",
+    "value": 984
+  },
+  {
+    "name": "FileChartSearch",
+    "value": 985
+  },
+  {
+    "name": "FileChartSparkle",
+    "value": 986
+  },
+  {
+    "name": "FileChartStar",
+    "value": 987
+  },
+  {
+    "name": "FileChartSync",
+    "value": 988
+  },
+  {
+    "name": "FileChartUp",
+    "value": 989
+  },
+  {
+    "name": "FileChartX",
+    "value": 990
+  },
+  {
+    "name": "FileCheck",
+    "value": 991
+  },
+  {
+    "name": "FileClock",
+    "value": 992
+  },
+  {
+    "name": "FileCode",
+    "value": 993
+  },
+  {
+    "name": "FileCodeAlert",
+    "value": 994
+  },
+  {
+    "name": "FileCodeCheck",
+    "value": 995
+  },
+  {
+    "name": "FileCodeClock",
+    "value": 996
+  },
+  {
+    "name": "FileCodeDown",
+    "value": 997
+  },
+  {
+    "name": "FileCodeHeart",
+    "value": 998
+  },
+  {
+    "name": "FileCodeInfo",
+    "value": 999
+  },
+  {
+    "name": "FileCodeLock",
+    "value": 1000
+  },
+  {
+    "name": "FileCodeMinus",
+    "value": 1001
+  },
+  {
+    "name": "FileCodePlus",
+    "value": 1002
+  },
+  {
+    "name": "FileCodeRight",
+    "value": 1003
+  },
+  {
+    "name": "FileCodeSearch",
+    "value": 1004
+  },
+  {
+    "name": "FileCodeSparkle",
+    "value": 1005
+  },
+  {
+    "name": "FileCodeStar",
+    "value": 1006
+  },
+  {
+    "name": "FileCodeSync",
+    "value": 1007
+  },
+  {
+    "name": "FileCodeUp",
+    "value": 1008
+  },
+  {
+    "name": "FileCodeX",
+    "value": 1009
+  },
+  {
+    "name": "FileCog",
+    "value": 1010
+  },
+  {
+    "name": "FileDiff",
+    "value": 1011
+  },
+  {
+    "name": "FileDiffAlert",
+    "value": 1012
+  },
+  {
+    "name": "FileDiffCheck",
+    "value": 1013
+  },
+  {
+    "name": "FileDiffClock",
+    "value": 1014
+  },
+  {
+    "name": "FileDiffDown",
+    "value": 1015
+  },
+  {
+    "name": "FileDiffInfo",
+    "value": 1016
+  },
+  {
+    "name": "FileDiffLock",
+    "value": 1017
+  },
+  {
+    "name": "FileDiffMinus",
+    "value": 1018
+  },
+  {
+    "name": "FileDiffPlus",
+    "value": 1019
+  },
+  {
+    "name": "FileDiffRight",
+    "value": 1020
+  },
+  {
+    "name": "FileDiffSearch",
+    "value": 1021
+  },
+  {
+    "name": "FileDiffSparkle",
+    "value": 1022
+  },
+  {
+    "name": "FileDiffStar",
+    "value": 1023
+  },
+  {
+    "name": "FileDiffSync",
+    "value": 1024
+  },
+  {
+    "name": "FileDiffUp",
+    "value": 1025
+  },
+  {
+    "name": "FileDiffX",
+    "value": 1026
+  },
+  {
+    "name": "FileDown",
+    "value": 1027
+  },
+  {
+    "name": "FileHeart",
+    "value": 1028
+  },
+  {
+    "name": "FileImage",
+    "value": 1029
+  },
+  {
+    "name": "FileImageAlert",
+    "value": 1030
+  },
+  {
+    "name": "FileImageCheck",
+    "value": 1031
+  },
+  {
+    "name": "FileImageClock",
+    "value": 1032
+  },
+  {
+    "name": "FileImageDown",
+    "value": 1033
+  },
+  {
+    "name": "FileImageHeart",
+    "value": 1034
+  },
+  {
+    "name": "FileImageInfo",
+    "value": 1035
+  },
+  {
+    "name": "FileImageLock",
+    "value": 1036
+  },
+  {
+    "name": "FileImageMinus",
+    "value": 1037
+  },
+  {
+    "name": "FileImagePlus",
+    "value": 1038
+  },
+  {
+    "name": "FileImageRight",
+    "value": 1039
+  },
+  {
+    "name": "FileImageSearch",
+    "value": 1040
+  },
+  {
+    "name": "FileImageSparkle",
+    "value": 1041
+  },
+  {
+    "name": "FileImageStar",
+    "value": 1042
+  },
+  {
+    "name": "FileImageSync",
+    "value": 1043
+  },
+  {
+    "name": "FileImageUp",
+    "value": 1044
+  },
+  {
+    "name": "FileImageX",
+    "value": 1045
+  },
+  {
+    "name": "FileInfo",
+    "value": 1046
+  },
+  {
+    "name": "FileLock",
+    "value": 1047
+  },
+  {
+    "name": "FileMinus",
+    "value": 1048
+  },
+  {
+    "name": "FilePlus",
+    "value": 1049
+  },
+  {
+    "name": "FileRight",
+    "value": 1050
+  },
+  {
+    "name": "FileSearch",
+    "value": 1051
+  },
+  {
+    "name": "FileSparkle",
+    "value": 1052
+  },
+  {
+    "name": "FileSpreadsheet",
+    "value": 1053
+  },
+  {
+    "name": "FileSpreadsheetAlert",
+    "value": 1054
+  },
+  {
+    "name": "FileSpreadsheetCheck",
+    "value": 1055
+  },
+  {
+    "name": "FileSpreadsheetClock",
+    "value": 1056
+  },
+  {
+    "name": "FileSpreadsheetDown",
+    "value": 1057
+  },
+  {
+    "name": "FileSpreadsheetHeart",
+    "value": 1058
+  },
+  {
+    "name": "FileSpreadsheetInfo",
+    "value": 1059
+  },
+  {
+    "name": "FileSpreadsheetLock",
+    "value": 1060
+  },
+  {
+    "name": "FileSpreadsheetMinus",
+    "value": 1061
+  },
+  {
+    "name": "FileSpreadsheetPlus",
+    "value": 1062
+  },
+  {
+    "name": "FileSpreadsheetRight",
+    "value": 1063
+  },
+  {
+    "name": "FileSpreadsheetSearch",
+    "value": 1064
+  },
+  {
+    "name": "FileSpreadsheetSparkle",
+    "value": 1065
+  },
+  {
+    "name": "FileSpreadsheetStar",
+    "value": 1066
+  },
+  {
+    "name": "FileSpreadsheetSync",
+    "value": 1067
+  },
+  {
+    "name": "FileSpreadsheetUp",
+    "value": 1068
+  },
+  {
+    "name": "FileSpreadsheetX",
+    "value": 1069
+  },
+  {
+    "name": "FileStar",
+    "value": 1070
+  },
+  {
+    "name": "FileSync",
+    "value": 1071
+  },
+  {
+    "name": "FileText",
+    "value": 1072
+  },
+  {
+    "name": "FileTextAlert",
+    "value": 1073
+  },
+  {
+    "name": "FileTextBolt",
+    "value": 1074
+  },
+  {
+    "name": "FileTextCheck",
+    "value": 1075
+  },
+  {
+    "name": "FileTextClock",
+    "value": 1076
+  },
+  {
+    "name": "FileTextCog",
+    "value": 1077
+  },
+  {
+    "name": "FileTextDown",
+    "value": 1078
+  },
+  {
+    "name": "FileTextHeart",
+    "value": 1079
+  },
+  {
+    "name": "FileTextInfo",
+    "value": 1080
+  },
+  {
+    "name": "FileTextLock",
+    "value": 1081
+  },
+  {
+    "name": "FileTextMinus",
+    "value": 1082
+  },
+  {
+    "name": "FileTextPlus",
+    "value": 1083
+  },
+  {
+    "name": "FileTextRight",
+    "value": 1084
+  },
+  {
+    "name": "FileTextSearch",
+    "value": 1085
+  },
+  {
+    "name": "FileTextSparkle",
+    "value": 1086
+  },
+  {
+    "name": "FileTextStar",
+    "value": 1087
+  },
+  {
+    "name": "FileTextSync",
+    "value": 1088
+  },
+  {
+    "name": "FileTextUp",
+    "value": 1089
+  },
+  {
+    "name": "FileTextX",
+    "value": 1090
+  },
+  {
+    "name": "FileUp",
+    "value": 1091
+  },
+  {
+    "name": "FileVideo",
+    "value": 1092
+  },
+  {
+    "name": "FileVideoAlert",
+    "value": 1093
+  },
+  {
+    "name": "FileVideoCheck",
+    "value": 1094
+  },
+  {
+    "name": "FileVideoClock",
+    "value": 1095
+  },
+  {
+    "name": "FileVideoDown",
+    "value": 1096
+  },
+  {
+    "name": "FileVideoHeart",
+    "value": 1097
+  },
+  {
+    "name": "FileVideoInfo",
+    "value": 1098
+  },
+  {
+    "name": "FileVideoLock",
+    "value": 1099
+  },
+  {
+    "name": "FileVideoMinus",
+    "value": 1100
+  },
+  {
+    "name": "FileVideoPlus",
+    "value": 1101
+  },
+  {
+    "name": "FileVideoRight",
+    "value": 1102
+  },
+  {
+    "name": "FileVideoSearch",
+    "value": 1103
+  },
+  {
+    "name": "FileVideoSparkle",
+    "value": 1104
+  },
+  {
+    "name": "FileVideoStar",
+    "value": 1105
+  },
+  {
+    "name": "FileVideoSync",
+    "value": 1106
+  },
+  {
+    "name": "FileVideoUp",
+    "value": 1107
+  },
+  {
+    "name": "FileVideoX",
+    "value": 1108
+  },
+  {
+    "name": "FileX",
+    "value": 1109
+  },
+  {
+    "name": "Files",
+    "value": 1110
+  },
+  {
+    "name": "FilesAlert",
+    "value": 1111
+  },
+  {
+    "name": "FilesCheck",
+    "value": 1112
+  },
+  {
+    "name": "FilesClock",
+    "value": 1113
+  },
+  {
+    "name": "FilesDown",
+    "value": 1114
+  },
+  {
+    "name": "FilesLock",
+    "value": 1115
+  },
+  {
+    "name": "FilesMinus",
+    "value": 1116
+  },
+  {
+    "name": "FilesPlus",
+    "value": 1117
+  },
+  {
+    "name": "FilesRight",
+    "value": 1118
+  },
+  {
+    "name": "FilesSearch",
+    "value": 1119
+  },
+  {
+    "name": "FilesSparkle",
+    "value": 1120
+  },
+  {
+    "name": "FilesStar",
+    "value": 1121
+  },
+  {
+    "name": "FilesSync",
+    "value": 1122
+  },
+  {
+    "name": "FilesUp",
+    "value": 1123
+  },
+  {
+    "name": "FilesX",
+    "value": 1124
+  },
+  {
+    "name": "FilingCabinet",
+    "value": 1125
+  },
+  {
+    "name": "FilingCabinetCheck",
+    "value": 1126
+  },
+  {
+    "name": "FilingCabinetLock",
+    "value": 1127
+  },
+  {
+    "name": "FilingCabinetPlus",
+    "value": 1128
+  },
+  {
+    "name": "FilingCabinetSearch",
+    "value": 1129
+  },
+  {
+    "name": "Film",
+    "value": 1130
+  },
+  {
+    "name": "FilmCheck",
+    "value": 1131
+  },
+  {
+    "name": "FilmClock",
+    "value": 1132
+  },
+  {
+    "name": "FilmDown",
+    "value": 1133
+  },
+  {
+    "name": "FilmHeart",
+    "value": 1134
+  },
+  {
+    "name": "FilmLock",
+    "value": 1135
+  },
+  {
+    "name": "FilmPlus",
+    "value": 1136
+  },
+  {
+    "name": "FilmReel",
+    "value": 1137
+  },
+  {
+    "name": "FilmReelCheck",
+    "value": 1138
+  },
+  {
+    "name": "FilmReelPlus",
+    "value": 1139
+  },
+  {
+    "name": "FilmReelStar",
+    "value": 1140
+  },
+  {
+    "name": "FilmSearch",
+    "value": 1141
+  },
+  {
+    "name": "FilmStar",
+    "value": 1142
+  },
+  {
+    "name": "FilmUp",
+    "value": 1143
+  },
+  {
+    "name": "FilmX",
+    "value": 1144
+  },
+  {
+    "name": "Filter",
+    "value": 1145
+  },
+  {
+    "name": "FilterCheck",
+    "value": 1146
+  },
+  {
+    "name": "FilterCog",
+    "value": 1147
+  },
+  {
+    "name": "FilterMinus",
+    "value": 1148
+  },
+  {
+    "name": "FilterOff",
+    "value": 1149
+  },
+  {
+    "name": "FilterPlus",
+    "value": 1150
+  },
+  {
+    "name": "FilterX",
+    "value": 1151
+  },
+  {
+    "name": "Fingerprint",
+    "value": 1152
+  },
+  {
+    "name": "FireHydrant",
+    "value": 1153
+  },
+  {
+    "name": "FireTruck",
+    "value": 1154
+  },
+  {
+    "name": "Fireplace",
+    "value": 1155
+  },
+  {
+    "name": "FirstAid",
+    "value": 1156
+  },
+  {
+    "name": "FirstAidAlert",
+    "value": 1157
+  },
+  {
+    "name": "FirstAidCheck",
+    "value": 1158
+  },
+  {
+    "name": "FirstAidPlus",
+    "value": 1159
+  },
+  {
+    "name": "Fish",
+    "value": 1160
+  },
+  {
+    "name": "FitnessBand",
+    "value": 1161
+  },
+  {
+    "name": "FitnessBandBolt",
+    "value": 1162
+  },
+  {
+    "name": "FitnessBandCheck",
+    "value": 1163
+  },
+  {
+    "name": "FitnessBandPlus",
+    "value": 1164
+  },
+  {
+    "name": "FitnessBandSync",
+    "value": 1165
+  },
+  {
+    "name": "Flag",
+    "value": 1166
+  },
+  {
+    "name": "FlagAlert",
+    "value": 1167
+  },
+  {
+    "name": "FlagCheck",
+    "value": 1168
+  },
+  {
+    "name": "FlagOff",
+    "value": 1169
+  },
+  {
+    "name": "FlagPlus",
+    "value": 1170
+  },
+  {
+    "name": "FlagTriangle",
+    "value": 1171
+  },
+  {
+    "name": "FlagX",
+    "value": 1172
+  },
+  {
+    "name": "Flame",
+    "value": 1173
+  },
+  {
+    "name": "Flashlight",
+    "value": 1174
+  },
+  {
+    "name": "Flask",
+    "value": 1175
+  },
+  {
+    "name": "FlaskAlert",
+    "value": 1176
+  },
+  {
+    "name": "FlaskCheck",
+    "value": 1177
+  },
+  {
+    "name": "FlaskSparkle",
+    "value": 1178
+  },
+  {
+    "name": "FlipPhone",
+    "value": 1179
+  },
+  {
+    "name": "FlipPhoneCheck",
+    "value": 1180
+  },
+  {
+    "name": "FlipPhoneHeart",
+    "value": 1181
+  },
+  {
+    "name": "FlipPhoneOff",
+    "value": 1182
+  },
+  {
+    "name": "FlipPhoneX",
+    "value": 1183
+  },
+  {
+    "name": "FloorLamp",
+    "value": 1184
+  },
+  {
+    "name": "FloorLampOff",
+    "value": 1185
+  },
+  {
+    "name": "Flower",
+    "value": 1186
+  },
+  {
+    "name": "FlowerHeart",
+    "value": 1187
+  },
+  {
+    "name": "FlowerTulip",
+    "value": 1188
+  },
+  {
+    "name": "FlowerTulipHeart",
+    "value": 1189
+  },
+  {
+    "name": "Flute",
+    "value": 1190
+  },
+  {
+    "name": "Focus",
+    "value": 1191
+  },
+  {
+    "name": "FoldablePhone",
+    "value": 1192
+  },
+  {
+    "name": "FoldablePhoneCheck",
+    "value": 1193
+  },
+  {
+    "name": "FoldablePhoneLock",
+    "value": 1194
+  },
+  {
+    "name": "FoldablePhoneSync",
+    "value": 1195
+  },
+  {
+    "name": "FoldablePhoneX",
+    "value": 1196
+  },
+  {
+    "name": "Folder",
+    "value": 1197
+  },
+  {
+    "name": "FolderAlert",
+    "value": 1198
+  },
+  {
+    "name": "FolderBolt",
+    "value": 1199
+  },
+  {
+    "name": "FolderCheck",
+    "value": 1200
+  },
+  {
+    "name": "FolderClock",
+    "value": 1201
+  },
+  {
+    "name": "FolderCog",
+    "value": 1202
+  },
+  {
+    "name": "FolderDown",
+    "value": 1203
+  },
+  {
+    "name": "FolderHeart",
+    "value": 1204
+  },
+  {
+    "name": "FolderInfo",
+    "value": 1205
+  },
+  {
+    "name": "FolderLock",
+    "value": 1206
+  },
+  {
+    "name": "FolderMinus",
+    "value": 1207
+  },
+  {
+    "name": "FolderOpen",
+    "value": 1208
+  },
+  {
+    "name": "FolderOpenAlert",
+    "value": 1209
+  },
+  {
+    "name": "FolderOpenCheck",
+    "value": 1210
+  },
+  {
+    "name": "FolderOpenClock",
+    "value": 1211
+  },
+  {
+    "name": "FolderOpenCog",
+    "value": 1212
+  },
+  {
+    "name": "FolderOpenDown",
+    "value": 1213
+  },
+  {
+    "name": "FolderOpenHeart",
+    "value": 1214
+  },
+  {
+    "name": "FolderOpenInfo",
+    "value": 1215
+  },
+  {
+    "name": "FolderOpenLock",
+    "value": 1216
+  },
+  {
+    "name": "FolderOpenMinus",
+    "value": 1217
+  },
+  {
+    "name": "FolderOpenPlus",
+    "value": 1218
+  },
+  {
+    "name": "FolderOpenRight",
+    "value": 1219
+  },
+  {
+    "name": "FolderOpenSearch",
+    "value": 1220
+  },
+  {
+    "name": "FolderOpenSparkle",
+    "value": 1221
+  },
+  {
+    "name": "FolderOpenStar",
+    "value": 1222
+  },
+  {
+    "name": "FolderOpenSync",
+    "value": 1223
+  },
+  {
+    "name": "FolderOpenUp",
+    "value": 1224
+  },
+  {
+    "name": "FolderOpenX",
+    "value": 1225
+  },
+  {
+    "name": "FolderPlus",
+    "value": 1226
+  },
+  {
+    "name": "FolderRight",
+    "value": 1227
+  },
+  {
+    "name": "FolderSearch",
+    "value": 1228
+  },
+  {
+    "name": "FolderSparkle",
+    "value": 1229
+  },
+  {
+    "name": "FolderStar",
+    "value": 1230
+  },
+  {
+    "name": "FolderSync",
+    "value": 1231
+  },
+  {
+    "name": "FolderUp",
+    "value": 1232
+  },
+  {
+    "name": "FolderX",
+    "value": 1233
+  },
+  {
+    "name": "Folders",
+    "value": 1234
+  },
+  {
+    "name": "FoldersAlert",
+    "value": 1235
+  },
+  {
+    "name": "FoldersCheck",
+    "value": 1236
+  },
+  {
+    "name": "FoldersClock",
+    "value": 1237
+  },
+  {
+    "name": "FoldersCog",
+    "value": 1238
+  },
+  {
+    "name": "FoldersDown",
+    "value": 1239
+  },
+  {
+    "name": "FoldersHeart",
+    "value": 1240
+  },
+  {
+    "name": "FoldersLock",
+    "value": 1241
+  },
+  {
+    "name": "FoldersMinus",
+    "value": 1242
+  },
+  {
+    "name": "FoldersPlus",
+    "value": 1243
+  },
+  {
+    "name": "FoldersRight",
+    "value": 1244
+  },
+  {
+    "name": "FoldersSearch",
+    "value": 1245
+  },
+  {
+    "name": "FoldersSparkle",
+    "value": 1246
+  },
+  {
+    "name": "FoldersStar",
+    "value": 1247
+  },
+  {
+    "name": "FoldersSync",
+    "value": 1248
+  },
+  {
+    "name": "FoldersUp",
+    "value": 1249
+  },
+  {
+    "name": "FoldersX",
+    "value": 1250
+  },
+  {
+    "name": "Footprints",
+    "value": 1251
+  },
+  {
+    "name": "Forklift",
+    "value": 1252
+  },
+  {
+    "name": "Fridge",
+    "value": 1253
+  },
+  {
+    "name": "FridgeCheck",
+    "value": 1254
+  },
+  {
+    "name": "FridgeLock",
+    "value": 1255
+  },
+  {
+    "name": "FridgePlus",
+    "value": 1256
+  },
+  {
+    "name": "Fries",
+    "value": 1257
+  },
+  {
+    "name": "FriesPlus",
+    "value": 1258
+  },
+  {
+    "name": "Frisbee",
+    "value": 1259
+  },
+  {
+    "name": "Frown",
+    "value": 1260
+  },
+  {
+    "name": "FryingPan",
+    "value": 1261
+  },
+  {
+    "name": "Fuel",
+    "value": 1262
+  },
+  {
+    "name": "FuelCheck",
+    "value": 1263
+  },
+  {
+    "name": "FuelClock",
+    "value": 1264
+  },
+  {
+    "name": "Function",
+    "value": 1265
+  },
+  {
+    "name": "GalleryView",
+    "value": 1266
+  },
+  {
+    "name": "GameCartridge",
+    "value": 1267
+  },
+  {
+    "name": "GameCartridgeCheck",
+    "value": 1268
+  },
+  {
+    "name": "GameCartridgePlus",
+    "value": 1269
+  },
+  {
+    "name": "GameCartridgeStar",
+    "value": 1270
+  },
+  {
+    "name": "GameConsole",
+    "value": 1271
+  },
+  {
+    "name": "GameConsoleCheck",
+    "value": 1272
+  },
+  {
+    "name": "GameConsoleDown",
+    "value": 1273
+  },
+  {
+    "name": "GameConsolePlus",
+    "value": 1274
+  },
+  {
+    "name": "GameConsoleStar",
+    "value": 1275
+  },
+  {
+    "name": "Gamepad",
+    "value": 1276
+  },
+  {
+    "name": "GamepadCheck",
+    "value": 1277
+  },
+  {
+    "name": "GamepadHeart",
+    "value": 1278
+  },
+  {
+    "name": "GamepadPlus",
+    "value": 1279
+  },
+  {
+    "name": "GamepadStar",
+    "value": 1280
+  },
+  {
+    "name": "GarbageTruck",
+    "value": 1281
+  },
+  {
+    "name": "GasCan",
+    "value": 1282
+  },
+  {
+    "name": "GasStation",
+    "value": 1283
+  },
+  {
+    "name": "Gauge",
+    "value": 1284
+  },
+  {
+    "name": "GaugeCheck",
+    "value": 1285
+  },
+  {
+    "name": "GaugeCog",
+    "value": 1286
+  },
+  {
+    "name": "GaugeDown",
+    "value": 1287
+  },
+  {
+    "name": "GaugePlus",
+    "value": 1288
+  },
+  {
+    "name": "GaugeUp",
+    "value": 1289
+  },
+  {
+    "name": "Gem",
+    "value": 1290
+  },
+  {
+    "name": "GemCheck",
+    "value": 1291
+  },
+  {
+    "name": "GemPlus",
+    "value": 1292
+  },
+  {
+    "name": "GemSparkle",
+    "value": 1293
+  },
+  {
+    "name": "GemStar",
+    "value": 1294
+  },
+  {
+    "name": "Ghost",
+    "value": 1295
+  },
+  {
+    "name": "Gift",
+    "value": 1296
+  },
+  {
+    "name": "GiftBag",
+    "value": 1297
+  },
+  {
+    "name": "GiftBagCheck",
+    "value": 1298
+  },
+  {
+    "name": "GiftBagHeart",
+    "value": 1299
+  },
+  {
+    "name": "GiftBagPlus",
+    "value": 1300
+  },
+  {
+    "name": "GiftBagStar",
+    "value": 1301
+  },
+  {
+    "name": "GiftCard",
+    "value": 1302
+  },
+  {
+    "name": "GiftCardCheck",
+    "value": 1303
+  },
+  {
+    "name": "GiftCardClock",
+    "value": 1304
+  },
+  {
+    "name": "GiftCardHeart",
+    "value": 1305
+  },
+  {
+    "name": "GiftCardPlus",
+    "value": 1306
+  },
+  {
+    "name": "GiftCheck",
+    "value": 1307
+  },
+  {
+    "name": "GiftClock",
+    "value": 1308
+  },
+  {
+    "name": "GiftHeart",
+    "value": 1309
+  },
+  {
+    "name": "GiftPlus",
+    "value": 1310
+  },
+  {
+    "name": "GiftSparkle",
+    "value": 1311
+  },
+  {
+    "name": "GiftStar",
+    "value": 1312
+  },
+  {
+    "name": "GitBranch",
+    "value": 1313
+  },
+  {
+    "name": "GitCommit",
+    "value": 1314
+  },
+  {
+    "name": "GitCompare",
+    "value": 1315
+  },
+  {
+    "name": "GitFork",
+    "value": 1316
+  },
+  {
+    "name": "GitMerge",
+    "value": 1317
+  },
+  {
+    "name": "GitPullRequest",
+    "value": 1318
+  },
+  {
+    "name": "Glasses",
+    "value": 1319
+  },
+  {
+    "name": "Globe",
+    "value": 1320
+  },
+  {
+    "name": "GlobeAlert",
+    "value": 1321
+  },
+  {
+    "name": "GlobeCheck",
+    "value": 1322
+  },
+  {
+    "name": "GlobeClock",
+    "value": 1323
+  },
+  {
+    "name": "GlobeCog",
+    "value": 1324
+  },
+  {
+    "name": "GlobeLock",
+    "value": 1325
+  },
+  {
+    "name": "GlobeOff",
+    "value": 1326
+  },
+  {
+    "name": "GlobeSearch",
+    "value": 1327
+  },
+  {
+    "name": "GlobeX",
+    "value": 1328
+  },
+  {
+    "name": "Glue",
+    "value": 1329
+  },
+  {
+    "name": "GolfFlag",
+    "value": 1330
+  },
+  {
+    "name": "GraduationCap",
+    "value": 1331
+  },
+  {
+    "name": "GraduationCapCheck",
+    "value": 1332
+  },
+  {
+    "name": "GraduationCapPlus",
+    "value": 1333
+  },
+  {
+    "name": "GraduationCapStar",
+    "value": 1334
+  },
+  {
+    "name": "Grape",
+    "value": 1335
+  },
+  {
+    "name": "GraphicsCard",
+    "value": 1336
+  },
+  {
+    "name": "GraphicsCardAlert",
+    "value": 1337
+  },
+  {
+    "name": "GraphicsCardBolt",
+    "value": 1338
+  },
+  {
+    "name": "GraphicsCardCheck",
+    "value": 1339
+  },
+  {
+    "name": "Greenhouse",
+    "value": 1340
+  },
+  {
+    "name": "Grid",
+    "value": 1341
+  },
+  {
+    "name": "Grill",
+    "value": 1342
+  },
+  {
+    "name": "Grip",
+    "value": 1343
+  },
+  {
+    "name": "Guitar",
+    "value": 1344
+  },
+  {
+    "name": "GumballMachine",
+    "value": 1345
+  },
+  {
+    "name": "GumballMachineHeart",
+    "value": 1346
+  },
+  {
+    "name": "GumballMachineStar",
+    "value": 1347
+  },
+  {
+    "name": "HairDryer",
+    "value": 1348
+  },
+  {
+    "name": "Hammer",
+    "value": 1349
+  },
+  {
+    "name": "Hammock",
+    "value": 1350
+  },
+  {
+    "name": "Hand",
+    "value": 1351
+  },
+  {
+    "name": "HandCoins",
+    "value": 1352
+  },
+  {
+    "name": "HandCoinsCheck",
+    "value": 1353
+  },
+  {
+    "name": "HandCoinsHeart",
+    "value": 1354
+  },
+  {
+    "name": "HandCoinsPlus",
+    "value": 1355
+  },
+  {
+    "name": "HandGrab",
+    "value": 1356
+  },
+  {
+    "name": "HandHeart",
+    "value": 1357
+  },
+  {
+    "name": "Handbag",
+    "value": 1358
+  },
+  {
+    "name": "HandbagCheck",
+    "value": 1359
+  },
+  {
+    "name": "HandbagHeart",
+    "value": 1360
+  },
+  {
+    "name": "HandbagPlus",
+    "value": 1361
+  },
+  {
+    "name": "HandbagStar",
+    "value": 1362
+  },
+  {
+    "name": "HandheldConsole",
+    "value": 1363
+  },
+  {
+    "name": "HandheldConsoleBolt",
+    "value": 1364
+  },
+  {
+    "name": "HandheldConsoleCheck",
+    "value": 1365
+  },
+  {
+    "name": "HandheldConsolePlus",
+    "value": 1366
+  },
+  {
+    "name": "Hanger",
+    "value": 1367
+  },
+  {
+    "name": "HardDrive",
+    "value": 1368
+  },
+  {
+    "name": "HardDriveAlert",
+    "value": 1369
+  },
+  {
+    "name": "HardDriveCheck",
+    "value": 1370
+  },
+  {
+    "name": "HardDriveClock",
+    "value": 1371
+  },
+  {
+    "name": "HardDriveCog",
+    "value": 1372
+  },
+  {
+    "name": "HardDriveDown",
+    "value": 1373
+  },
+  {
+    "name": "HardDriveLock",
+    "value": 1374
+  },
+  {
+    "name": "HardDriveMinus",
+    "value": 1375
+  },
+  {
+    "name": "HardDrivePlus",
+    "value": 1376
+  },
+  {
+    "name": "HardDriveSearch",
+    "value": 1377
+  },
+  {
+    "name": "HardDriveSync",
+    "value": 1378
+  },
+  {
+    "name": "HardDriveUp",
+    "value": 1379
+  },
+  {
+    "name": "HardDriveX",
+    "value": 1380
+  },
+  {
+    "name": "HardHat",
+    "value": 1381
+  },
+  {
+    "name": "Harp",
+    "value": 1382
+  },
+  {
+    "name": "Hash",
+    "value": 1383
+  },
+  {
+    "name": "HdmiPort",
+    "value": 1384
+  },
+  {
+    "name": "HdmiPortAlert",
+    "value": 1385
+  },
+  {
+    "name": "HdmiPortCheck",
+    "value": 1386
+  },
+  {
+    "name": "HdmiPortX",
+    "value": 1387
+  },
+  {
+    "name": "Heading",
+    "value": 1388
+  },
+  {
+    "name": "Headphones",
+    "value": 1389
+  },
+  {
+    "name": "HeadphonesCheck",
+    "value": 1390
+  },
+  {
+    "name": "HeadphonesOff",
+    "value": 1391
+  },
+  {
+    "name": "HeadphonesX",
+    "value": 1392
+  },
+  {
+    "name": "Headset",
+    "value": 1393
+  },
+  {
+    "name": "HeadsetAlert",
+    "value": 1394
+  },
+  {
+    "name": "HeadsetCheck",
+    "value": 1395
+  },
+  {
+    "name": "HeadsetClock",
+    "value": 1396
+  },
+  {
+    "name": "HeadsetHeart",
+    "value": 1397
+  },
+  {
+    "name": "HeadsetInfo",
+    "value": 1398
+  },
+  {
+    "name": "HeadsetOff",
+    "value": 1399
+  },
+  {
+    "name": "HeadsetX",
+    "value": 1400
+  },
+  {
+    "name": "HearingAid",
+    "value": 1401
+  },
+  {
+    "name": "Heart",
+    "value": 1402
+  },
+  {
+    "name": "HeartCheck",
+    "value": 1403
+  },
+  {
+    "name": "HeartMinus",
+    "value": 1404
+  },
+  {
+    "name": "HeartOff",
+    "value": 1405
+  },
+  {
+    "name": "HeartPlus",
+    "value": 1406
+  },
+  {
+    "name": "HeartPulse",
+    "value": 1407
+  },
+  {
+    "name": "HeartPulseAlert",
+    "value": 1408
+  },
+  {
+    "name": "HeartPulsePlus",
+    "value": 1409
+  },
+  {
+    "name": "HeartX",
+    "value": 1410
+  },
+  {
+    "name": "Heatmap",
+    "value": 1411
+  },
+  {
+    "name": "HeatmapPlus",
+    "value": 1412
+  },
+  {
+    "name": "HeatmapSearch",
+    "value": 1413
+  },
+  {
+    "name": "HeatmapSparkle",
+    "value": 1414
+  },
+  {
+    "name": "HeatmapX",
+    "value": 1415
+  },
+  {
+    "name": "Helicopter",
+    "value": 1416
+  },
+  {
+    "name": "Hexagon",
+    "value": 1417
+  },
+  {
+    "name": "HighHeel",
+    "value": 1418
+  },
+  {
+    "name": "HighHeelCheck",
+    "value": 1419
+  },
+  {
+    "name": "HighHeelHeart",
+    "value": 1420
+  },
+  {
+    "name": "HighHeelPlus",
+    "value": 1421
+  },
+  {
+    "name": "Highlighter",
+    "value": 1422
+  },
+  {
+    "name": "HikingBoot",
+    "value": 1423
+  },
+  {
+    "name": "History",
+    "value": 1424
+  },
+  {
+    "name": "HockeyStick",
+    "value": 1425
+  },
+  {
+    "name": "Home",
+    "value": 1426
+  },
+  {
+    "name": "HomeCheck",
+    "value": 1427
+  },
+  {
+    "name": "HomeCog",
+    "value": 1428
+  },
+  {
+    "name": "HomeHeart",
+    "value": 1429
+  },
+  {
+    "name": "HomeLock",
+    "value": 1430
+  },
+  {
+    "name": "HomePlus",
+    "value": 1431
+  },
+  {
+    "name": "HomeSearch",
+    "value": 1432
+  },
+  {
+    "name": "HomeSparkle",
+    "value": 1433
+  },
+  {
+    "name": "HomeStar",
+    "value": 1434
+  },
+  {
+    "name": "HomeX",
+    "value": 1435
+  },
+  {
+    "name": "Hook",
+    "value": 1436
+  },
+  {
+    "name": "Horse",
+    "value": 1437
+  },
+  {
+    "name": "Hospital",
+    "value": 1438
+  },
+  {
+    "name": "HospitalCheck",
+    "value": 1439
+  },
+  {
+    "name": "HospitalClock",
+    "value": 1440
+  },
+  {
+    "name": "HospitalCross",
+    "value": 1441
+  },
+  {
+    "name": "HospitalCrossAlert",
+    "value": 1442
+  },
+  {
+    "name": "HospitalCrossCheck",
+    "value": 1443
+  },
+  {
+    "name": "HospitalCrossPlus",
+    "value": 1444
+  },
+  {
+    "name": "HospitalHeart",
+    "value": 1445
+  },
+  {
+    "name": "HospitalSearch",
+    "value": 1446
+  },
+  {
+    "name": "HotAirBalloon",
+    "value": 1447
+  },
+  {
+    "name": "HotDog",
+    "value": 1448
+  },
+  {
+    "name": "Hotel",
+    "value": 1449
+  },
+  {
+    "name": "HotelCheck",
+    "value": 1450
+  },
+  {
+    "name": "HotelHeart",
+    "value": 1451
+  },
+  {
+    "name": "HotelPlus",
+    "value": 1452
+  },
+  {
+    "name": "HotelSearch",
+    "value": 1453
+  },
+  {
+    "name": "HotelStar",
+    "value": 1454
+  },
+  {
+    "name": "HotelX",
+    "value": 1455
+  },
+  {
+    "name": "Hourglass",
+    "value": 1456
+  },
+  {
+    "name": "IceCream",
+    "value": 1457
+  },
+  {
+    "name": "IceCreamHeart",
+    "value": 1458
+  },
+  {
+    "name": "IcePop",
+    "value": 1459
+  },
+  {
+    "name": "IdBadge",
+    "value": 1460
+  },
+  {
+    "name": "IdBadgeAlert",
+    "value": 1461
+  },
+  {
+    "name": "IdBadgeCheck",
+    "value": 1462
+  },
+  {
+    "name": "IdBadgeClock",
+    "value": 1463
+  },
+  {
+    "name": "IdBadgeLock",
+    "value": 1464
+  },
+  {
+    "name": "IdBadgePlus",
+    "value": 1465
+  },
+  {
+    "name": "IdBadgeSearch",
+    "value": 1466
+  },
+  {
+    "name": "IdBadgeStar",
+    "value": 1467
+  },
+  {
+    "name": "IdBadgeSync",
+    "value": 1468
+  },
+  {
+    "name": "IdBadgeX",
+    "value": 1469
+  },
+  {
+    "name": "IdCard",
+    "value": 1470
+  },
+  {
+    "name": "Igloo",
+    "value": 1471
+  },
+  {
+    "name": "Image",
+    "value": 1472
+  },
+  {
+    "name": "ImageAlert",
+    "value": 1473
+  },
+  {
+    "name": "ImageCheck",
+    "value": 1474
+  },
+  {
+    "name": "ImageDown",
+    "value": 1475
+  },
+  {
+    "name": "ImageHeart",
+    "value": 1476
+  },
+  {
+    "name": "ImageLock",
+    "value": 1477
+  },
+  {
+    "name": "ImageMinus",
+    "value": 1478
+  },
+  {
+    "name": "ImagePlus",
+    "value": 1479
+  },
+  {
+    "name": "ImageSearch",
+    "value": 1480
+  },
+  {
+    "name": "ImageSparkle",
+    "value": 1481
+  },
+  {
+    "name": "ImageStar",
+    "value": 1482
+  },
+  {
+    "name": "ImageUp",
+    "value": 1483
+  },
+  {
+    "name": "ImageX",
+    "value": 1484
+  },
+  {
+    "name": "Images",
+    "value": 1485
+  },
+  {
+    "name": "ImagesCheck",
+    "value": 1486
+  },
+  {
+    "name": "ImagesDown",
+    "value": 1487
+  },
+  {
+    "name": "ImagesHeart",
+    "value": 1488
+  },
+  {
+    "name": "ImagesLock",
+    "value": 1489
+  },
+  {
+    "name": "ImagesMinus",
+    "value": 1490
+  },
+  {
+    "name": "ImagesPlus",
+    "value": 1491
+  },
+  {
+    "name": "ImagesSearch",
+    "value": 1492
+  },
+  {
+    "name": "ImagesSparkle",
+    "value": 1493
+  },
+  {
+    "name": "ImagesStar",
+    "value": 1494
+  },
+  {
+    "name": "ImagesUp",
+    "value": 1495
+  },
+  {
+    "name": "ImagesX",
+    "value": 1496
+  },
+  {
+    "name": "Import",
+    "value": 1497
+  },
+  {
+    "name": "Inbox",
+    "value": 1498
+  },
+  {
+    "name": "InboxAlert",
+    "value": 1499
+  },
+  {
+    "name": "InboxCheck",
+    "value": 1500
+  },
+  {
+    "name": "InboxClock",
+    "value": 1501
+  },
+  {
+    "name": "InboxDown",
+    "value": 1502
+  },
+  {
+    "name": "InboxInfo",
+    "value": 1503
+  },
+  {
+    "name": "InboxLock",
+    "value": 1504
+  },
+  {
+    "name": "InboxMinus",
+    "value": 1505
+  },
+  {
+    "name": "InboxPlus",
+    "value": 1506
+  },
+  {
+    "name": "InboxRight",
+    "value": 1507
+  },
+  {
+    "name": "InboxSearch",
+    "value": 1508
+  },
+  {
+    "name": "InboxSparkle",
+    "value": 1509
+  },
+  {
+    "name": "InboxStar",
+    "value": 1510
+  },
+  {
+    "name": "InboxSync",
+    "value": 1511
+  },
+  {
+    "name": "InboxUp",
+    "value": 1512
+  },
+  {
+    "name": "InboxX",
+    "value": 1513
+  },
+  {
+    "name": "Indent",
+    "value": 1514
+  },
+  {
+    "name": "Infinity",
+    "value": 1515
+  },
+  {
+    "name": "Info",
+    "value": 1516
+  },
+  {
+    "name": "Inhaler",
+    "value": 1517
+  },
+  {
+    "name": "Invoice",
+    "value": 1518
+  },
+  {
+    "name": "InvoiceAlert",
+    "value": 1519
+  },
+  {
+    "name": "InvoiceCheck",
+    "value": 1520
+  },
+  {
+    "name": "InvoiceClock",
+    "value": 1521
+  },
+  {
+    "name": "InvoiceDown",
+    "value": 1522
+  },
+  {
+    "name": "InvoiceLock",
+    "value": 1523
+  },
+  {
+    "name": "InvoicePlus",
+    "value": 1524
+  },
+  {
+    "name": "InvoiceRight",
+    "value": 1525
+  },
+  {
+    "name": "InvoiceSearch",
+    "value": 1526
+  },
+  {
+    "name": "InvoiceUp",
+    "value": 1527
+  },
+  {
+    "name": "InvoiceX",
+    "value": 1528
+  },
+  {
+    "name": "Iron",
+    "value": 1529
+  },
+  {
+    "name": "Island",
+    "value": 1530
+  },
+  {
+    "name": "Italic",
+    "value": 1531
+  },
+  {
+    "name": "ItemTracker",
+    "value": 1532
+  },
+  {
+    "name": "ItemTrackerAlert",
+    "value": 1533
+  },
+  {
+    "name": "ItemTrackerCheck",
+    "value": 1534
+  },
+  {
+    "name": "ItemTrackerPlus",
+    "value": 1535
+  },
+  {
+    "name": "ItemTrackerSearch",
+    "value": 1536
+  },
+  {
+    "name": "ItemTrackerX",
+    "value": 1537
+  },
+  {
+    "name": "Jetpack",
+    "value": 1538
+  },
+  {
+    "name": "JetpackBolt",
+    "value": 1539
+  },
+  {
+    "name": "Joystick",
+    "value": 1540
+  },
+  {
+    "name": "JoystickCheck",
+    "value": 1541
+  },
+  {
+    "name": "JoystickPlus",
+    "value": 1542
+  },
+  {
+    "name": "JoystickStar",
+    "value": 1543
+  },
+  {
+    "name": "Jukebox",
+    "value": 1544
+  },
+  {
+    "name": "JukeboxHeart",
+    "value": 1545
+  },
+  {
+    "name": "JukeboxStar",
+    "value": 1546
+  },
+  {
+    "name": "JumpRope",
+    "value": 1547
+  },
+  {
+    "name": "Kanban",
+    "value": 1548
+  },
+  {
+    "name": "KanbanCheck",
+    "value": 1549
+  },
+  {
+    "name": "KanbanPlus",
+    "value": 1550
+  },
+  {
+    "name": "Kayak",
+    "value": 1551
+  },
+  {
+    "name": "Kettle",
+    "value": 1552
+  },
+  {
+    "name": "Key",
+    "value": 1553
+  },
+  {
+    "name": "KeyCheck",
+    "value": 1554
+  },
+  {
+    "name": "KeyLock",
+    "value": 1555
+  },
+  {
+    "name": "KeyPlus",
+    "value": 1556
+  },
+  {
+    "name": "KeyRound",
+    "value": 1557
+  },
+  {
+    "name": "KeyRoundCheck",
+    "value": 1558
+  },
+  {
+    "name": "KeyRoundPlus",
+    "value": 1559
+  },
+  {
+    "name": "KeyRoundSync",
+    "value": 1560
+  },
+  {
+    "name": "KeyRoundX",
+    "value": 1561
+  },
+  {
+    "name": "KeySearch",
+    "value": 1562
+  },
+  {
+    "name": "KeySync",
+    "value": 1563
+  },
+  {
+    "name": "KeyX",
+    "value": 1564
+  },
+  {
+    "name": "Keyboard",
+    "value": 1565
+  },
+  {
+    "name": "KeyboardCog",
+    "value": 1566
+  },
+  {
+    "name": "KeyboardLock",
+    "value": 1567
+  },
+  {
+    "name": "KeyboardPlus",
+    "value": 1568
+  },
+  {
+    "name": "Kite",
+    "value": 1569
+  },
+  {
+    "name": "Ladder",
+    "value": 1570
+  },
+  {
+    "name": "Ladybug",
+    "value": 1571
+  },
+  {
+    "name": "Lamp",
+    "value": 1572
+  },
+  {
+    "name": "LampCog",
+    "value": 1573
+  },
+  {
+    "name": "LampOff",
+    "value": 1574
+  },
+  {
+    "name": "LampPlus",
+    "value": 1575
+  },
+  {
+    "name": "Landmark",
+    "value": 1576
+  },
+  {
+    "name": "LandmarkCheck",
+    "value": 1577
+  },
+  {
+    "name": "LandmarkCog",
+    "value": 1578
+  },
+  {
+    "name": "LandmarkLock",
+    "value": 1579
+  },
+  {
+    "name": "LandmarkPlus",
+    "value": 1580
+  },
+  {
+    "name": "LandmarkSearch",
+    "value": 1581
+  },
+  {
+    "name": "LandmarkX",
+    "value": 1582
+  },
+  {
+    "name": "Languages",
+    "value": 1583
+  },
+  {
+    "name": "LanguagesCheck",
+    "value": 1584
+  },
+  {
+    "name": "LanguagesSparkle",
+    "value": 1585
+  },
+  {
+    "name": "Lantern",
+    "value": 1586
+  },
+  {
+    "name": "Laptop",
+    "value": 1587
+  },
+  {
+    "name": "LaptopAlert",
+    "value": 1588
+  },
+  {
+    "name": "LaptopCheck",
+    "value": 1589
+  },
+  {
+    "name": "LaptopCog",
+    "value": 1590
+  },
+  {
+    "name": "LaptopDown",
+    "value": 1591
+  },
+  {
+    "name": "LaptopInfo",
+    "value": 1592
+  },
+  {
+    "name": "LaptopLock",
+    "value": 1593
+  },
+  {
+    "name": "LaptopPlus",
+    "value": 1594
+  },
+  {
+    "name": "LaptopSearch",
+    "value": 1595
+  },
+  {
+    "name": "LaptopSparkle",
+    "value": 1596
+  },
+  {
+    "name": "LaptopSync",
+    "value": 1597
+  },
+  {
+    "name": "LaptopUp",
+    "value": 1598
+  },
+  {
+    "name": "LaptopX",
+    "value": 1599
+  },
+  {
+    "name": "Laugh",
+    "value": 1600
+  },
+  {
+    "name": "LaundryBasket",
+    "value": 1601
+  },
+  {
+    "name": "LaundryBasketCheck",
+    "value": 1602
+  },
+  {
+    "name": "Layers",
+    "value": 1603
+  },
+  {
+    "name": "LayersCheck",
+    "value": 1604
+  },
+  {
+    "name": "LayersLock",
+    "value": 1605
+  },
+  {
+    "name": "LayersMinus",
+    "value": 1606
+  },
+  {
+    "name": "LayersPlus",
+    "value": 1607
+  },
+  {
+    "name": "LayersSearch",
+    "value": 1608
+  },
+  {
+    "name": "LayersX",
+    "value": 1609
+  },
+  {
+    "name": "LayoutDashboard",
+    "value": 1610
+  },
+  {
+    "name": "LayoutDashboardCog",
+    "value": 1611
+  },
+  {
+    "name": "LayoutDashboardPlus",
+    "value": 1612
+  },
+  {
+    "name": "Leaf",
+    "value": 1613
+  },
+  {
+    "name": "Lemon",
+    "value": 1614
+  },
+  {
+    "name": "Library",
+    "value": 1615
+  },
+  {
+    "name": "LibraryCheck",
+    "value": 1616
+  },
+  {
+    "name": "LibraryHeart",
+    "value": 1617
+  },
+  {
+    "name": "LibraryPlus",
+    "value": 1618
+  },
+  {
+    "name": "LibrarySearch",
+    "value": 1619
+  },
+  {
+    "name": "LibrarySparkle",
+    "value": 1620
+  },
+  {
+    "name": "LibraryStar",
+    "value": 1621
+  },
+  {
+    "name": "Lifebuoy",
+    "value": 1622
+  },
+  {
+    "name": "LightSwitch",
+    "value": 1623
+  },
+  {
+    "name": "LightSwitchCheck",
+    "value": 1624
+  },
+  {
+    "name": "LightSwitchClock",
+    "value": 1625
+  },
+  {
+    "name": "LightSwitchOff",
+    "value": 1626
+  },
+  {
+    "name": "Lightbulb",
+    "value": 1627
+  },
+  {
+    "name": "LightbulbBolt",
+    "value": 1628
+  },
+  {
+    "name": "LightbulbCheck",
+    "value": 1629
+  },
+  {
+    "name": "LightbulbOff",
+    "value": 1630
+  },
+  {
+    "name": "LightbulbPlus",
+    "value": 1631
+  },
+  {
+    "name": "LightbulbSparkle",
+    "value": 1632
+  },
+  {
+    "name": "Lighthouse",
+    "value": 1633
+  },
+  {
+    "name": "Link",
+    "value": 1634
+  },
+  {
+    "name": "Link2",
+    "value": 1635
+  },
+  {
+    "name": "Link2Check",
+    "value": 1636
+  },
+  {
+    "name": "Link2Plus",
+    "value": 1637
+  },
+  {
+    "name": "Link2X",
+    "value": 1638
+  },
+  {
+    "name": "LinkCheck",
+    "value": 1639
+  },
+  {
+    "name": "LinkLock",
+    "value": 1640
+  },
+  {
+    "name": "LinkOff",
+    "value": 1641
+  },
+  {
+    "name": "LinkPlus",
+    "value": 1642
+  },
+  {
+    "name": "LinkX",
+    "value": 1643
+  },
+  {
+    "name": "Lipstick",
+    "value": 1644
+  },
+  {
+    "name": "LipstickCheck",
+    "value": 1645
+  },
+  {
+    "name": "LipstickHeart",
+    "value": 1646
+  },
+  {
+    "name": "LipstickPlus",
+    "value": 1647
+  },
+  {
+    "name": "LipstickStar",
+    "value": 1648
+  },
+  {
+    "name": "List",
+    "value": 1649
+  },
+  {
+    "name": "ListChecks",
+    "value": 1650
+  },
+  {
+    "name": "ListOrdered",
+    "value": 1651
+  },
+  {
+    "name": "ListView",
+    "value": 1652
+  },
+  {
+    "name": "LitterBox",
+    "value": 1653
+  },
+  {
+    "name": "LitterBoxCheck",
+    "value": 1654
+  },
+  {
+    "name": "LitterBoxClock",
+    "value": 1655
+  },
+  {
+    "name": "Live",
+    "value": 1656
+  },
+  {
+    "name": "LiveOff",
+    "value": 1657
+  },
+  {
+    "name": "Loader",
+    "value": 1658
+  },
+  {
+    "name": "Lock",
+    "value": 1659
+  },
+  {
+    "name": "LockKeyhole",
+    "value": 1660
+  },
+  {
+    "name": "LockOpen",
+    "value": 1661
+  },
+  {
+    "name": "LockOpenCheck",
+    "value": 1662
+  },
+  {
+    "name": "Locker",
+    "value": 1663
+  },
+  {
+    "name": "LockerCheck",
+    "value": 1664
+  },
+  {
+    "name": "LockerLock",
+    "value": 1665
+  },
+  {
+    "name": "Locomotive",
+    "value": 1666
+  },
+  {
+    "name": "LocomotiveCheck",
+    "value": 1667
+  },
+  {
+    "name": "LocomotiveClock",
+    "value": 1668
+  },
+  {
+    "name": "LogIn",
+    "value": 1669
+  },
+  {
+    "name": "LogOut",
+    "value": 1670
+  },
+  {
+    "name": "Lollipop",
+    "value": 1671
+  },
+  {
+    "name": "Luggage",
+    "value": 1672
+  },
+  {
+    "name": "LuggageAlert",
+    "value": 1673
+  },
+  {
+    "name": "LuggageCheck",
+    "value": 1674
+  },
+  {
+    "name": "LuggageClock",
+    "value": 1675
+  },
+  {
+    "name": "LuggageLock",
+    "value": 1676
+  },
+  {
+    "name": "LuggagePlus",
+    "value": 1677
+  },
+  {
+    "name": "LuggageSearch",
+    "value": 1678
+  },
+  {
+    "name": "LuggageX",
+    "value": 1679
+  },
+  {
+    "name": "Lungs",
+    "value": 1680
+  },
+  {
+    "name": "Magnet",
+    "value": 1681
+  },
+  {
+    "name": "Mail",
+    "value": 1682
+  },
+  {
+    "name": "MailAlert",
+    "value": 1683
+  },
+  {
+    "name": "MailCheck",
+    "value": 1684
+  },
+  {
+    "name": "MailClock",
+    "value": 1685
+  },
+  {
+    "name": "MailDown",
+    "value": 1686
+  },
+  {
+    "name": "MailHeart",
+    "value": 1687
+  },
+  {
+    "name": "MailLock",
+    "value": 1688
+  },
+  {
+    "name": "MailOpen",
+    "value": 1689
+  },
+  {
+    "name": "MailOpenAlert",
+    "value": 1690
+  },
+  {
+    "name": "MailOpenCheck",
+    "value": 1691
+  },
+  {
+    "name": "MailOpenClock",
+    "value": 1692
+  },
+  {
+    "name": "MailOpenDown",
+    "value": 1693
+  },
+  {
+    "name": "MailOpenHeart",
+    "value": 1694
+  },
+  {
+    "name": "MailOpenLock",
+    "value": 1695
+  },
+  {
+    "name": "MailOpenRight",
+    "value": 1696
+  },
+  {
+    "name": "MailOpenSearch",
+    "value": 1697
+  },
+  {
+    "name": "MailOpenStar",
+    "value": 1698
+  },
+  {
+    "name": "MailOpenX",
+    "value": 1699
+  },
+  {
+    "name": "MailPlus",
+    "value": 1700
+  },
+  {
+    "name": "MailRight",
+    "value": 1701
+  },
+  {
+    "name": "MailSearch",
+    "value": 1702
+  },
+  {
+    "name": "MailSparkle",
+    "value": 1703
+  },
+  {
+    "name": "MailStar",
+    "value": 1704
+  },
+  {
+    "name": "MailSync",
+    "value": 1705
+  },
+  {
+    "name": "MailUp",
+    "value": 1706
+  },
+  {
+    "name": "MailX",
+    "value": 1707
+  },
+  {
+    "name": "Mailbox",
+    "value": 1708
+  },
+  {
+    "name": "MailboxAlert",
+    "value": 1709
+  },
+  {
+    "name": "MailboxCheck",
+    "value": 1710
+  },
+  {
+    "name": "MailboxPlus",
+    "value": 1711
+  },
+  {
+    "name": "Mails",
+    "value": 1712
+  },
+  {
+    "name": "MailsAlert",
+    "value": 1713
+  },
+  {
+    "name": "MailsCheck",
+    "value": 1714
+  },
+  {
+    "name": "MailsClock",
+    "value": 1715
+  },
+  {
+    "name": "MailsDown",
+    "value": 1716
+  },
+  {
+    "name": "MailsLock",
+    "value": 1717
+  },
+  {
+    "name": "MailsPlus",
+    "value": 1718
+  },
+  {
+    "name": "MailsRight",
+    "value": 1719
+  },
+  {
+    "name": "MailsSearch",
+    "value": 1720
+  },
+  {
+    "name": "MailsSync",
+    "value": 1721
+  },
+  {
+    "name": "MailsX",
+    "value": 1722
+  },
+  {
+    "name": "Map",
+    "value": 1723
+  },
+  {
+    "name": "MapCheck",
+    "value": 1724
+  },
+  {
+    "name": "MapHeart",
+    "value": 1725
+  },
+  {
+    "name": "MapLock",
+    "value": 1726
+  },
+  {
+    "name": "MapPin",
+    "value": 1727
+  },
+  {
+    "name": "MapPinCheck",
+    "value": 1728
+  },
+  {
+    "name": "MapPinHeart",
+    "value": 1729
+  },
+  {
+    "name": "MapPinLock",
+    "value": 1730
+  },
+  {
+    "name": "MapPinMinus",
+    "value": 1731
+  },
+  {
+    "name": "MapPinOff",
+    "value": 1732
+  },
+  {
+    "name": "MapPinPlus",
+    "value": 1733
+  },
+  {
+    "name": "MapPinSearch",
+    "value": 1734
+  },
+  {
+    "name": "MapPinStar",
+    "value": 1735
+  },
+  {
+    "name": "MapPinX",
+    "value": 1736
+  },
+  {
+    "name": "MapPinned",
+    "value": 1737
+  },
+  {
+    "name": "MapPinnedCheck",
+    "value": 1738
+  },
+  {
+    "name": "MapPinnedPlus",
+    "value": 1739
+  },
+  {
+    "name": "MapPinnedSearch",
+    "value": 1740
+  },
+  {
+    "name": "MapPinnedStar",
+    "value": 1741
+  },
+  {
+    "name": "MapPinnedX",
+    "value": 1742
+  },
+  {
+    "name": "MapPlus",
+    "value": 1743
+  },
+  {
+    "name": "MapSearch",
+    "value": 1744
+  },
+  {
+    "name": "MapStar",
+    "value": 1745
+  },
+  {
+    "name": "MapX",
+    "value": 1746
+  },
+  {
+    "name": "MarsRover",
+    "value": 1747
+  },
+  {
+    "name": "Matchbox",
+    "value": 1748
+  },
+  {
+    "name": "Maximize",
+    "value": 1749
+  },
+  {
+    "name": "Medal",
+    "value": 1750
+  },
+  {
+    "name": "Megaphone",
+    "value": 1751
+  },
+  {
+    "name": "MegaphoneOff",
+    "value": 1752
+  },
+  {
+    "name": "Meh",
+    "value": 1753
+  },
+  {
+    "name": "MemoryCard",
+    "value": 1754
+  },
+  {
+    "name": "MemoryCardAlert",
+    "value": 1755
+  },
+  {
+    "name": "MemoryCardCheck",
+    "value": 1756
+  },
+  {
+    "name": "MemoryCardLock",
+    "value": 1757
+  },
+  {
+    "name": "MemoryCardPlus",
+    "value": 1758
+  },
+  {
+    "name": "MemoryCardX",
+    "value": 1759
+  },
+  {
+    "name": "MemoryStick",
+    "value": 1760
+  },
+  {
+    "name": "MemoryStickAlert",
+    "value": 1761
+  },
+  {
+    "name": "MemoryStickCheck",
+    "value": 1762
+  },
+  {
+    "name": "MemoryStickDown",
+    "value": 1763
+  },
+  {
+    "name": "MemoryStickPlus",
+    "value": 1764
+  },
+  {
+    "name": "MemoryStickUp",
+    "value": 1765
+  },
+  {
+    "name": "MemoryStickX",
+    "value": 1766
+  },
+  {
+    "name": "Menu",
+    "value": 1767
+  },
+  {
+    "name": "Merge",
+    "value": 1768
+  },
+  {
+    "name": "MessageCircle",
+    "value": 1769
+  },
+  {
+    "name": "MessageCircleAlert",
+    "value": 1770
+  },
+  {
+    "name": "MessageCircleCheck",
+    "value": 1771
+  },
+  {
+    "name": "MessageCircleHeart",
+    "value": 1772
+  },
+  {
+    "name": "MessageCircleLock",
+    "value": 1773
+  },
+  {
+    "name": "MessageCircleOff",
+    "value": 1774
+  },
+  {
+    "name": "MessageCirclePlus",
+    "value": 1775
+  },
+  {
+    "name": "MessageCircleX",
+    "value": 1776
+  },
+  {
+    "name": "MessageSquare",
+    "value": 1777
+  },
+  {
+    "name": "MessageSquareAlert",
+    "value": 1778
+  },
+  {
+    "name": "MessageSquareCheck",
+    "value": 1779
+  },
+  {
+    "name": "MessageSquareLock",
+    "value": 1780
+  },
+  {
+    "name": "MessageSquarePlus",
+    "value": 1781
+  },
+  {
+    "name": "MessageSquareX",
+    "value": 1782
+  },
+  {
+    "name": "Messages",
+    "value": 1783
+  },
+  {
+    "name": "MessagesAlert",
+    "value": 1784
+  },
+  {
+    "name": "MessagesCheck",
+    "value": 1785
+  },
+  {
+    "name": "MessagesClock",
+    "value": 1786
+  },
+  {
+    "name": "MessagesHeart",
+    "value": 1787
+  },
+  {
+    "name": "MessagesLock",
+    "value": 1788
+  },
+  {
+    "name": "MessagesOff",
+    "value": 1789
+  },
+  {
+    "name": "MessagesPlus",
+    "value": 1790
+  },
+  {
+    "name": "MessagesSearch",
+    "value": 1791
+  },
+  {
+    "name": "MessagesSparkle",
+    "value": 1792
+  },
+  {
+    "name": "MessagesSquare",
+    "value": 1793
+  },
+  {
+    "name": "MessagesSquareAlert",
+    "value": 1794
+  },
+  {
+    "name": "MessagesSquareCheck",
+    "value": 1795
+  },
+  {
+    "name": "MessagesSquareClock",
+    "value": 1796
+  },
+  {
+    "name": "MessagesSquareHeart",
+    "value": 1797
+  },
+  {
+    "name": "MessagesSquareLock",
+    "value": 1798
+  },
+  {
+    "name": "MessagesSquareOff",
+    "value": 1799
+  },
+  {
+    "name": "MessagesSquarePlus",
+    "value": 1800
+  },
+  {
+    "name": "MessagesSquareSearch",
+    "value": 1801
+  },
+  {
+    "name": "MessagesSquareSparkle",
+    "value": 1802
+  },
+  {
+    "name": "MessagesSquareX",
+    "value": 1803
+  },
+  {
+    "name": "MessagesStar",
+    "value": 1804
+  },
+  {
+    "name": "MessagesX",
+    "value": 1805
+  },
+  {
+    "name": "Metronome",
+    "value": 1806
+  },
+  {
+    "name": "Mic",
+    "value": 1807
+  },
+  {
+    "name": "MicCheck",
+    "value": 1808
+  },
+  {
+    "name": "MicLock",
+    "value": 1809
+  },
+  {
+    "name": "MicOff",
+    "value": 1810
+  },
+  {
+    "name": "MicPlus",
+    "value": 1811
+  },
+  {
+    "name": "MicSparkle",
+    "value": 1812
+  },
+  {
+    "name": "MicVocal",
+    "value": 1813
+  },
+  {
+    "name": "MicVocalOff",
+    "value": 1814
+  },
+  {
+    "name": "MicX",
+    "value": 1815
+  },
+  {
+    "name": "Microscope",
+    "value": 1816
+  },
+  {
+    "name": "Microwave",
+    "value": 1817
+  },
+  {
+    "name": "MicrowaveCheck",
+    "value": 1818
+  },
+  {
+    "name": "MicrowaveClock",
+    "value": 1819
+  },
+  {
+    "name": "Milk",
+    "value": 1820
+  },
+  {
+    "name": "MilkCheck",
+    "value": 1821
+  },
+  {
+    "name": "MilkPlus",
+    "value": 1822
+  },
+  {
+    "name": "Minimize",
+    "value": 1823
+  },
+  {
+    "name": "Mirror",
+    "value": 1824
+  },
+  {
+    "name": "Mitten",
+    "value": 1825
+  },
+  {
+    "name": "MittenCheck",
+    "value": 1826
+  },
+  {
+    "name": "MittenHeart",
+    "value": 1827
+  },
+  {
+    "name": "MittenPlus",
+    "value": 1828
+  },
+  {
+    "name": "Modem",
+    "value": 1829
+  },
+  {
+    "name": "ModemAlert",
+    "value": 1830
+  },
+  {
+    "name": "ModemCheck",
+    "value": 1831
+  },
+  {
+    "name": "ModemOff",
+    "value": 1832
+  },
+  {
+    "name": "ModemX",
+    "value": 1833
+  },
+  {
+    "name": "Molecule",
+    "value": 1834
+  },
+  {
+    "name": "MoleculeSparkle",
+    "value": 1835
+  },
+  {
+    "name": "Monitor",
+    "value": 1836
+  },
+  {
+    "name": "MonitorAlert",
+    "value": 1837
+  },
+  {
+    "name": "MonitorCheck",
+    "value": 1838
+  },
+  {
+    "name": "MonitorCog",
+    "value": 1839
+  },
+  {
+    "name": "MonitorDown",
+    "value": 1840
+  },
+  {
+    "name": "MonitorInfo",
+    "value": 1841
+  },
+  {
+    "name": "MonitorLock",
+    "value": 1842
+  },
+  {
+    "name": "MonitorOff",
+    "value": 1843
+  },
+  {
+    "name": "MonitorPlus",
+    "value": 1844
+  },
+  {
+    "name": "MonitorSearch",
+    "value": 1845
+  },
+  {
+    "name": "MonitorSparkle",
+    "value": 1846
+  },
+  {
+    "name": "MonitorSync",
+    "value": 1847
+  },
+  {
+    "name": "MonitorUp",
+    "value": 1848
+  },
+  {
+    "name": "MonitorX",
+    "value": 1849
+  },
+  {
+    "name": "Monorail",
+    "value": 1850
+  },
+  {
+    "name": "MonorailCheck",
+    "value": 1851
+  },
+  {
+    "name": "MonorailClock",
+    "value": 1852
+  },
+  {
+    "name": "Moon",
+    "value": 1853
+  },
+  {
+    "name": "MoonClock",
+    "value": 1854
+  },
+  {
+    "name": "MoonStar",
+    "value": 1855
+  },
+  {
+    "name": "Mop",
+    "value": 1856
+  },
+  {
+    "name": "MoreHorizontal",
+    "value": 1857
+  },
+  {
+    "name": "MoreVertical",
+    "value": 1858
+  },
+  {
+    "name": "Motorcycle",
+    "value": 1859
+  },
+  {
+    "name": "MotorcycleCheck",
+    "value": 1860
+  },
+  {
+    "name": "MotorcycleClock",
+    "value": 1861
+  },
+  {
+    "name": "Mountain",
+    "value": 1862
+  },
+  {
+    "name": "Mouse",
+    "value": 1863
+  },
+  {
+    "name": "MouseCheck",
+    "value": 1864
+  },
+  {
+    "name": "MouseCog",
+    "value": 1865
+  },
+  {
+    "name": "MousePlus",
+    "value": 1866
+  },
+  {
+    "name": "MousePointerClick",
+    "value": 1867
+  },
+  {
+    "name": "Move",
+    "value": 1868
+  },
+  {
+    "name": "Muffin",
+    "value": 1869
+  },
+  {
+    "name": "MuffinHeart",
+    "value": 1870
+  },
+  {
+    "name": "Mug",
+    "value": 1871
+  },
+  {
+    "name": "MugHeart",
+    "value": 1872
+  },
+  {
+    "name": "MugPlus",
+    "value": 1873
+  },
+  {
+    "name": "Museum",
+    "value": 1874
+  },
+  {
+    "name": "MuseumCheck",
+    "value": 1875
+  },
+  {
+    "name": "MuseumClock",
+    "value": 1876
+  },
+  {
+    "name": "MuseumHeart",
+    "value": 1877
+  },
+  {
+    "name": "MuseumStar",
+    "value": 1878
+  },
+  {
+    "name": "Mushroom",
+    "value": 1879
+  },
+  {
+    "name": "Music",
+    "value": 1880
+  },
+  {
+    "name": "MusicHeart",
+    "value": 1881
+  },
+  {
+    "name": "MusicLibrary",
+    "value": 1882
+  },
+  {
+    "name": "MusicLibraryCheck",
+    "value": 1883
+  },
+  {
+    "name": "MusicLibraryClock",
+    "value": 1884
+  },
+  {
+    "name": "MusicLibraryDown",
+    "value": 1885
+  },
+  {
+    "name": "MusicLibraryHeart",
+    "value": 1886
+  },
+  {
+    "name": "MusicLibraryLock",
+    "value": 1887
+  },
+  {
+    "name": "MusicLibraryPlus",
+    "value": 1888
+  },
+  {
+    "name": "MusicLibrarySearch",
+    "value": 1889
+  },
+  {
+    "name": "MusicLibraryStar",
+    "value": 1890
+  },
+  {
+    "name": "MusicLibrarySync",
+    "value": 1891
+  },
+  {
+    "name": "MusicLibraryUp",
+    "value": 1892
+  },
+  {
+    "name": "MusicLibraryX",
+    "value": 1893
+  },
+  {
+    "name": "MusicOff",
+    "value": 1894
+  },
+  {
+    "name": "MusicPlayer",
+    "value": 1895
+  },
+  {
+    "name": "MusicPlayerDown",
+    "value": 1896
+  },
+  {
+    "name": "MusicPlayerHeart",
+    "value": 1897
+  },
+  {
+    "name": "MusicPlayerPlus",
+    "value": 1898
+  },
+  {
+    "name": "MusicPlus",
+    "value": 1899
+  },
+  {
+    "name": "MusicSparkle",
+    "value": 1900
+  },
+  {
+    "name": "MusicStar",
+    "value": 1901
+  },
+  {
+    "name": "Nail",
+    "value": 1902
+  },
+  {
+    "name": "NailPolish",
+    "value": 1903
+  },
+  {
+    "name": "NailPolishCheck",
+    "value": 1904
+  },
+  {
+    "name": "NailPolishHeart",
+    "value": 1905
+  },
+  {
+    "name": "NailPolishPlus",
+    "value": 1906
+  },
+  {
+    "name": "Navigation",
+    "value": 1907
+  },
+  {
+    "name": "NavigationOff",
+    "value": 1908
+  },
+  {
+    "name": "Necklace",
+    "value": 1909
+  },
+  {
+    "name": "NecklaceCheck",
+    "value": 1910
+  },
+  {
+    "name": "NecklaceHeart",
+    "value": 1911
+  },
+  {
+    "name": "NecklacePlus",
+    "value": 1912
+  },
+  {
+    "name": "Necktie",
+    "value": 1913
+  },
+  {
+    "name": "NecktieCheck",
+    "value": 1914
+  },
+  {
+    "name": "NecktiePlus",
+    "value": 1915
+  },
+  {
+    "name": "NeedleThread",
+    "value": 1916
+  },
+  {
+    "name": "Network",
+    "value": 1917
+  },
+  {
+    "name": "NetworkCheck",
+    "value": 1918
+  },
+  {
+    "name": "NetworkCog",
+    "value": 1919
+  },
+  {
+    "name": "NetworkPlus",
+    "value": 1920
+  },
+  {
+    "name": "NetworkSearch",
+    "value": 1921
+  },
+  {
+    "name": "NetworkX",
+    "value": 1922
+  },
+  {
+    "name": "Newspaper",
+    "value": 1923
+  },
+  {
+    "name": "NewspaperAlert",
+    "value": 1924
+  },
+  {
+    "name": "NewspaperCheck",
+    "value": 1925
+  },
+  {
+    "name": "NewspaperClock",
+    "value": 1926
+  },
+  {
+    "name": "NewspaperHeart",
+    "value": 1927
+  },
+  {
+    "name": "NewspaperPlus",
+    "value": 1928
+  },
+  {
+    "name": "NewspaperSearch",
+    "value": 1929
+  },
+  {
+    "name": "NewspaperSparkle",
+    "value": 1930
+  },
+  {
+    "name": "NewspaperStar",
+    "value": 1931
+  },
+  {
+    "name": "NewspaperSync",
+    "value": 1932
+  },
+  {
+    "name": "NewspaperX",
+    "value": 1933
+  },
+  {
+    "name": "Nfc",
+    "value": 1934
+  },
+  {
+    "name": "NfcAlert",
+    "value": 1935
+  },
+  {
+    "name": "NfcCheck",
+    "value": 1936
+  },
+  {
+    "name": "NfcLock",
+    "value": 1937
+  },
+  {
+    "name": "NfcX",
+    "value": 1938
+  },
+  {
+    "name": "Nightstand",
+    "value": 1939
+  },
+  {
+    "name": "Noodles",
+    "value": 1940
+  },
+  {
+    "name": "NoodlesClock",
+    "value": 1941
+  },
+  {
+    "name": "NoodlesHeart",
+    "value": 1942
+  },
+  {
+    "name": "Notebook",
+    "value": 1943
+  },
+  {
+    "name": "NotebookCheck",
+    "value": 1944
+  },
+  {
+    "name": "NotebookClock",
+    "value": 1945
+  },
+  {
+    "name": "NotebookHeart",
+    "value": 1946
+  },
+  {
+    "name": "NotebookLock",
+    "value": 1947
+  },
+  {
+    "name": "NotebookPen",
+    "value": 1948
+  },
+  {
+    "name": "NotebookPenCheck",
+    "value": 1949
+  },
+  {
+    "name": "NotebookPenLock",
+    "value": 1950
+  },
+  {
+    "name": "NotebookPenPlus",
+    "value": 1951
+  },
+  {
+    "name": "NotebookPenSparkle",
+    "value": 1952
+  },
+  {
+    "name": "NotebookPlus",
+    "value": 1953
+  },
+  {
+    "name": "NotebookSearch",
+    "value": 1954
+  },
+  {
+    "name": "NotebookSparkle",
+    "value": 1955
+  },
+  {
+    "name": "NotebookStar",
+    "value": 1956
+  },
+  {
+    "name": "NotebookX",
+    "value": 1957
+  },
+  {
+    "name": "Notepad",
+    "value": 1958
+  },
+  {
+    "name": "NotepadAlert",
+    "value": 1959
+  },
+  {
+    "name": "NotepadCheck",
+    "value": 1960
+  },
+  {
+    "name": "NotepadClock",
+    "value": 1961
+  },
+  {
+    "name": "NotepadHeart",
+    "value": 1962
+  },
+  {
+    "name": "NotepadLock",
+    "value": 1963
+  },
+  {
+    "name": "NotepadMinus",
+    "value": 1964
+  },
+  {
+    "name": "NotepadPlus",
+    "value": 1965
+  },
+  {
+    "name": "NotepadSearch",
+    "value": 1966
+  },
+  {
+    "name": "NotepadSparkle",
+    "value": 1967
+  },
+  {
+    "name": "NotepadStar",
+    "value": 1968
+  },
+  {
+    "name": "NotepadSync",
+    "value": 1969
+  },
+  {
+    "name": "NotepadX",
+    "value": 1970
+  },
+  {
+    "name": "NutBolt",
+    "value": 1971
+  },
+  {
+    "name": "Octagon",
+    "value": 1972
+  },
+  {
+    "name": "OfficeChair",
+    "value": 1973
+  },
+  {
+    "name": "Ointment",
+    "value": 1974
+  },
+  {
+    "name": "OintmentPlus",
+    "value": 1975
+  },
+  {
+    "name": "Option",
+    "value": 1976
+  },
+  {
+    "name": "Orbit",
+    "value": 1977
+  },
+  {
+    "name": "Outdent",
+    "value": 1978
+  },
+  {
+    "name": "Oven",
+    "value": 1979
+  },
+  {
+    "name": "OvenCheck",
+    "value": 1980
+  },
+  {
+    "name": "OvenClock",
+    "value": 1981
+  },
+  {
+    "name": "OvenMitt",
+    "value": 1982
+  },
+  {
+    "name": "Owl",
+    "value": 1983
+  },
+  {
+    "name": "Package",
+    "value": 1984
+  },
+  {
+    "name": "PackageAlert",
+    "value": 1985
+  },
+  {
+    "name": "PackageCheck",
+    "value": 1986
+  },
+  {
+    "name": "PackageClock",
+    "value": 1987
+  },
+  {
+    "name": "PackageDown",
+    "value": 1988
+  },
+  {
+    "name": "PackageHeart",
+    "value": 1989
+  },
+  {
+    "name": "PackageLock",
+    "value": 1990
+  },
+  {
+    "name": "PackageMinus",
+    "value": 1991
+  },
+  {
+    "name": "PackagePlus",
+    "value": 1992
+  },
+  {
+    "name": "PackageRight",
+    "value": 1993
+  },
+  {
+    "name": "PackageSearch",
+    "value": 1994
+  },
+  {
+    "name": "PackageSync",
+    "value": 1995
+  },
+  {
+    "name": "PackageUp",
+    "value": 1996
+  },
+  {
+    "name": "PackageX",
+    "value": 1997
+  },
+  {
+    "name": "Pager",
+    "value": 1998
+  },
+  {
+    "name": "PagerAlert",
+    "value": 1999
+  },
+  {
+    "name": "PagerCheck",
+    "value": 2000
+  },
+  {
+    "name": "PagerOff",
+    "value": 2001
+  },
+  {
+    "name": "PagerX",
+    "value": 2002
+  },
+  {
+    "name": "Pagoda",
+    "value": 2003
+  },
+  {
+    "name": "PaintBucket",
+    "value": 2004
+  },
+  {
+    "name": "PaintRoller",
+    "value": 2005
+  },
+  {
+    "name": "Paintbrush",
+    "value": 2006
+  },
+  {
+    "name": "Palette",
+    "value": 2007
+  },
+  {
+    "name": "Pancake",
+    "value": 2008
+  },
+  {
+    "name": "PanelBottom",
+    "value": 2009
+  },
+  {
+    "name": "Pants",
+    "value": 2010
+  },
+  {
+    "name": "PantsCheck",
+    "value": 2011
+  },
+  {
+    "name": "PantsHeart",
+    "value": 2012
+  },
+  {
+    "name": "PantsPlus",
+    "value": 2013
+  },
+  {
+    "name": "PaperShredder",
+    "value": 2014
+  },
+  {
+    "name": "Paperclip",
+    "value": 2015
+  },
+  {
+    "name": "Parachute",
+    "value": 2016
+  },
+  {
+    "name": "Parking",
+    "value": 2017
+  },
+  {
+    "name": "ParkingMeter",
+    "value": 2018
+  },
+  {
+    "name": "PartyPopper",
+    "value": 2019
+  },
+  {
+    "name": "Passport",
+    "value": 2020
+  },
+  {
+    "name": "PassportCheck",
+    "value": 2021
+  },
+  {
+    "name": "PassportClock",
+    "value": 2022
+  },
+  {
+    "name": "PassportX",
+    "value": 2023
+  },
+  {
+    "name": "Password",
+    "value": 2024
+  },
+  {
+    "name": "PasswordCheck",
+    "value": 2025
+  },
+  {
+    "name": "PasswordLock",
+    "value": 2026
+  },
+  {
+    "name": "PasswordX",
+    "value": 2027
+  },
+  {
+    "name": "Pause",
+    "value": 2028
+  },
+  {
+    "name": "Paw",
+    "value": 2029
+  },
+  {
+    "name": "PawHeart",
+    "value": 2030
+  },
+  {
+    "name": "Pda",
+    "value": 2031
+  },
+  {
+    "name": "PdaCheck",
+    "value": 2032
+  },
+  {
+    "name": "PdaLock",
+    "value": 2033
+  },
+  {
+    "name": "PdaSync",
+    "value": 2034
+  },
+  {
+    "name": "PdaX",
+    "value": 2035
+  },
+  {
+    "name": "Pen",
+    "value": 2036
+  },
+  {
+    "name": "PenTool",
+    "value": 2037
+  },
+  {
+    "name": "Pencil",
+    "value": 2038
+  },
+  {
+    "name": "PencilCase",
+    "value": 2039
+  },
+  {
+    "name": "PencilCaseCheck",
+    "value": 2040
+  },
+  {
+    "name": "PencilCasePlus",
+    "value": 2041
+  },
+  {
+    "name": "PencilCheck",
+    "value": 2042
+  },
+  {
+    "name": "PencilCup",
+    "value": 2043
+  },
+  {
+    "name": "PencilLock",
+    "value": 2044
+  },
+  {
+    "name": "PencilOff",
+    "value": 2045
+  },
+  {
+    "name": "PencilPlus",
+    "value": 2046
+  },
+  {
+    "name": "PencilRuler",
+    "value": 2047
+  },
+  {
+    "name": "PencilSparkle",
+    "value": 2048
+  },
+  {
+    "name": "PencilX",
+    "value": 2049
+  },
+  {
+    "name": "Pentagon",
+    "value": 2050
+  },
+  {
+    "name": "Perfume",
+    "value": 2051
+  },
+  {
+    "name": "PerfumeCheck",
+    "value": 2052
+  },
+  {
+    "name": "PerfumeHeart",
+    "value": 2053
+  },
+  {
+    "name": "PerfumePlus",
+    "value": 2054
+  },
+  {
+    "name": "PerfumeStar",
+    "value": 2055
+  },
+  {
+    "name": "PeriodicTable",
+    "value": 2056
+  },
+  {
+    "name": "PersonRunning",
+    "value": 2057
+  },
+  {
+    "name": "PersonStanding",
+    "value": 2058
+  },
+  {
+    "name": "PersonWalking",
+    "value": 2059
+  },
+  {
+    "name": "PetBowl",
+    "value": 2060
+  },
+  {
+    "name": "PetBowlCheck",
+    "value": 2061
+  },
+  {
+    "name": "PetBowlClock",
+    "value": 2062
+  },
+  {
+    "name": "PetBowlHeart",
+    "value": 2063
+  },
+  {
+    "name": "PetBowlPlus",
+    "value": 2064
+  },
+  {
+    "name": "PetFoodBag",
+    "value": 2065
+  },
+  {
+    "name": "PetFoodBagCheck",
+    "value": 2066
+  },
+  {
+    "name": "PetFoodBagHeart",
+    "value": 2067
+  },
+  {
+    "name": "PetFoodBagPlus",
+    "value": 2068
+  },
+  {
+    "name": "PetriDish",
+    "value": 2069
+  },
+  {
+    "name": "Phone",
+    "value": 2070
+  },
+  {
+    "name": "PhoneCall",
+    "value": 2071
+  },
+  {
+    "name": "PhoneClock",
+    "value": 2072
+  },
+  {
+    "name": "PhoneLock",
+    "value": 2073
+  },
+  {
+    "name": "PhonePlus",
+    "value": 2074
+  },
+  {
+    "name": "PhoneRight",
+    "value": 2075
+  },
+  {
+    "name": "PhoneVibrate",
+    "value": 2076
+  },
+  {
+    "name": "PhoneVibrateOff",
+    "value": 2077
+  },
+  {
+    "name": "PhoneX",
+    "value": 2078
+  },
+  {
+    "name": "PhotoFrame",
+    "value": 2079
+  },
+  {
+    "name": "PhotoFrameCheck",
+    "value": 2080
+  },
+  {
+    "name": "PhotoFrameDown",
+    "value": 2081
+  },
+  {
+    "name": "PhotoFrameHeart",
+    "value": 2082
+  },
+  {
+    "name": "PhotoFrameLock",
+    "value": 2083
+  },
+  {
+    "name": "PhotoFramePlus",
+    "value": 2084
+  },
+  {
+    "name": "PhotoFrameSearch",
+    "value": 2085
+  },
+  {
+    "name": "PhotoFrameStar",
+    "value": 2086
+  },
+  {
+    "name": "PhotoFrameUp",
+    "value": 2087
+  },
+  {
+    "name": "PhotoFrameX",
+    "value": 2088
+  },
+  {
+    "name": "Pi",
+    "value": 2089
+  },
+  {
+    "name": "Piano",
+    "value": 2090
+  },
+  {
+    "name": "PicnicBasket",
+    "value": 2091
+  },
+  {
+    "name": "PictureInPicture",
+    "value": 2092
+  },
+  {
+    "name": "Pie",
+    "value": 2093
+  },
+  {
+    "name": "PieHeart",
+    "value": 2094
+  },
+  {
+    "name": "PiggyBank",
+    "value": 2095
+  },
+  {
+    "name": "PiggyBankCheck",
+    "value": 2096
+  },
+  {
+    "name": "PiggyBankClock",
+    "value": 2097
+  },
+  {
+    "name": "PiggyBankDown",
+    "value": 2098
+  },
+  {
+    "name": "PiggyBankLock",
+    "value": 2099
+  },
+  {
+    "name": "PiggyBankMinus",
+    "value": 2100
+  },
+  {
+    "name": "PiggyBankPlus",
+    "value": 2101
+  },
+  {
+    "name": "PiggyBankUp",
+    "value": 2102
+  },
+  {
+    "name": "Pilcrow",
+    "value": 2103
+  },
+  {
+    "name": "Pill",
+    "value": 2104
+  },
+  {
+    "name": "Pills",
+    "value": 2105
+  },
+  {
+    "name": "PillsCheck",
+    "value": 2106
+  },
+  {
+    "name": "PillsClock",
+    "value": 2107
+  },
+  {
+    "name": "PillsPlus",
+    "value": 2108
+  },
+  {
+    "name": "Pin",
+    "value": 2109
+  },
+  {
+    "name": "PinOff",
+    "value": 2110
+  },
+  {
+    "name": "PingPong",
+    "value": 2111
+  },
+  {
+    "name": "Pinwheel",
+    "value": 2112
+  },
+  {
+    "name": "Pipette",
+    "value": 2113
+  },
+  {
+    "name": "Pizza",
+    "value": 2114
+  },
+  {
+    "name": "PizzaHeart",
+    "value": 2115
+  },
+  {
+    "name": "PizzaPlus",
+    "value": 2116
+  },
+  {
+    "name": "PizzaStar",
+    "value": 2117
+  },
+  {
+    "name": "Plane",
+    "value": 2118
+  },
+  {
+    "name": "PlaneAlert",
+    "value": 2119
+  },
+  {
+    "name": "PlaneCheck",
+    "value": 2120
+  },
+  {
+    "name": "PlaneClock",
+    "value": 2121
+  },
+  {
+    "name": "PlaneLanding",
+    "value": 2122
+  },
+  {
+    "name": "PlaneLandingAlert",
+    "value": 2123
+  },
+  {
+    "name": "PlaneLandingCheck",
+    "value": 2124
+  },
+  {
+    "name": "PlaneLandingClock",
+    "value": 2125
+  },
+  {
+    "name": "PlaneOff",
+    "value": 2126
+  },
+  {
+    "name": "PlanePlus",
+    "value": 2127
+  },
+  {
+    "name": "PlaneSearch",
+    "value": 2128
+  },
+  {
+    "name": "PlaneTakeoff",
+    "value": 2129
+  },
+  {
+    "name": "PlaneTakeoffAlert",
+    "value": 2130
+  },
+  {
+    "name": "PlaneTakeoffCheck",
+    "value": 2131
+  },
+  {
+    "name": "PlaneTakeoffClock",
+    "value": 2132
+  },
+  {
+    "name": "PlaneX",
+    "value": 2133
+  },
+  {
+    "name": "Planet",
+    "value": 2134
+  },
+  {
+    "name": "Plant",
+    "value": 2135
+  },
+  {
+    "name": "PlantCheck",
+    "value": 2136
+  },
+  {
+    "name": "PlantHeart",
+    "value": 2137
+  },
+  {
+    "name": "PlantPlus",
+    "value": 2138
+  },
+  {
+    "name": "PlasmaBall",
+    "value": 2139
+  },
+  {
+    "name": "PlasmaBallBolt",
+    "value": 2140
+  },
+  {
+    "name": "Play",
+    "value": 2141
+  },
+  {
+    "name": "PlayingCards",
+    "value": 2142
+  },
+  {
+    "name": "Playlist",
+    "value": 2143
+  },
+  {
+    "name": "PlaylistCheck",
+    "value": 2144
+  },
+  {
+    "name": "PlaylistClock",
+    "value": 2145
+  },
+  {
+    "name": "PlaylistDown",
+    "value": 2146
+  },
+  {
+    "name": "PlaylistHeart",
+    "value": 2147
+  },
+  {
+    "name": "PlaylistLock",
+    "value": 2148
+  },
+  {
+    "name": "PlaylistMinus",
+    "value": 2149
+  },
+  {
+    "name": "PlaylistPlus",
+    "value": 2150
+  },
+  {
+    "name": "PlaylistSearch",
+    "value": 2151
+  },
+  {
+    "name": "PlaylistSparkle",
+    "value": 2152
+  },
+  {
+    "name": "PlaylistStar",
+    "value": 2153
+  },
+  {
+    "name": "PlaylistUp",
+    "value": 2154
+  },
+  {
+    "name": "PlaylistX",
+    "value": 2155
+  },
+  {
+    "name": "Plug",
+    "value": 2156
+  },
+  {
+    "name": "PlugAlert",
+    "value": 2157
+  },
+  {
+    "name": "PlugBolt",
+    "value": 2158
+  },
+  {
+    "name": "PlugCheck",
+    "value": 2159
+  },
+  {
+    "name": "PlugOff",
+    "value": 2160
+  },
+  {
+    "name": "PlugX",
+    "value": 2161
+  },
+  {
+    "name": "Plunger",
+    "value": 2162
+  },
+  {
+    "name": "PlusSquare",
+    "value": 2163
+  },
+  {
+    "name": "Podcast",
+    "value": 2164
+  },
+  {
+    "name": "PodcastCheck",
+    "value": 2165
+  },
+  {
+    "name": "PodcastDown",
+    "value": 2166
+  },
+  {
+    "name": "PodcastPlus",
+    "value": 2167
+  },
+  {
+    "name": "Podium",
+    "value": 2168
+  },
+  {
+    "name": "Pointer",
+    "value": 2169
+  },
+  {
+    "name": "Polaroid",
+    "value": 2170
+  },
+  {
+    "name": "PoliceCar",
+    "value": 2171
+  },
+  {
+    "name": "Popcorn",
+    "value": 2172
+  },
+  {
+    "name": "PosTerminal",
+    "value": 2173
+  },
+  {
+    "name": "PosTerminalCheck",
+    "value": 2174
+  },
+  {
+    "name": "PosTerminalClock",
+    "value": 2175
+  },
+  {
+    "name": "PosTerminalSync",
+    "value": 2176
+  },
+  {
+    "name": "PosTerminalX",
+    "value": 2177
+  },
+  {
+    "name": "Power",
+    "value": 2178
+  },
+  {
+    "name": "PowerBank",
+    "value": 2179
+  },
+  {
+    "name": "PowerBankAlert",
+    "value": 2180
+  },
+  {
+    "name": "PowerBankCheck",
+    "value": 2181
+  },
+  {
+    "name": "PowerBankClock",
+    "value": 2182
+  },
+  {
+    "name": "PowerClock",
+    "value": 2183
+  },
+  {
+    "name": "Presentation",
+    "value": 2184
+  },
+  {
+    "name": "PresentationCheck",
+    "value": 2185
+  },
+  {
+    "name": "PresentationPlus",
+    "value": 2186
+  },
+  {
+    "name": "PresentationSearch",
+    "value": 2187
+  },
+  {
+    "name": "Printer",
+    "value": 2188
+  },
+  {
+    "name": "Printer3d",
+    "value": 2189
+  },
+  {
+    "name": "Printer3dCheck",
+    "value": 2190
+  },
+  {
+    "name": "Printer3dClock",
+    "value": 2191
+  },
+  {
+    "name": "Printer3dCog",
+    "value": 2192
+  },
+  {
+    "name": "Printer3dX",
+    "value": 2193
+  },
+  {
+    "name": "PrinterAlert",
+    "value": 2194
+  },
+  {
+    "name": "PrinterCheck",
+    "value": 2195
+  },
+  {
+    "name": "PrinterClock",
+    "value": 2196
+  },
+  {
+    "name": "PrinterCog",
+    "value": 2197
+  },
+  {
+    "name": "PrinterOff",
+    "value": 2198
+  },
+  {
+    "name": "PrinterX",
+    "value": 2199
+  },
+  {
+    "name": "Projector",
+    "value": 2200
+  },
+  {
+    "name": "ProjectorCheck",
+    "value": 2201
+  },
+  {
+    "name": "ProjectorCog",
+    "value": 2202
+  },
+  {
+    "name": "ProjectorPlus",
+    "value": 2203
+  },
+  {
+    "name": "ProjectorScreen",
+    "value": 2204
+  },
+  {
+    "name": "ProjectorScreenCheck",
+    "value": 2205
+  },
+  {
+    "name": "ProjectorScreenX",
+    "value": 2206
+  },
+  {
+    "name": "ProjectorX",
+    "value": 2207
+  },
+  {
+    "name": "Protractor",
+    "value": 2208
+  },
+  {
+    "name": "Pudding",
+    "value": 2209
+  },
+  {
+    "name": "PuddingHeart",
+    "value": 2210
+  },
+  {
+    "name": "Puzzle",
+    "value": 2211
+  },
+  {
+    "name": "PuzzleCheck",
+    "value": 2212
+  },
+  {
+    "name": "PuzzleCog",
+    "value": 2213
+  },
+  {
+    "name": "PuzzleMinus",
+    "value": 2214
+  },
+  {
+    "name": "PuzzlePlus",
+    "value": 2215
+  },
+  {
+    "name": "PuzzleSearch",
+    "value": 2216
+  },
+  {
+    "name": "PuzzleX",
+    "value": 2217
+  },
+  {
+    "name": "Pyramid",
+    "value": 2218
+  },
+  {
+    "name": "Quiz",
+    "value": 2219
+  },
+  {
+    "name": "Quote",
+    "value": 2220
+  },
+  {
+    "name": "Rabbit",
+    "value": 2221
+  },
+  {
+    "name": "RabbitHeart",
+    "value": 2222
+  },
+  {
+    "name": "Radar",
+    "value": 2223
+  },
+  {
+    "name": "RadarOff",
+    "value": 2224
+  },
+  {
+    "name": "Radio",
+    "value": 2225
+  },
+  {
+    "name": "RadioOff",
+    "value": 2226
+  },
+  {
+    "name": "RadioTower",
+    "value": 2227
+  },
+  {
+    "name": "RadioTowerOff",
+    "value": 2228
+  },
+  {
+    "name": "RainBarrel",
+    "value": 2229
+  },
+  {
+    "name": "Rainbow",
+    "value": 2230
+  },
+  {
+    "name": "Rake",
+    "value": 2231
+  },
+  {
+    "name": "Razor",
+    "value": 2232
+  },
+  {
+    "name": "Receipt",
+    "value": 2233
+  },
+  {
+    "name": "ReceiptAlert",
+    "value": 2234
+  },
+  {
+    "name": "ReceiptCheck",
+    "value": 2235
+  },
+  {
+    "name": "ReceiptClock",
+    "value": 2236
+  },
+  {
+    "name": "ReceiptDown",
+    "value": 2237
+  },
+  {
+    "name": "ReceiptPlus",
+    "value": 2238
+  },
+  {
+    "name": "ReceiptRight",
+    "value": 2239
+  },
+  {
+    "name": "ReceiptSearch",
+    "value": 2240
+  },
+  {
+    "name": "ReceiptSparkle",
+    "value": 2241
+  },
+  {
+    "name": "ReceiptX",
+    "value": 2242
+  },
+  {
+    "name": "Record",
+    "value": 2243
+  },
+  {
+    "name": "Redo",
+    "value": 2244
+  },
+  {
+    "name": "Regex",
+    "value": 2245
+  },
+  {
+    "name": "Remote",
+    "value": 2246
+  },
+  {
+    "name": "RemoteCheck",
+    "value": 2247
+  },
+  {
+    "name": "RemoteCog",
+    "value": 2248
+  },
+  {
+    "name": "RemotePlus",
+    "value": 2249
+  },
+  {
+    "name": "Repeat",
+    "value": 2250
+  },
+  {
+    "name": "Reply",
+    "value": 2251
+  },
+  {
+    "name": "RetroComputer",
+    "value": 2252
+  },
+  {
+    "name": "RetroComputerAlert",
+    "value": 2253
+  },
+  {
+    "name": "RetroComputerCheck",
+    "value": 2254
+  },
+  {
+    "name": "RetroComputerHeart",
+    "value": 2255
+  },
+  {
+    "name": "RetroComputerPlus",
+    "value": 2256
+  },
+  {
+    "name": "RetroComputerX",
+    "value": 2257
+  },
+  {
+    "name": "Rewind",
+    "value": 2258
+  },
+  {
+    "name": "RiceBowl",
+    "value": 2259
+  },
+  {
+    "name": "RiceBowlClock",
+    "value": 2260
+  },
+  {
+    "name": "RiceBowlHeart",
+    "value": 2261
+  },
+  {
+    "name": "Ring",
+    "value": 2262
+  },
+  {
+    "name": "RingHeart",
+    "value": 2263
+  },
+  {
+    "name": "RingLight",
+    "value": 2264
+  },
+  {
+    "name": "RingLightBolt",
+    "value": 2265
+  },
+  {
+    "name": "RingLightCheck",
+    "value": 2266
+  },
+  {
+    "name": "RingLightOff",
+    "value": 2267
+  },
+  {
+    "name": "RingLightX",
+    "value": 2268
+  },
+  {
+    "name": "RingStar",
+    "value": 2269
+  },
+  {
+    "name": "Road",
+    "value": 2270
+  },
+  {
+    "name": "RobotArm",
+    "value": 2271
+  },
+  {
+    "name": "RobotArmCheck",
+    "value": 2272
+  },
+  {
+    "name": "RobotArmCog",
+    "value": 2273
+  },
+  {
+    "name": "RobotArmSparkle",
+    "value": 2274
+  },
+  {
+    "name": "RobotVacuum",
+    "value": 2275
+  },
+  {
+    "name": "RobotVacuumBolt",
+    "value": 2276
+  },
+  {
+    "name": "RobotVacuumCheck",
+    "value": 2277
+  },
+  {
+    "name": "RobotVacuumClock",
+    "value": 2278
+  },
+  {
+    "name": "RobotVacuumX",
+    "value": 2279
+  },
+  {
+    "name": "Rocket",
+    "value": 2280
+  },
+  {
+    "name": "RocketCheck",
+    "value": 2281
+  },
+  {
+    "name": "RocketClock",
+    "value": 2282
+  },
+  {
+    "name": "RockingChair",
+    "value": 2283
+  },
+  {
+    "name": "RollerSkate",
+    "value": 2284
+  },
+  {
+    "name": "RollingPin",
+    "value": 2285
+  },
+  {
+    "name": "RotaryPhone",
+    "value": 2286
+  },
+  {
+    "name": "RotaryPhoneClock",
+    "value": 2287
+  },
+  {
+    "name": "RotaryPhoneX",
+    "value": 2288
+  },
+  {
+    "name": "RotateCcw",
+    "value": 2289
+  },
+  {
+    "name": "RotateCw",
+    "value": 2290
+  },
+  {
+    "name": "Route",
+    "value": 2291
+  },
+  {
+    "name": "RouteCheck",
+    "value": 2292
+  },
+  {
+    "name": "RouteClock",
+    "value": 2293
+  },
+  {
+    "name": "RoutePlus",
+    "value": 2294
+  },
+  {
+    "name": "RouteSearch",
+    "value": 2295
+  },
+  {
+    "name": "RouteStar",
+    "value": 2296
+  },
+  {
+    "name": "RouteX",
+    "value": 2297
+  },
+  {
+    "name": "Router",
+    "value": 2298
+  },
+  {
+    "name": "RouterAlert",
+    "value": 2299
+  },
+  {
+    "name": "RouterCheck",
+    "value": 2300
+  },
+  {
+    "name": "RouterCog",
+    "value": 2301
+  },
+  {
+    "name": "RouterLock",
+    "value": 2302
+  },
+  {
+    "name": "RouterOff",
+    "value": 2303
+  },
+  {
+    "name": "RouterSync",
+    "value": 2304
+  },
+  {
+    "name": "RouterX",
+    "value": 2305
+  },
+  {
+    "name": "Rows",
+    "value": 2306
+  },
+  {
+    "name": "Rss",
+    "value": 2307
+  },
+  {
+    "name": "RssCheck",
+    "value": 2308
+  },
+  {
+    "name": "RssOff",
+    "value": 2309
+  },
+  {
+    "name": "RssPlus",
+    "value": 2310
+  },
+  {
+    "name": "Ruler",
+    "value": 2311
+  },
+  {
+    "name": "RunningShoe",
+    "value": 2312
+  },
+  {
+    "name": "Safe",
+    "value": 2313
+  },
+  {
+    "name": "SafeCheck",
+    "value": 2314
+  },
+  {
+    "name": "SafeLock",
+    "value": 2315
+  },
+  {
+    "name": "SafePlus",
+    "value": 2316
+  },
+  {
+    "name": "SafeX",
+    "value": 2317
+  },
+  {
+    "name": "SafetyVest",
+    "value": 2318
+  },
+  {
+    "name": "Sailboat",
+    "value": 2319
+  },
+  {
+    "name": "SailboatCheck",
+    "value": 2320
+  },
+  {
+    "name": "SaltShaker",
+    "value": 2321
+  },
+  {
+    "name": "Sandwich",
+    "value": 2322
+  },
+  {
+    "name": "SandwichPlus",
+    "value": 2323
+  },
+  {
+    "name": "Satellite",
+    "value": 2324
+  },
+  {
+    "name": "SatelliteDish",
+    "value": 2325
+  },
+  {
+    "name": "Save",
+    "value": 2326
+  },
+  {
+    "name": "SaveAlert",
+    "value": 2327
+  },
+  {
+    "name": "SaveCheck",
+    "value": 2328
+  },
+  {
+    "name": "SaveClock",
+    "value": 2329
+  },
+  {
+    "name": "SaveDown",
+    "value": 2330
+  },
+  {
+    "name": "SaveLock",
+    "value": 2331
+  },
+  {
+    "name": "SaveSync",
+    "value": 2332
+  },
+  {
+    "name": "SaveUp",
+    "value": 2333
+  },
+  {
+    "name": "SaveX",
+    "value": 2334
+  },
+  {
+    "name": "Saw",
+    "value": 2335
+  },
+  {
+    "name": "Saxophone",
+    "value": 2336
+  },
+  {
+    "name": "Scale",
+    "value": 2337
+  },
+  {
+    "name": "Scalpel",
+    "value": 2338
+  },
+  {
+    "name": "Scan",
+    "value": 2339
+  },
+  {
+    "name": "ScanBarcode",
+    "value": 2340
+  },
+  {
+    "name": "ScanBarcodeCheck",
+    "value": 2341
+  },
+  {
+    "name": "ScanBarcodeX",
+    "value": 2342
+  },
+  {
+    "name": "ScanCheck",
+    "value": 2343
+  },
+  {
+    "name": "ScanFace",
+    "value": 2344
+  },
+  {
+    "name": "ScanQr",
+    "value": 2345
+  },
+  {
+    "name": "ScanQrCheck",
+    "value": 2346
+  },
+  {
+    "name": "ScanQrSearch",
+    "value": 2347
+  },
+  {
+    "name": "ScanQrX",
+    "value": 2348
+  },
+  {
+    "name": "ScanText",
+    "value": 2349
+  },
+  {
+    "name": "ScanTextCheck",
+    "value": 2350
+  },
+  {
+    "name": "ScanTextX",
+    "value": 2351
+  },
+  {
+    "name": "ScanX",
+    "value": 2352
+  },
+  {
+    "name": "Scanner",
+    "value": 2353
+  },
+  {
+    "name": "ScannerAlert",
+    "value": 2354
+  },
+  {
+    "name": "ScannerCheck",
+    "value": 2355
+  },
+  {
+    "name": "ScannerCog",
+    "value": 2356
+  },
+  {
+    "name": "ScannerPlus",
+    "value": 2357
+  },
+  {
+    "name": "ScannerUp",
+    "value": 2358
+  },
+  {
+    "name": "ScannerX",
+    "value": 2359
+  },
+  {
+    "name": "Scarf",
+    "value": 2360
+  },
+  {
+    "name": "ScarfCheck",
+    "value": 2361
+  },
+  {
+    "name": "ScarfHeart",
+    "value": 2362
+  },
+  {
+    "name": "ScarfPlus",
+    "value": 2363
+  },
+  {
+    "name": "School",
+    "value": 2364
+  },
+  {
+    "name": "SchoolBell",
+    "value": 2365
+  },
+  {
+    "name": "SchoolBus",
+    "value": 2366
+  },
+  {
+    "name": "SchoolCheck",
+    "value": 2367
+  },
+  {
+    "name": "SchoolSearch",
+    "value": 2368
+  },
+  {
+    "name": "SchoolStar",
+    "value": 2369
+  },
+  {
+    "name": "Scissors",
+    "value": 2370
+  },
+  {
+    "name": "Scooter",
+    "value": 2371
+  },
+  {
+    "name": "ScooterCheck",
+    "value": 2372
+  },
+  {
+    "name": "ScooterClock",
+    "value": 2373
+  },
+  {
+    "name": "Screw",
+    "value": 2374
+  },
+  {
+    "name": "Screwdriver",
+    "value": 2375
+  },
+  {
+    "name": "Scroll",
+    "value": 2376
+  },
+  {
+    "name": "ScrollCheck",
+    "value": 2377
+  },
+  {
+    "name": "ScrollLock",
+    "value": 2378
+  },
+  {
+    "name": "ScrollPlus",
+    "value": 2379
+  },
+  {
+    "name": "ScrollSparkle",
+    "value": 2380
+  },
+  {
+    "name": "ScrollStar",
+    "value": 2381
+  },
+  {
+    "name": "ScrollX",
+    "value": 2382
+  },
+  {
+    "name": "SdCard",
+    "value": 2383
+  },
+  {
+    "name": "SdCardAlert",
+    "value": 2384
+  },
+  {
+    "name": "SdCardCheck",
+    "value": 2385
+  },
+  {
+    "name": "SdCardLock",
+    "value": 2386
+  },
+  {
+    "name": "SdCardPlus",
+    "value": 2387
+  },
+  {
+    "name": "SdCardSync",
+    "value": 2388
+  },
+  {
+    "name": "SdCardX",
+    "value": 2389
+  },
+  {
+    "name": "Search",
+    "value": 2390
+  },
+  {
+    "name": "SearchSparkle",
+    "value": 2391
+  },
+  {
+    "name": "SeedPacket",
+    "value": 2392
+  },
+  {
+    "name": "Seesaw",
+    "value": 2393
+  },
+  {
+    "name": "Send",
+    "value": 2394
+  },
+  {
+    "name": "SendAlert",
+    "value": 2395
+  },
+  {
+    "name": "SendCheck",
+    "value": 2396
+  },
+  {
+    "name": "SendClock",
+    "value": 2397
+  },
+  {
+    "name": "SendX",
+    "value": 2398
+  },
+  {
+    "name": "Server",
+    "value": 2399
+  },
+  {
+    "name": "ServerAlert",
+    "value": 2400
+  },
+  {
+    "name": "ServerBolt",
+    "value": 2401
+  },
+  {
+    "name": "ServerCheck",
+    "value": 2402
+  },
+  {
+    "name": "ServerClock",
+    "value": 2403
+  },
+  {
+    "name": "ServerCog",
+    "value": 2404
+  },
+  {
+    "name": "ServerDown",
+    "value": 2405
+  },
+  {
+    "name": "ServerInfo",
+    "value": 2406
+  },
+  {
+    "name": "ServerLock",
+    "value": 2407
+  },
+  {
+    "name": "ServerMinus",
+    "value": 2408
+  },
+  {
+    "name": "ServerPlus",
+    "value": 2409
+  },
+  {
+    "name": "ServerRack",
+    "value": 2410
+  },
+  {
+    "name": "ServerRackAlert",
+    "value": 2411
+  },
+  {
+    "name": "ServerRackCheck",
+    "value": 2412
+  },
+  {
+    "name": "ServerRackCog",
+    "value": 2413
+  },
+  {
+    "name": "ServerRackLock",
+    "value": 2414
+  },
+  {
+    "name": "ServerRackX",
+    "value": 2415
+  },
+  {
+    "name": "ServerSearch",
+    "value": 2416
+  },
+  {
+    "name": "ServerSync",
+    "value": 2417
+  },
+  {
+    "name": "ServerUp",
+    "value": 2418
+  },
+  {
+    "name": "ServerX",
+    "value": 2419
+  },
+  {
+    "name": "Settings",
+    "value": 2420
+  },
+  {
+    "name": "SewingMachine",
+    "value": 2421
+  },
+  {
+    "name": "Shapes",
+    "value": 2422
+  },
+  {
+    "name": "Share",
+    "value": 2423
+  },
+  {
+    "name": "ShareCheck",
+    "value": 2424
+  },
+  {
+    "name": "ShareLock",
+    "value": 2425
+  },
+  {
+    "name": "SharePlus",
+    "value": 2426
+  },
+  {
+    "name": "Shell",
+    "value": 2427
+  },
+  {
+    "name": "Shield",
+    "value": 2428
+  },
+  {
+    "name": "ShieldAlert",
+    "value": 2429
+  },
+  {
+    "name": "ShieldBolt",
+    "value": 2430
+  },
+  {
+    "name": "ShieldCheck",
+    "value": 2431
+  },
+  {
+    "name": "ShieldInfo",
+    "value": 2432
+  },
+  {
+    "name": "ShieldLock",
+    "value": 2433
+  },
+  {
+    "name": "ShieldMinus",
+    "value": 2434
+  },
+  {
+    "name": "ShieldPlus",
+    "value": 2435
+  },
+  {
+    "name": "ShieldStar",
+    "value": 2436
+  },
+  {
+    "name": "ShieldX",
+    "value": 2437
+  },
+  {
+    "name": "Ship",
+    "value": 2438
+  },
+  {
+    "name": "ShipCheck",
+    "value": 2439
+  },
+  {
+    "name": "ShipClock",
+    "value": 2440
+  },
+  {
+    "name": "ShippingLabel",
+    "value": 2441
+  },
+  {
+    "name": "ShippingLabelAlert",
+    "value": 2442
+  },
+  {
+    "name": "ShippingLabelCheck",
+    "value": 2443
+  },
+  {
+    "name": "ShippingLabelSearch",
+    "value": 2444
+  },
+  {
+    "name": "ShippingLabelX",
+    "value": 2445
+  },
+  {
+    "name": "Shirt",
+    "value": 2446
+  },
+  {
+    "name": "ShirtCheck",
+    "value": 2447
+  },
+  {
+    "name": "ShirtHeart",
+    "value": 2448
+  },
+  {
+    "name": "ShirtPlus",
+    "value": 2449
+  },
+  {
+    "name": "ShirtStar",
+    "value": 2450
+  },
+  {
+    "name": "ShoppingBag",
+    "value": 2451
+  },
+  {
+    "name": "ShoppingBagCheck",
+    "value": 2452
+  },
+  {
+    "name": "ShoppingBagClock",
+    "value": 2453
+  },
+  {
+    "name": "ShoppingBagHeart",
+    "value": 2454
+  },
+  {
+    "name": "ShoppingBagMinus",
+    "value": 2455
+  },
+  {
+    "name": "ShoppingBagPlus",
+    "value": 2456
+  },
+  {
+    "name": "ShoppingBagSearch",
+    "value": 2457
+  },
+  {
+    "name": "ShoppingBagStar",
+    "value": 2458
+  },
+  {
+    "name": "ShoppingBagX",
+    "value": 2459
+  },
+  {
+    "name": "ShoppingCart",
+    "value": 2460
+  },
+  {
+    "name": "ShoppingCartAlert",
+    "value": 2461
+  },
+  {
+    "name": "ShoppingCartCheck",
+    "value": 2462
+  },
+  {
+    "name": "ShoppingCartClock",
+    "value": 2463
+  },
+  {
+    "name": "ShoppingCartHeart",
+    "value": 2464
+  },
+  {
+    "name": "ShoppingCartMinus",
+    "value": 2465
+  },
+  {
+    "name": "ShoppingCartPlus",
+    "value": 2466
+  },
+  {
+    "name": "ShoppingCartX",
+    "value": 2467
+  },
+  {
+    "name": "Shortcut",
+    "value": 2468
+  },
+  {
+    "name": "ShortcutCog",
+    "value": 2469
+  },
+  {
+    "name": "ShortcutPlus",
+    "value": 2470
+  },
+  {
+    "name": "Shovel",
+    "value": 2471
+  },
+  {
+    "name": "Shower",
+    "value": 2472
+  },
+  {
+    "name": "Shrink",
+    "value": 2473
+  },
+  {
+    "name": "Shuffle",
+    "value": 2474
+  },
+  {
+    "name": "Sidebar",
+    "value": 2475
+  },
+  {
+    "name": "Sigma",
+    "value": 2476
+  },
+  {
+    "name": "Signal",
+    "value": 2477
+  },
+  {
+    "name": "SignalAlert",
+    "value": 2478
+  },
+  {
+    "name": "SignalCheck",
+    "value": 2479
+  },
+  {
+    "name": "SignalOff",
+    "value": 2480
+  },
+  {
+    "name": "SignalX",
+    "value": 2481
+  },
+  {
+    "name": "Signature",
+    "value": 2482
+  },
+  {
+    "name": "Signpost",
+    "value": 2483
+  },
+  {
+    "name": "SimCard",
+    "value": 2484
+  },
+  {
+    "name": "SimCardAlert",
+    "value": 2485
+  },
+  {
+    "name": "SimCardCheck",
+    "value": 2486
+  },
+  {
+    "name": "SimCardLock",
+    "value": 2487
+  },
+  {
+    "name": "SimCardX",
+    "value": 2488
+  },
+  {
+    "name": "Siren",
+    "value": 2489
+  },
+  {
+    "name": "SirenOff",
+    "value": 2490
+  },
+  {
+    "name": "Sitemap",
+    "value": 2491
+  },
+  {
+    "name": "SitemapCheck",
+    "value": 2492
+  },
+  {
+    "name": "SitemapCog",
+    "value": 2493
+  },
+  {
+    "name": "SitemapPlus",
+    "value": 2494
+  },
+  {
+    "name": "SitemapSearch",
+    "value": 2495
+  },
+  {
+    "name": "SitemapX",
+    "value": 2496
+  },
+  {
+    "name": "Skateboard",
+    "value": 2497
+  },
+  {
+    "name": "Ski",
+    "value": 2498
+  },
+  {
+    "name": "SkipBack",
+    "value": 2499
+  },
+  {
+    "name": "SkipForward",
+    "value": 2500
+  },
+  {
+    "name": "Skull",
+    "value": 2501
+  },
+  {
+    "name": "Sled",
+    "value": 2502
+  },
+  {
+    "name": "SleepingBag",
+    "value": 2503
+  },
+  {
+    "name": "Sliders",
+    "value": 2504
+  },
+  {
+    "name": "Slideshow",
+    "value": 2505
+  },
+  {
+    "name": "SlideshowCheck",
+    "value": 2506
+  },
+  {
+    "name": "SlideshowPlus",
+    "value": 2507
+  },
+  {
+    "name": "SmartBulb",
+    "value": 2508
+  },
+  {
+    "name": "SmartBulbCheck",
+    "value": 2509
+  },
+  {
+    "name": "SmartBulbClock",
+    "value": 2510
+  },
+  {
+    "name": "SmartBulbCog",
+    "value": 2511
+  },
+  {
+    "name": "SmartBulbOff",
+    "value": 2512
+  },
+  {
+    "name": "SmartBulbX",
+    "value": 2513
+  },
+  {
+    "name": "SmartGlasses",
+    "value": 2514
+  },
+  {
+    "name": "SmartGlassesCheck",
+    "value": 2515
+  },
+  {
+    "name": "SmartGlassesOff",
+    "value": 2516
+  },
+  {
+    "name": "SmartGlassesSparkle",
+    "value": 2517
+  },
+  {
+    "name": "SmartGlassesX",
+    "value": 2518
+  },
+  {
+    "name": "SmartLock",
+    "value": 2519
+  },
+  {
+    "name": "SmartLockAlert",
+    "value": 2520
+  },
+  {
+    "name": "SmartLockCheck",
+    "value": 2521
+  },
+  {
+    "name": "SmartLockX",
+    "value": 2522
+  },
+  {
+    "name": "SmartSpeaker",
+    "value": 2523
+  },
+  {
+    "name": "SmartSpeakerCheck",
+    "value": 2524
+  },
+  {
+    "name": "SmartSpeakerCog",
+    "value": 2525
+  },
+  {
+    "name": "SmartSpeakerOff",
+    "value": 2526
+  },
+  {
+    "name": "SmartSpeakerPlus",
+    "value": 2527
+  },
+  {
+    "name": "SmartSpeakerSparkle",
+    "value": 2528
+  },
+  {
+    "name": "SmartSpeakerX",
+    "value": 2529
+  },
+  {
+    "name": "Smartphone",
+    "value": 2530
+  },
+  {
+    "name": "SmartphoneAlert",
+    "value": 2531
+  },
+  {
+    "name": "SmartphoneBolt",
+    "value": 2532
+  },
+  {
+    "name": "SmartphoneCheck",
+    "value": 2533
+  },
+  {
+    "name": "SmartphoneCog",
+    "value": 2534
+  },
+  {
+    "name": "SmartphoneDown",
+    "value": 2535
+  },
+  {
+    "name": "SmartphoneLock",
+    "value": 2536
+  },
+  {
+    "name": "SmartphoneOff",
+    "value": 2537
+  },
+  {
+    "name": "SmartphoneSync",
+    "value": 2538
+  },
+  {
+    "name": "SmartphoneUp",
+    "value": 2539
+  },
+  {
+    "name": "SmartphoneX",
+    "value": 2540
+  },
+  {
+    "name": "Smile",
+    "value": 2541
+  },
+  {
+    "name": "SmokeDetector",
+    "value": 2542
+  },
+  {
+    "name": "SmokeDetectorAlert",
+    "value": 2543
+  },
+  {
+    "name": "SmokeDetectorCheck",
+    "value": 2544
+  },
+  {
+    "name": "Snail",
+    "value": 2545
+  },
+  {
+    "name": "Snowflake",
+    "value": 2546
+  },
+  {
+    "name": "Soap",
+    "value": 2547
+  },
+  {
+    "name": "SoccerBall",
+    "value": 2548
+  },
+  {
+    "name": "Sock",
+    "value": 2549
+  },
+  {
+    "name": "SockCheck",
+    "value": 2550
+  },
+  {
+    "name": "SockHeart",
+    "value": 2551
+  },
+  {
+    "name": "SockPlus",
+    "value": 2552
+  },
+  {
+    "name": "Socket",
+    "value": 2553
+  },
+  {
+    "name": "SocketBolt",
+    "value": 2554
+  },
+  {
+    "name": "SocketCheck",
+    "value": 2555
+  },
+  {
+    "name": "SocketOff",
+    "value": 2556
+  },
+  {
+    "name": "SocketX",
+    "value": 2557
+  },
+  {
+    "name": "Sofa",
+    "value": 2558
+  },
+  {
+    "name": "SofaHeart",
+    "value": 2559
+  },
+  {
+    "name": "SofaPlus",
+    "value": 2560
+  },
+  {
+    "name": "SolarPanel",
+    "value": 2561
+  },
+  {
+    "name": "SolarPanelBolt",
+    "value": 2562
+  },
+  {
+    "name": "SolarPanelCheck",
+    "value": 2563
+  },
+  {
+    "name": "Sort",
+    "value": 2564
+  },
+  {
+    "name": "Soup",
+    "value": 2565
+  },
+  {
+    "name": "SoupClock",
+    "value": 2566
+  },
+  {
+    "name": "SoupHeart",
+    "value": 2567
+  },
+  {
+    "name": "SpaceStation",
+    "value": 2568
+  },
+  {
+    "name": "Spade",
+    "value": 2569
+  },
+  {
+    "name": "Sparkles",
+    "value": 2570
+  },
+  {
+    "name": "Spatula",
+    "value": 2571
+  },
+  {
+    "name": "Speaker",
+    "value": 2572
+  },
+  {
+    "name": "SpeakerOff",
+    "value": 2573
+  },
+  {
+    "name": "Speech",
+    "value": 2574
+  },
+  {
+    "name": "SpeechOff",
+    "value": 2575
+  },
+  {
+    "name": "SpellCheck",
+    "value": 2576
+  },
+  {
+    "name": "SpiritLevel",
+    "value": 2577
+  },
+  {
+    "name": "Split",
+    "value": 2578
+  },
+  {
+    "name": "SplitView",
+    "value": 2579
+  },
+  {
+    "name": "SplitViewPlus",
+    "value": 2580
+  },
+  {
+    "name": "SplitViewX",
+    "value": 2581
+  },
+  {
+    "name": "Spotlight",
+    "value": 2582
+  },
+  {
+    "name": "SprayCan",
+    "value": 2583
+  },
+  {
+    "name": "Sprout",
+    "value": 2584
+  },
+  {
+    "name": "Square",
+    "value": 2585
+  },
+  {
+    "name": "SquareArrowDown",
+    "value": 2586
+  },
+  {
+    "name": "SquareArrowLeft",
+    "value": 2587
+  },
+  {
+    "name": "SquareArrowRight",
+    "value": 2588
+  },
+  {
+    "name": "SquareArrowUp",
+    "value": 2589
+  },
+  {
+    "name": "StackingRings",
+    "value": 2590
+  },
+  {
+    "name": "Stadium",
+    "value": 2591
+  },
+  {
+    "name": "StadiumCheck",
+    "value": 2592
+  },
+  {
+    "name": "StadiumClock",
+    "value": 2593
+  },
+  {
+    "name": "StadiumStar",
+    "value": 2594
+  },
+  {
+    "name": "Stamp",
+    "value": 2595
+  },
+  {
+    "name": "StampCheck",
+    "value": 2596
+  },
+  {
+    "name": "StampClock",
+    "value": 2597
+  },
+  {
+    "name": "StampLock",
+    "value": 2598
+  },
+  {
+    "name": "StampPlus",
+    "value": 2599
+  },
+  {
+    "name": "StampStar",
+    "value": 2600
+  },
+  {
+    "name": "StampX",
+    "value": 2601
+  },
+  {
+    "name": "StandingDesk",
+    "value": 2602
+  },
+  {
+    "name": "Stapler",
+    "value": 2603
+  },
+  {
+    "name": "Star",
+    "value": 2604
+  },
+  {
+    "name": "StarHalf",
+    "value": 2605
+  },
+  {
+    "name": "SteeringWheel",
+    "value": 2606
+  },
+  {
+    "name": "Stethoscope",
+    "value": 2607
+  },
+  {
+    "name": "Sticker",
+    "value": 2608
+  },
+  {
+    "name": "StickerHeart",
+    "value": 2609
+  },
+  {
+    "name": "StickerPlus",
+    "value": 2610
+  },
+  {
+    "name": "StickerStar",
+    "value": 2611
+  },
+  {
+    "name": "StickyNote",
+    "value": 2612
+  },
+  {
+    "name": "StickyNoteCheck",
+    "value": 2613
+  },
+  {
+    "name": "StickyNoteClock",
+    "value": 2614
+  },
+  {
+    "name": "StickyNoteHeart",
+    "value": 2615
+  },
+  {
+    "name": "StickyNotePlus",
+    "value": 2616
+  },
+  {
+    "name": "StickyNoteStar",
+    "value": 2617
+  },
+  {
+    "name": "StickyNoteX",
+    "value": 2618
+  },
+  {
+    "name": "StickyNotes",
+    "value": 2619
+  },
+  {
+    "name": "StickyNotesCheck",
+    "value": 2620
+  },
+  {
+    "name": "StickyNotesPlus",
+    "value": 2621
+  },
+  {
+    "name": "StickyNotesStar",
+    "value": 2622
+  },
+  {
+    "name": "StickyNotesX",
+    "value": 2623
+  },
+  {
+    "name": "Stool",
+    "value": 2624
+  },
+  {
+    "name": "Stop",
+    "value": 2625
+  },
+  {
+    "name": "Stopwatch",
+    "value": 2626
+  },
+  {
+    "name": "Store",
+    "value": 2627
+  },
+  {
+    "name": "StoreCheck",
+    "value": 2628
+  },
+  {
+    "name": "StoreClock",
+    "value": 2629
+  },
+  {
+    "name": "StoreCog",
+    "value": 2630
+  },
+  {
+    "name": "StoreHeart",
+    "value": 2631
+  },
+  {
+    "name": "StoreLock",
+    "value": 2632
+  },
+  {
+    "name": "StorePlus",
+    "value": 2633
+  },
+  {
+    "name": "StoreSearch",
+    "value": 2634
+  },
+  {
+    "name": "StoreStar",
+    "value": 2635
+  },
+  {
+    "name": "StoreX",
+    "value": 2636
+  },
+  {
+    "name": "Strawberry",
+    "value": 2637
+  },
+  {
+    "name": "StrawberryHeart",
+    "value": 2638
+  },
+  {
+    "name": "StreetLamp",
+    "value": 2639
+  },
+  {
+    "name": "Strikethrough",
+    "value": 2640
+  },
+  {
+    "name": "Stroller",
+    "value": 2641
+  },
+  {
+    "name": "Stylus",
+    "value": 2642
+  },
+  {
+    "name": "StylusCheck",
+    "value": 2643
+  },
+  {
+    "name": "StylusX",
+    "value": 2644
+  },
+  {
+    "name": "Submarine",
+    "value": 2645
+  },
+  {
+    "name": "Subscript",
+    "value": 2646
+  },
+  {
+    "name": "Subtitles",
+    "value": 2647
+  },
+  {
+    "name": "SubtitlesOff",
+    "value": 2648
+  },
+  {
+    "name": "Subway",
+    "value": 2649
+  },
+  {
+    "name": "SubwayAlert",
+    "value": 2650
+  },
+  {
+    "name": "SubwayCheck",
+    "value": 2651
+  },
+  {
+    "name": "SubwayClock",
+    "value": 2652
+  },
+  {
+    "name": "Sun",
+    "value": 2653
+  },
+  {
+    "name": "SunMinus",
+    "value": 2654
+  },
+  {
+    "name": "SunPlus",
+    "value": 2655
+  },
+  {
+    "name": "Sundial",
+    "value": 2656
+  },
+  {
+    "name": "Sunflower",
+    "value": 2657
+  },
+  {
+    "name": "SunflowerHeart",
+    "value": 2658
+  },
+  {
+    "name": "Sunglasses",
+    "value": 2659
+  },
+  {
+    "name": "SunglassesCheck",
+    "value": 2660
+  },
+  {
+    "name": "SunglassesHeart",
+    "value": 2661
+  },
+  {
+    "name": "SunglassesPlus",
+    "value": 2662
+  },
+  {
+    "name": "Sunrise",
+    "value": 2663
+  },
+  {
+    "name": "Sunset",
+    "value": 2664
+  },
+  {
+    "name": "Superscript",
+    "value": 2665
+  },
+  {
+    "name": "Surfboard",
+    "value": 2666
+  },
+  {
+    "name": "Sushi",
+    "value": 2667
+  },
+  {
+    "name": "SushiHeart",
+    "value": 2668
+  },
+  {
+    "name": "Swimmer",
+    "value": 2669
+  },
+  {
+    "name": "Sync",
+    "value": 2670
+  },
+  {
+    "name": "SyncAlert",
+    "value": 2671
+  },
+  {
+    "name": "SyncCheck",
+    "value": 2672
+  },
+  {
+    "name": "SyncClock",
+    "value": 2673
+  },
+  {
+    "name": "SyncX",
+    "value": 2674
+  },
+  {
+    "name": "Syringe",
+    "value": 2675
+  },
+  {
+    "name": "TabGroup",
+    "value": 2676
+  },
+  {
+    "name": "TabGroupPlus",
+    "value": 2677
+  },
+  {
+    "name": "TabGroupX",
+    "value": 2678
+  },
+  {
+    "name": "Table",
+    "value": 2679
+  },
+  {
+    "name": "TableCog",
+    "value": 2680
+  },
+  {
+    "name": "TableMinus",
+    "value": 2681
+  },
+  {
+    "name": "TablePlus",
+    "value": 2682
+  },
+  {
+    "name": "TableSearch",
+    "value": 2683
+  },
+  {
+    "name": "TableX",
+    "value": 2684
+  },
+  {
+    "name": "Tablet",
+    "value": 2685
+  },
+  {
+    "name": "TabletCheck",
+    "value": 2686
+  },
+  {
+    "name": "TabletCog",
+    "value": 2687
+  },
+  {
+    "name": "TabletLock",
+    "value": 2688
+  },
+  {
+    "name": "TabletPlus",
+    "value": 2689
+  },
+  {
+    "name": "TabletSearch",
+    "value": 2690
+  },
+  {
+    "name": "TabletSmartphone",
+    "value": 2691
+  },
+  {
+    "name": "TabletSmartphoneCheck",
+    "value": 2692
+  },
+  {
+    "name": "TabletSmartphoneCog",
+    "value": 2693
+  },
+  {
+    "name": "TabletSmartphoneDown",
+    "value": 2694
+  },
+  {
+    "name": "TabletSmartphoneSync",
+    "value": 2695
+  },
+  {
+    "name": "TabletSparkle",
+    "value": 2696
+  },
+  {
+    "name": "TabletSync",
+    "value": 2697
+  },
+  {
+    "name": "TabletX",
+    "value": 2698
+  },
+  {
+    "name": "Taco",
+    "value": 2699
+  },
+  {
+    "name": "Tag",
+    "value": 2700
+  },
+  {
+    "name": "TagCheck",
+    "value": 2701
+  },
+  {
+    "name": "TagHeart",
+    "value": 2702
+  },
+  {
+    "name": "TagMinus",
+    "value": 2703
+  },
+  {
+    "name": "TagPlus",
+    "value": 2704
+  },
+  {
+    "name": "TagSearch",
+    "value": 2705
+  },
+  {
+    "name": "TagSparkle",
+    "value": 2706
+  },
+  {
+    "name": "TagStar",
+    "value": 2707
+  },
+  {
+    "name": "TagX",
+    "value": 2708
+  },
+  {
+    "name": "Tags",
+    "value": 2709
+  },
+  {
+    "name": "TagsCheck",
+    "value": 2710
+  },
+  {
+    "name": "TagsMinus",
+    "value": 2711
+  },
+  {
+    "name": "TagsPlus",
+    "value": 2712
+  },
+  {
+    "name": "TagsSearch",
+    "value": 2713
+  },
+  {
+    "name": "TagsX",
+    "value": 2714
+  },
+  {
+    "name": "TapeDispenser",
+    "value": 2715
+  },
+  {
+    "name": "TapeMeasure",
+    "value": 2716
+  },
+  {
+    "name": "TapeRoll",
+    "value": 2717
+  },
+  {
+    "name": "Target",
+    "value": 2718
+  },
+  {
+    "name": "TargetCheck",
+    "value": 2719
+  },
+  {
+    "name": "TargetClock",
+    "value": 2720
+  },
+  {
+    "name": "TargetStar",
+    "value": 2721
+  },
+  {
+    "name": "Taxi",
+    "value": 2722
+  },
+  {
+    "name": "TaxiCheck",
+    "value": 2723
+  },
+  {
+    "name": "TaxiClock",
+    "value": 2724
+  },
+  {
+    "name": "TaxiPlus",
+    "value": 2725
+  },
+  {
+    "name": "TaxiX",
+    "value": 2726
+  },
+  {
+    "name": "Teapot",
+    "value": 2727
+  },
+  {
+    "name": "Telescope",
+    "value": 2728
+  },
+  {
+    "name": "TennisBall",
+    "value": 2729
+  },
+  {
+    "name": "Tent",
+    "value": 2730
+  },
+  {
+    "name": "Terminal",
+    "value": 2731
+  },
+  {
+    "name": "TerminalAlert",
+    "value": 2732
+  },
+  {
+    "name": "TerminalBolt",
+    "value": 2733
+  },
+  {
+    "name": "TerminalCheck",
+    "value": 2734
+  },
+  {
+    "name": "TerminalCog",
+    "value": 2735
+  },
+  {
+    "name": "TerminalPlus",
+    "value": 2736
+  },
+  {
+    "name": "TerminalX",
+    "value": 2737
+  },
+  {
+    "name": "TestTube",
+    "value": 2738
+  },
+  {
+    "name": "TextCursor",
+    "value": 2739
+  },
+  {
+    "name": "TextSelect",
+    "value": 2740
+  },
+  {
+    "name": "TextSize",
+    "value": 2741
+  },
+  {
+    "name": "Theater",
+    "value": 2742
+  },
+  {
+    "name": "Thermometer",
+    "value": 2743
+  },
+  {
+    "name": "ThermometerAlert",
+    "value": 2744
+  },
+  {
+    "name": "ThermometerMinus",
+    "value": 2745
+  },
+  {
+    "name": "ThermometerPlus",
+    "value": 2746
+  },
+  {
+    "name": "Thermos",
+    "value": 2747
+  },
+  {
+    "name": "Thermostat",
+    "value": 2748
+  },
+  {
+    "name": "ThermostatCheck",
+    "value": 2749
+  },
+  {
+    "name": "ThermostatClock",
+    "value": 2750
+  },
+  {
+    "name": "ThermostatCog",
+    "value": 2751
+  },
+  {
+    "name": "ThermostatOff",
+    "value": 2752
+  },
+  {
+    "name": "ThumbsDown",
+    "value": 2753
+  },
+  {
+    "name": "ThumbsUp",
+    "value": 2754
+  },
+  {
+    "name": "Ticket",
+    "value": 2755
+  },
+  {
+    "name": "TicketCheck",
+    "value": 2756
+  },
+  {
+    "name": "TicketClock",
+    "value": 2757
+  },
+  {
+    "name": "TicketHeart",
+    "value": 2758
+  },
+  {
+    "name": "TicketPlus",
+    "value": 2759
+  },
+  {
+    "name": "TicketStar",
+    "value": 2760
+  },
+  {
+    "name": "TicketX",
+    "value": 2761
+  },
+  {
+    "name": "Timer",
+    "value": 2762
+  },
+  {
+    "name": "Tire",
+    "value": 2763
+  },
+  {
+    "name": "Toaster",
+    "value": 2764
+  },
+  {
+    "name": "Toggle",
+    "value": 2765
+  },
+  {
+    "name": "Toilet",
+    "value": 2766
+  },
+  {
+    "name": "TollBooth",
+    "value": 2767
+  },
+  {
+    "name": "Toolbox",
+    "value": 2768
+  },
+  {
+    "name": "ToolboxCheck",
+    "value": 2769
+  },
+  {
+    "name": "ToolboxLock",
+    "value": 2770
+  },
+  {
+    "name": "ToolboxPlus",
+    "value": 2771
+  },
+  {
+    "name": "ToolboxSearch",
+    "value": 2772
+  },
+  {
+    "name": "Tooth",
+    "value": 2773
+  },
+  {
+    "name": "Toothbrush",
+    "value": 2774
+  },
+  {
+    "name": "Tornado",
+    "value": 2775
+  },
+  {
+    "name": "Towel",
+    "value": 2776
+  },
+  {
+    "name": "ToyRobot",
+    "value": 2777
+  },
+  {
+    "name": "ToyRobotHeart",
+    "value": 2778
+  },
+  {
+    "name": "ToyRobotStar",
+    "value": 2779
+  },
+  {
+    "name": "Trackpad",
+    "value": 2780
+  },
+  {
+    "name": "TrackpadCheck",
+    "value": 2781
+  },
+  {
+    "name": "TrackpadCog",
+    "value": 2782
+  },
+  {
+    "name": "Tractor",
+    "value": 2783
+  },
+  {
+    "name": "TrafficCone",
+    "value": 2784
+  },
+  {
+    "name": "TrafficLight",
+    "value": 2785
+  },
+  {
+    "name": "Trailer",
+    "value": 2786
+  },
+  {
+    "name": "Train",
+    "value": 2787
+  },
+  {
+    "name": "TrainAlert",
+    "value": 2788
+  },
+  {
+    "name": "TrainCheck",
+    "value": 2789
+  },
+  {
+    "name": "TrainClock",
+    "value": 2790
+  },
+  {
+    "name": "Tram",
+    "value": 2791
+  },
+  {
+    "name": "TramCheck",
+    "value": 2792
+  },
+  {
+    "name": "TramClock",
+    "value": 2793
+  },
+  {
+    "name": "Trash",
+    "value": 2794
+  },
+  {
+    "name": "TrashClock",
+    "value": 2795
+  },
+  {
+    "name": "TrashX",
+    "value": 2796
+  },
+  {
+    "name": "Tree",
+    "value": 2797
+  },
+  {
+    "name": "TreePalm",
+    "value": 2798
+  },
+  {
+    "name": "TreePine",
+    "value": 2799
+  },
+  {
+    "name": "Treemap",
+    "value": 2800
+  },
+  {
+    "name": "TreemapPlus",
+    "value": 2801
+  },
+  {
+    "name": "TreemapSearch",
+    "value": 2802
+  },
+  {
+    "name": "TreemapSparkle",
+    "value": 2803
+  },
+  {
+    "name": "TreemapX",
+    "value": 2804
+  },
+  {
+    "name": "TrendingDown",
+    "value": 2805
+  },
+  {
+    "name": "TrendingDownAlert",
+    "value": 2806
+  },
+  {
+    "name": "TrendingDownPlus",
+    "value": 2807
+  },
+  {
+    "name": "TrendingDownX",
+    "value": 2808
+  },
+  {
+    "name": "TrendingUp",
+    "value": 2809
+  },
+  {
+    "name": "TrendingUpCheck",
+    "value": 2810
+  },
+  {
+    "name": "TrendingUpPlus",
+    "value": 2811
+  },
+  {
+    "name": "TrendingUpSparkle",
+    "value": 2812
+  },
+  {
+    "name": "Triangle",
+    "value": 2813
+  },
+  {
+    "name": "TriangleAlert",
+    "value": 2814
+  },
+  {
+    "name": "Trophy",
+    "value": 2815
+  },
+  {
+    "name": "TrophyCheck",
+    "value": 2816
+  },
+  {
+    "name": "TrophyStar",
+    "value": 2817
+  },
+  {
+    "name": "Trowel",
+    "value": 2818
+  },
+  {
+    "name": "Truck",
+    "value": 2819
+  },
+  {
+    "name": "TruckAlert",
+    "value": 2820
+  },
+  {
+    "name": "TruckCheck",
+    "value": 2821
+  },
+  {
+    "name": "TruckClock",
+    "value": 2822
+  },
+  {
+    "name": "TruckPlus",
+    "value": 2823
+  },
+  {
+    "name": "TruckSearch",
+    "value": 2824
+  },
+  {
+    "name": "TruckX",
+    "value": 2825
+  },
+  {
+    "name": "Trumpet",
+    "value": 2826
+  },
+  {
+    "name": "Turntable",
+    "value": 2827
+  },
+  {
+    "name": "Turtle",
+    "value": 2828
+  },
+  {
+    "name": "Tv",
+    "value": 2829
+  },
+  {
+    "name": "TvCheck",
+    "value": 2830
+  },
+  {
+    "name": "TvClock",
+    "value": 2831
+  },
+  {
+    "name": "TvHeart",
+    "value": 2832
+  },
+  {
+    "name": "TvOff",
+    "value": 2833
+  },
+  {
+    "name": "TvPlus",
+    "value": 2834
+  },
+  {
+    "name": "TvStar",
+    "value": 2835
+  },
+  {
+    "name": "TvX",
+    "value": 2836
+  },
+  {
+    "name": "Tweezers",
+    "value": 2837
+  },
+  {
+    "name": "Type",
+    "value": 2838
+  },
+  {
+    "name": "Typewriter",
+    "value": 2839
+  },
+  {
+    "name": "Ufo",
+    "value": 2840
+  },
+  {
+    "name": "Umbrella",
+    "value": 2841
+  },
+  {
+    "name": "Underline",
+    "value": 2842
+  },
+  {
+    "name": "Undo",
+    "value": 2843
+  },
+  {
+    "name": "Unlink",
+    "value": 2844
+  },
+  {
+    "name": "Upload",
+    "value": 2845
+  },
+  {
+    "name": "Usb",
+    "value": 2846
+  },
+  {
+    "name": "UsbAlert",
+    "value": 2847
+  },
+  {
+    "name": "UsbCPort",
+    "value": 2848
+  },
+  {
+    "name": "UsbCPortAlert",
+    "value": 2849
+  },
+  {
+    "name": "UsbCPortCheck",
+    "value": 2850
+  },
+  {
+    "name": "UsbCPortX",
+    "value": 2851
+  },
+  {
+    "name": "UsbCheck",
+    "value": 2852
+  },
+  {
+    "name": "UsbDown",
+    "value": 2853
+  },
+  {
+    "name": "UsbLock",
+    "value": 2854
+  },
+  {
+    "name": "UsbPlus",
+    "value": 2855
+  },
+  {
+    "name": "UsbSync",
+    "value": 2856
+  },
+  {
+    "name": "UsbUp",
+    "value": 2857
+  },
+  {
+    "name": "UsbX",
+    "value": 2858
+  },
+  {
+    "name": "User",
+    "value": 2859
+  },
+  {
+    "name": "UserAlert",
+    "value": 2860
+  },
+  {
+    "name": "UserBolt",
+    "value": 2861
+  },
+  {
+    "name": "UserCheck",
+    "value": 2862
+  },
+  {
+    "name": "UserClock",
+    "value": 2863
+  },
+  {
+    "name": "UserCog",
+    "value": 2864
+  },
+  {
+    "name": "UserGroup",
+    "value": 2865
+  },
+  {
+    "name": "UserGroupAlert",
+    "value": 2866
+  },
+  {
+    "name": "UserGroupCheck",
+    "value": 2867
+  },
+  {
+    "name": "UserGroupCog",
+    "value": 2868
+  },
+  {
+    "name": "UserGroupHeart",
+    "value": 2869
+  },
+  {
+    "name": "UserGroupInfo",
+    "value": 2870
+  },
+  {
+    "name": "UserGroupLock",
+    "value": 2871
+  },
+  {
+    "name": "UserGroupMinus",
+    "value": 2872
+  },
+  {
+    "name": "UserGroupPlus",
+    "value": 2873
+  },
+  {
+    "name": "UserGroupSearch",
+    "value": 2874
+  },
+  {
+    "name": "UserGroupStar",
+    "value": 2875
+  },
+  {
+    "name": "UserGroupSync",
+    "value": 2876
+  },
+  {
+    "name": "UserGroupX",
+    "value": 2877
+  },
+  {
+    "name": "UserHeart",
+    "value": 2878
+  },
+  {
+    "name": "UserLock",
+    "value": 2879
+  },
+  {
+    "name": "UserMinus",
+    "value": 2880
+  },
+  {
+    "name": "UserPlus",
+    "value": 2881
+  },
+  {
+    "name": "UserRound",
+    "value": 2882
+  },
+  {
+    "name": "UserRoundAlert",
+    "value": 2883
+  },
+  {
+    "name": "UserRoundCheck",
+    "value": 2884
+  },
+  {
+    "name": "UserRoundClock",
+    "value": 2885
+  },
+  {
+    "name": "UserRoundCog",
+    "value": 2886
+  },
+  {
+    "name": "UserRoundHeart",
+    "value": 2887
+  },
+  {
+    "name": "UserRoundInfo",
+    "value": 2888
+  },
+  {
+    "name": "UserRoundLock",
+    "value": 2889
+  },
+  {
+    "name": "UserRoundMinus",
+    "value": 2890
+  },
+  {
+    "name": "UserRoundPlus",
+    "value": 2891
+  },
+  {
+    "name": "UserRoundSearch",
+    "value": 2892
+  },
+  {
+    "name": "UserRoundSparkle",
+    "value": 2893
+  },
+  {
+    "name": "UserRoundStar",
+    "value": 2894
+  },
+  {
+    "name": "UserRoundSync",
+    "value": 2895
+  },
+  {
+    "name": "UserRoundX",
+    "value": 2896
+  },
+  {
+    "name": "UserSearch",
+    "value": 2897
+  },
+  {
+    "name": "UserSparkle",
+    "value": 2898
+  },
+  {
+    "name": "UserStar",
+    "value": 2899
+  },
+  {
+    "name": "UserSync",
+    "value": 2900
+  },
+  {
+    "name": "UserX",
+    "value": 2901
+  },
+  {
+    "name": "Users",
+    "value": 2902
+  },
+  {
+    "name": "UsersAlert",
+    "value": 2903
+  },
+  {
+    "name": "UsersCheck",
+    "value": 2904
+  },
+  {
+    "name": "UsersClock",
+    "value": 2905
+  },
+  {
+    "name": "UsersCog",
+    "value": 2906
+  },
+  {
+    "name": "UsersHeart",
+    "value": 2907
+  },
+  {
+    "name": "UsersInfo",
+    "value": 2908
+  },
+  {
+    "name": "UsersLock",
+    "value": 2909
+  },
+  {
+    "name": "UsersMinus",
+    "value": 2910
+  },
+  {
+    "name": "UsersPlus",
+    "value": 2911
+  },
+  {
+    "name": "UsersRight",
+    "value": 2912
+  },
+  {
+    "name": "UsersRound",
+    "value": 2913
+  },
+  {
+    "name": "UsersRoundCheck",
+    "value": 2914
+  },
+  {
+    "name": "UsersRoundCog",
+    "value": 2915
+  },
+  {
+    "name": "UsersRoundHeart",
+    "value": 2916
+  },
+  {
+    "name": "UsersRoundLock",
+    "value": 2917
+  },
+  {
+    "name": "UsersRoundMinus",
+    "value": 2918
+  },
+  {
+    "name": "UsersRoundPlus",
+    "value": 2919
+  },
+  {
+    "name": "UsersRoundSearch",
+    "value": 2920
+  },
+  {
+    "name": "UsersRoundStar",
+    "value": 2921
+  },
+  {
+    "name": "UsersRoundSync",
+    "value": 2922
+  },
+  {
+    "name": "UsersRoundX",
+    "value": 2923
+  },
+  {
+    "name": "UsersSearch",
+    "value": 2924
+  },
+  {
+    "name": "UsersStar",
+    "value": 2925
+  },
+  {
+    "name": "UsersSync",
+    "value": 2926
+  },
+  {
+    "name": "UsersX",
+    "value": 2927
+  },
+  {
+    "name": "Utensils",
+    "value": 2928
+  },
+  {
+    "name": "UtensilsCheck",
+    "value": 2929
+  },
+  {
+    "name": "UtensilsClock",
+    "value": 2930
+  },
+  {
+    "name": "UtensilsHeart",
+    "value": 2931
+  },
+  {
+    "name": "UtensilsPlus",
+    "value": 2932
+  },
+  {
+    "name": "UtensilsStar",
+    "value": 2933
+  },
+  {
+    "name": "Vacuum",
+    "value": 2934
+  },
+  {
+    "name": "VacuumCheck",
+    "value": 2935
+  },
+  {
+    "name": "VacuumClock",
+    "value": 2936
+  },
+  {
+    "name": "VacuumCog",
+    "value": 2937
+  },
+  {
+    "name": "Variable",
+    "value": 2938
+  },
+  {
+    "name": "VhsTape",
+    "value": 2939
+  },
+  {
+    "name": "VhsTapeCheck",
+    "value": 2940
+  },
+  {
+    "name": "VhsTapeHeart",
+    "value": 2941
+  },
+  {
+    "name": "VhsTapePlus",
+    "value": 2942
+  },
+  {
+    "name": "VhsTapeX",
+    "value": 2943
+  },
+  {
+    "name": "Video",
+    "value": 2944
+  },
+  {
+    "name": "VideoCall",
+    "value": 2945
+  },
+  {
+    "name": "VideoCallClock",
+    "value": 2946
+  },
+  {
+    "name": "VideoCallLock",
+    "value": 2947
+  },
+  {
+    "name": "VideoCallOff",
+    "value": 2948
+  },
+  {
+    "name": "VideoCallPlus",
+    "value": 2949
+  },
+  {
+    "name": "VideoCallX",
+    "value": 2950
+  },
+  {
+    "name": "VideoCheck",
+    "value": 2951
+  },
+  {
+    "name": "VideoLock",
+    "value": 2952
+  },
+  {
+    "name": "VideoOff",
+    "value": 2953
+  },
+  {
+    "name": "VideoPlus",
+    "value": 2954
+  },
+  {
+    "name": "VideoSparkle",
+    "value": 2955
+  },
+  {
+    "name": "VideoX",
+    "value": 2956
+  },
+  {
+    "name": "Vinyl",
+    "value": 2957
+  },
+  {
+    "name": "Virus",
+    "value": 2958
+  },
+  {
+    "name": "Voicemail",
+    "value": 2959
+  },
+  {
+    "name": "VoicemailAlert",
+    "value": 2960
+  },
+  {
+    "name": "VoicemailCheck",
+    "value": 2961
+  },
+  {
+    "name": "Volcano",
+    "value": 2962
+  },
+  {
+    "name": "Volleyball",
+    "value": 2963
+  },
+  {
+    "name": "Volume",
+    "value": 2964
+  },
+  {
+    "name": "VolumeOff",
+    "value": 2965
+  },
+  {
+    "name": "Vote",
+    "value": 2966
+  },
+  {
+    "name": "VoteCheck",
+    "value": 2967
+  },
+  {
+    "name": "VoteClock",
+    "value": 2968
+  },
+  {
+    "name": "VoteLock",
+    "value": 2969
+  },
+  {
+    "name": "VrHeadset",
+    "value": 2970
+  },
+  {
+    "name": "VrHeadsetCheck",
+    "value": 2971
+  },
+  {
+    "name": "VrHeadsetCog",
+    "value": 2972
+  },
+  {
+    "name": "VrHeadsetPlus",
+    "value": 2973
+  },
+  {
+    "name": "VrHeadsetSparkle",
+    "value": 2974
+  },
+  {
+    "name": "Waffle",
+    "value": 2975
+  },
+  {
+    "name": "WalkieTalkie",
+    "value": 2976
+  },
+  {
+    "name": "WalkieTalkieCheck",
+    "value": 2977
+  },
+  {
+    "name": "WalkieTalkieOff",
+    "value": 2978
+  },
+  {
+    "name": "WalkieTalkieX",
+    "value": 2979
+  },
+  {
+    "name": "Wallet",
+    "value": 2980
+  },
+  {
+    "name": "WalletAlert",
+    "value": 2981
+  },
+  {
+    "name": "WalletCheck",
+    "value": 2982
+  },
+  {
+    "name": "WalletClock",
+    "value": 2983
+  },
+  {
+    "name": "WalletCog",
+    "value": 2984
+  },
+  {
+    "name": "WalletDown",
+    "value": 2985
+  },
+  {
+    "name": "WalletLock",
+    "value": 2986
+  },
+  {
+    "name": "WalletMinus",
+    "value": 2987
+  },
+  {
+    "name": "WalletPlus",
+    "value": 2988
+  },
+  {
+    "name": "WalletUp",
+    "value": 2989
+  },
+  {
+    "name": "WalletX",
+    "value": 2990
+  },
+  {
+    "name": "Wand",
+    "value": 2991
+  },
+  {
+    "name": "Wardrobe",
+    "value": 2992
+  },
+  {
+    "name": "Warehouse",
+    "value": 2993
+  },
+  {
+    "name": "WarehouseCheck",
+    "value": 2994
+  },
+  {
+    "name": "WarehouseLock",
+    "value": 2995
+  },
+  {
+    "name": "WarehousePlus",
+    "value": 2996
+  },
+  {
+    "name": "WarehouseSearch",
+    "value": 2997
+  },
+  {
+    "name": "WashingMachine",
+    "value": 2998
+  },
+  {
+    "name": "WashingMachineCheck",
+    "value": 2999
+  },
+  {
+    "name": "WashingMachineClock",
+    "value": 3000
+  },
+  {
+    "name": "WashingMachineCog",
+    "value": 3001
+  },
+  {
+    "name": "Watch",
+    "value": 3002
+  },
+  {
+    "name": "WatchBolt",
+    "value": 3003
+  },
+  {
+    "name": "WatchCheck",
+    "value": 3004
+  },
+  {
+    "name": "WatchHeart",
+    "value": 3005
+  },
+  {
+    "name": "WatchPlus",
+    "value": 3006
+  },
+  {
+    "name": "WatchSync",
+    "value": 3007
+  },
+  {
+    "name": "WaterCooler",
+    "value": 3008
+  },
+  {
+    "name": "WateringCan",
+    "value": 3009
+  },
+  {
+    "name": "WateringCanClock",
+    "value": 3010
+  },
+  {
+    "name": "Watermelon",
+    "value": 3011
+  },
+  {
+    "name": "Waves",
+    "value": 3012
+  },
+  {
+    "name": "Webcam",
+    "value": 3013
+  },
+  {
+    "name": "WebcamAlert",
+    "value": 3014
+  },
+  {
+    "name": "WebcamCheck",
+    "value": 3015
+  },
+  {
+    "name": "WebcamCog",
+    "value": 3016
+  },
+  {
+    "name": "WebcamLock",
+    "value": 3017
+  },
+  {
+    "name": "WebcamOff",
+    "value": 3018
+  },
+  {
+    "name": "WebcamX",
+    "value": 3019
+  },
+  {
+    "name": "Webhook",
+    "value": 3020
+  },
+  {
+    "name": "WebhookBolt",
+    "value": 3021
+  },
+  {
+    "name": "WebhookCheck",
+    "value": 3022
+  },
+  {
+    "name": "WebhookPlus",
+    "value": 3023
+  },
+  {
+    "name": "WebhookX",
+    "value": 3024
+  },
+  {
+    "name": "WeightScale",
+    "value": 3025
+  },
+  {
+    "name": "Whale",
+    "value": 3026
+  },
+  {
+    "name": "Wheelbarrow",
+    "value": 3027
+  },
+  {
+    "name": "Wheelchair",
+    "value": 3028
+  },
+  {
+    "name": "Whisk",
+    "value": 3029
+  },
+  {
+    "name": "Whistle",
+    "value": 3030
+  },
+  {
+    "name": "Whiteboard",
+    "value": 3031
+  },
+  {
+    "name": "Wifi",
+    "value": 3032
+  },
+  {
+    "name": "WifiAlert",
+    "value": 3033
+  },
+  {
+    "name": "WifiCheck",
+    "value": 3034
+  },
+  {
+    "name": "WifiCog",
+    "value": 3035
+  },
+  {
+    "name": "WifiLock",
+    "value": 3036
+  },
+  {
+    "name": "WifiOff",
+    "value": 3037
+  },
+  {
+    "name": "WifiX",
+    "value": 3038
+  },
+  {
+    "name": "Wind",
+    "value": 3039
+  },
+  {
+    "name": "WindChime",
+    "value": 3040
+  },
+  {
+    "name": "WindTurbine",
+    "value": 3041
+  },
+  {
+    "name": "WindTurbineBolt",
+    "value": 3042
+  },
+  {
+    "name": "Windmill",
+    "value": 3043
+  },
+  {
+    "name": "WindowFrame",
+    "value": 3044
+  },
+  {
+    "name": "WindowFrameLock",
+    "value": 3045
+  },
+  {
+    "name": "Wine",
+    "value": 3046
+  },
+  {
+    "name": "WineHeart",
+    "value": 3047
+  },
+  {
+    "name": "WinePlus",
+    "value": 3048
+  },
+  {
+    "name": "WineStar",
+    "value": 3049
+  },
+  {
+    "name": "Wink",
+    "value": 3050
+  },
+  {
+    "name": "WirelessCharger",
+    "value": 3051
+  },
+  {
+    "name": "WirelessChargerAlert",
+    "value": 3052
+  },
+  {
+    "name": "WirelessChargerCheck",
+    "value": 3053
+  },
+  {
+    "name": "WirelessChargerX",
+    "value": 3054
+  },
+  {
+    "name": "Workflow",
+    "value": 3055
+  },
+  {
+    "name": "WorkflowBolt",
+    "value": 3056
+  },
+  {
+    "name": "WorkflowCheck",
+    "value": 3057
+  },
+  {
+    "name": "WorkflowClock",
+    "value": 3058
+  },
+  {
+    "name": "WorkflowPlus",
+    "value": 3059
+  },
+  {
+    "name": "WorkflowSync",
+    "value": 3060
+  },
+  {
+    "name": "WorkflowX",
+    "value": 3061
+  },
+  {
+    "name": "WrapText",
+    "value": 3062
+  },
+  {
+    "name": "Wrench",
+    "value": 3063
+  },
+  {
+    "name": "Wristwatch",
+    "value": 3064
+  },
+  {
+    "name": "WristwatchAlert",
+    "value": 3065
+  },
+  {
+    "name": "WristwatchCheck",
+    "value": 3066
+  },
+  {
+    "name": "WristwatchX",
+    "value": 3067
+  },
+  {
+    "name": "XRay",
+    "value": 3068
+  },
+  {
+    "name": "YarnBall",
+    "value": 3069
+  },
+  {
+    "name": "YarnBallHeart",
+    "value": 3070
+  },
+  {
+    "name": "YoYo",
+    "value": 3071
+  },
+  {
+    "name": "YogaMat",
+    "value": 3072
+  },
+  {
+    "name": "ZoomIn",
+    "value": 3073
+  },
+  {
+    "name": "ZoomOut",
+    "value": 3074
+  }
+]

@@ -1,0 +1,7 @@
+# Generated catalog files have identical bytes on Windows and Linux.
+catalog/* text eol=lf
+samples/IconStudio/Catalog/*.json text eol=lf
+src/KubaiIcons.Avalonia/Rendering/CompositionData.g.cs text eol=lf
+*.kbi binary
+src/KubaiIcons.Avalonia/CatalogData.g.cs text eol=lf
+licenses/LICENSE-ICONS text eol=lf
