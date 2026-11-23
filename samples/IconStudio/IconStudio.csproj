@@ -16,6 +16,10 @@
     <PackageReference Include="TKCode.Arc.Fonts" Version="$(ArcVersion)"/>
   </ItemGroup>
 
+  <ItemGroup Condition="'$(PublishAot)' == 'true' and '$(RuntimeIdentifier)' == 'win-x64'">
+    <PackageReference Include="StaticLink.Avalonia" Version="3.119.4.1" PrivateAssets="all"/>
+  </ItemGroup>
+
   <ItemGroup>
     <AvaloniaResource Include="Assets/studio.ico"/>
     <AvaloniaResource Include="../../media/folder.png" Link="Assets/folder.png"/>

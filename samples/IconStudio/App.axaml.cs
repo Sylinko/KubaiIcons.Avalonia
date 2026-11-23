@@ -10,7 +10,7 @@ namespace IconStudio;
 public class App : Application
 {
     /// <summary>
-    /// Configures the shared desktop and headless hosts with the same Arc resources and fonts.
+    /// Configures the Studio desktop host with Arc resources and fonts.
     /// </summary>
     public static AppBuilder CreateBuilder()
     {

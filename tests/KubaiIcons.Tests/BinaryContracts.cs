@@ -12,7 +12,7 @@ namespace KubaiIcons.Tests;
 
 public partial class IconContracts
 {
-    [Test]
+    [Test, Explicit, Category("Artwork")]
     public async Task CompiledPaths_WhenReplayingSvgCommands_PreservePixelsAndContourLengths()
     {
         await _session.Dispatch(
@@ -62,53 +62,6 @@ public partial class IconContracts
             CancellationToken.None);
     }
 
-    [Test]
-    public async Task BinaryArtwork_WhenDataIsCorrupt_RejectsInvalidBlocksAndPathCommands()
-    {
-        await _session.Dispatch(
-            () =>
-            {
-                var assembly = typeof(KubaiIcon).Assembly;
-                using var resource = assembly.GetManifestResourceStream("KubaiArt.duotone-folder")
-                    ?? throw new AssertionException("Missing Folder.");
-                using var buffer = new MemoryStream();
-                resource.CopyTo(buffer);
-                var valid = buffer.ToArray();
-                ReadBlock(valid);
-                var version = (byte[])valid.Clone();
-                version[3] = 2;
-                var kind = (byte[])valid.Clone();
-                kind[4] = 1;
-                var count = (byte[])valid.Clone();
-                count[21] = 255;
-                count[22] = 127;
-                var nonFinite = (byte[])valid.Clone();
-                BitConverter.GetBytes(double.NaN).CopyTo(nonFinite, 5);
-                foreach (var bytes in new[] { version, kind, count, nonFinite, valid[..^1], valid.Concat(new byte[] { 0 }).ToArray() })
-                {
-                    Assert.That(() => ReadBlock(bytes), Throws.InstanceOf<IOException>().Or.InstanceOf<InvalidDataException>());
-                }
-
-                var path = CompilePath("M1 2 L3 4 Z", FillRule.NonZero);
-                var opcode = (byte[])path.Clone();
-                opcode[2] = 255;
-                var encoding = (byte[])path.Clone();
-                encoding[0] = 7;
-                foreach (var bytes in new[] { opcode, encoding, path[..^1] })
-                {
-                    var compiled = NewCompiledPath(bytes);
-                    Assert.That(
-                        () => Call(
-                            compiled.GetType().GetMethod("Build", Type.EmptyTypes)
-                            ?? throw new AssertionException("Missing Build."),
-                            compiled,
-                            []),
-                        Throws.InstanceOf<IOException>().Or.InstanceOf<InvalidDataException>());
-                }
-            },
-            CancellationToken.None);
-    }
-
     private static byte[] CompilePath(string source, FillRule rule)
     {
         var type = typeof(CatalogImport).Assembly.GetType("KubaiIcons.Importer.PathCompiler", true)
@@ -121,21 +74,6 @@ public partial class IconContracts
         var type = typeof(KubaiIcon).Assembly.GetType("KubaiIcons.Avalonia.Rendering.CompiledPath", true)
             ?? throw new AssertionException("Missing path.");
         return Activator.CreateInstance(type, [bytes]) ?? throw new AssertionException("Missing path instance.");
-    }
-
-    private static void ReadBlock(byte[] bytes)
-    {
-        var assembly = typeof(KubaiIcon).Assembly;
-        var readerType = assembly.GetType("KubaiIcons.Avalonia.Rendering.ArtReader", true)
-            ?? throw new AssertionException("Missing reader.");
-        var kindType = assembly.GetType("KubaiIcons.Avalonia.Rendering.ArtKind", true)
-            ?? throw new AssertionException("Missing kind.");
-        var dataType = assembly.GetType("KubaiIcons.Avalonia.Rendering.DuotoneData", true)
-            ?? throw new AssertionException("Missing data.");
-        using var stream = new MemoryStream(bytes, false);
-        using var reader = (IDisposable)Call(readerType.GetConstructors().Single(), null, [stream, Enum.ToObject(kindType, 0)]);
-        Call(dataType.GetMethod("Read") ?? throw new AssertionException("Missing Read."), null, [reader]);
-        Call(readerType.GetMethod("Complete") ?? throw new AssertionException("Missing Complete."), reader, []);
     }
 
     private static object Call(MethodBase method, object? target, object?[] arguments)

@@ -80,5 +80,4 @@ for title, names in [("New IDs", added), ("Existing IDs gaining a style", backfi
                    + (" …" if len(names) > 16 else ""))
 notice = "licenses/LICENSE-ICONS" in dirty
 summary.append("**Upstream artwork license:** " + ("changed — review before merging." if notice else "unchanged."))
-summary.append("Open the Windows Check artifact **upstream-artwork-comparison** and its `index.html` for the changed poses.")
 (out / "summary.md").write_text("\n\n".join(summary) + "\n", encoding="utf-8")

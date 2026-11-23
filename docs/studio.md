@@ -46,12 +46,21 @@ Following [Arc guidance](https://docs.tkcode.si/skills/tkcode-arc/SKILL.md) and 
 - Metadata in `samples/IconStudio/Catalog/catalog.json` merges upstream categories, tags, Chinese labels, and base keyword groups (shape, object, meaning,
   action, and Chinese synonyms) across all 3,074 identities—staying strictly inside the Studio sample executable.
 
-## Verification
+## Windows x64 single executable
+
+To publish Studio as a standalone EXE, use the .NET 11 SDK, the Visual Studio C++ build tools with a Windows SDK, and put LLVM's `llvm-ar` and `lld-link`
+on `PATH`. From the repository root:
 
 ```sh
-dotnet test tests/KubaiIcons.Tests
+dotnet publish samples/IconStudio/IconStudio.csproj -c Release -f net11.0 -r win-x64 -p:PublishAot=true
 ```
 
-Studio UI tests cover virtualized browsing, Chinese/English search (including spaced/unspaced middle dots like `档案夹 · 同步`), capability-gated switches,
-popover focus/Escape handling, pointer dragging on the size slider, clipboard output, and theme switching. Set `KUBAI_CAPTURE_DIR` to save rendered Studio
-screenshots across themes and states. Dependency notices under `licenses/studio` copy only to Studio build/publish output.
+Only this Windows x64 Native AOT build uses [StaticLink.Avalonia](https://github.com/greepar/StaticLink.Avalonia) to link SkiaSharp, HarfBuzzSharp and ANGLE
+into `IconStudio.exe`. No .NET installation or application DLLs are needed on the target machine. When distributing the EXE, include the project, artwork and
+third-party license notices alongside it; debug symbols are optional.
+
+## Run Studio locally
+
+```sh
+dotnet run --project samples/IconStudio
+```

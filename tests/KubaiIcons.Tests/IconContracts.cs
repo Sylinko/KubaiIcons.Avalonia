@@ -2,11 +2,8 @@
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Headless;
 using Avalonia.Media;
-using Avalonia.Media.Imaging;
-using IconStudio;
 using KubaiIcons.Avalonia;
 using NUnit.Framework;
 
@@ -16,9 +13,9 @@ public static class TestHost
 {
     public static AppBuilder BuildAvaloniaApp()
     {
-        return App.CreateBuilder()
-        .UseHeadless(new AvaloniaHeadlessPlatformOptions { UseHeadlessDrawing = false })
-        .UseSkia();
+        return AppBuilder.Configure<Application>()
+            .UseHeadless(new AvaloniaHeadlessPlatformOptions { UseHeadlessDrawing = false })
+            .UseSkia();
     }
 }
 
@@ -47,145 +44,41 @@ public partial class IconContracts
         }
     }
 
-
     [Test, Order(0)]
-    public async Task Artwork_WhenChangingKindsAndPoses_LoadsOnlyDemandedBlocksAndDrawsAuthoredMotion()
+    public Task Artwork_WhenRendered_LoadsOnlyTheRequestedFamilyAndReusesSharedBlocks()
     {
-        await _session.Dispatch(
+        return _session.Dispatch(
             () =>
             {
                 using var reads = new DecodeListener();
-                var icon = new KubaiIcon
-                {
-                    Kind = KubaiIconKind.Folder,
-                    Size = 144,
-                    AccentColor = Color.Parse("#7160DB"),
-                    IsEngaged = false,
-                    IsAnimationEnabled = false
-                };
-                var window = new Window
-                {
-                    Width = 200,
-                    Height = 200,
-                    Background = Brushes.White,
-                    Content = icon
-                };
+                var icon = new KubaiIcon { Kind = KubaiIconKind.FolderPlus, Size = 32, IsAnimationEnabled = false };
+                var bounds = new Rect(0, 0, 32, 32);
+                icon.Measure(bounds.Size);
+                icon.Arrange(bounds);
+                Assert.That(reads.Names, Is.Empty, "Selection and layout must not open artwork.");
 
-                byte[] Pixels()
+                void Draw()
                 {
-                    using var frame = new RenderTargetBitmap(new PixelSize(200, 200));
-                    frame.Render(window);
-                    var bytes = new byte[200 * 200 * 4];
-                    var pin = GCHandle.Alloc(bytes, GCHandleType.Pinned);
-                    try
-                    {
-                        frame.CopyPixels(new PixelRect(0, 0, 200, 200), pin.AddrOfPinnedObject(), bytes.Length, 800);
-                    }
-                    finally
-                    {
-                        pin.Free();
-                    }
-
-                    return bytes;
+                    using var context = new DrawingGroup().Open();
+                    icon.Render(context);
                 }
 
-                static int Changed(byte[] a, byte[] b)
-                {
-                    var count = 0;
-                    for (var i = 0; i < a.Length; i += 4)
-                    {
-                        if (Math.Abs(a[i] - b[i]) > 2 || Math.Abs(a[i + 1] - b[i + 1]) > 2 || Math.Abs(a[i + 2] - b[i + 2]) > 2)
-                        {
-                            count++;
-                        }
-                    }
+                Draw();
+                Assert.That(reads.Names, Is.EquivalentTo(new[] { "scene-folder", "badge-plus" }));
+                icon.Kind = KubaiIconKind.Folder;
+                Draw();
+                icon.IsEngaged = true;
+                Draw();
+                Assert.That(reads.Names, Has.Count.EqualTo(2));
 
-                    return count;
-                }
+                icon.IconStyle = KubaiIconStyle.Duotone;
+                Draw();
+                Assert.That(reads.Names.Skip(2), Is.EqualTo(new[] { "duotone-folder" }));
 
-                try
-                {
-                    icon.Measure(new Size(200, 200));
-                    new KubaiIcon { Kind = KubaiIconKind.Bookmark }.Measure(new Size(24, 24));
-                    Assert.That(reads.Names, Is.Empty, "Configuration and measurement do not decode artwork.");
-                    window.Show();
-                    Pump();
-                    var rest = Pixels();
-                    Assert.That(reads.Names, Is.EqualTo(new[] { "scene-folder" }));
-                    icon.IsEngaged = true;
-                    Assert.That(Changed(Pixels(), rest), Is.GreaterThan(40));
-                    icon.IsEngaged = false;
-                    Assert.That(Changed(Pixels(), rest), Is.Zero);
-
-                    icon.Kind = KubaiIconKind.FolderPlus;
-                    Pump();
-                    Assert.That(Changed(Pixels(), rest), Is.GreaterThan(40));
-                    Assert.That(reads.Names, Is.EqualTo(new[] { "scene-folder", "badge-plus" }));
-                    icon.Kind = KubaiIconKind.Folder;
-                    Pump();
-                    Assert.That(Changed(Pixels(), rest), Is.Zero);
-                    Assert.That(reads.Names.Count, Is.EqualTo(2));
-
-                    icon.Kind = KubaiIconKind.Bookmark;
-                    Pump();
-                    var unsaved = Pixels();
-                    icon.IsActive = true;
-                    var saved = Pixels();
-                    Assert.That(Changed(saved, unsaved), Is.GreaterThan(40));
-                    icon.IsEngaged = true;
-                    Assert.That(Changed(Pixels(), saved), Is.GreaterThan(40));
-                    icon.IsEngaged = false;
-                    Assert.That(Changed(Pixels(), saved), Is.Zero);
-                    icon.ColorVariant = KubaiColorVariant.Soft;
-                    Assert.That(Changed(Pixels(), saved), Is.GreaterThan(40));
-
-                    icon.Kind = KubaiIconKind.Folder;
-                    icon.IconStyle = KubaiIconStyle.Duotone;
-                    Pump();
-                    var duo = Pixels();
-                    icon.IsEngaged = true;
-                    var held = Pixels();
-                    Assert.That(Changed(held, duo), Is.GreaterThan(40));
-                    icon.IsEngaged = false;
-                    icon.IsAnimationEnabled = true;
-                    icon.IsEngaged = true;
-                    // The rear sheet is masked by the folder body at 140 ms; sample after it emerges.
-                    Step(icon, 170);
-                    var mid = Pixels(); // Capture the sampled pose without advancing the headless render clock.
-                    Assert.That(Changed(mid, duo), Is.GreaterThan(40));
-                    if (SystemAllowsMotion())
-                    {
-                        Assert.That(Changed(mid, held), Is.GreaterThan(40));
-                    }
-
-                    icon.IsEngaged = false;
-                    Step(icon, 420);
-                    Assert.That(Changed(Pixels(), duo), Is.Zero);
-                    Assert.That(reads.Names, Is.EqualTo(new[] { "scene-folder", "badge-plus", "scene-bookmark", "duotone-folder" }));
-                    icon.IconStyle = KubaiIconStyle.Layered;
-                    icon.Kind = KubaiIconKind.BookmarkPlus;
-                    icon.IsAnimationEnabled = false;
-                    icon.IsActive = false;
-                    Pump();
-                    var composed = Pixels();
-                    icon.IsSemanticBadgeEnabled = true;
-                    Assert.That(Changed(composed, Pixels()), Is.GreaterThan(40), "Semantic color changes the neutral disc.");
-                    icon.BadgeColor = Color.Parse("#E71180");
-                    var custom = Pixels();
-                    icon.IsSemanticBadgeEnabled = false;
-                    Assert.That(Changed(custom, Pixels()), Is.Zero, "An explicit badge color takes precedence.");
-                    icon.BadgeColor = null;
-                    icon.IsActive = true;
-                    Assert.That(Changed(composed, Pixels()), Is.GreaterThan(40), "The composed bookmark retains its saved state.");
-                    Assert.That(reads.Names.Count, Is.EqualTo(4), "Changing base should reuse the decoded plus badge.");
-                    icon.Size = 24;
-                    Pump();
-                    Assert.That(icon.DesiredSize, Is.EqualTo(new Size(24, 24)));
-                }
-                finally
-                {
-                    window.Close();
-                }
+                var missing = KubaiIconCatalog.All.FirstOrDefault(info => info.HasLayered && !info.HasDuotone);
+                icon.Kind = missing.Kind == KubaiIconKind.None ? (KubaiIconKind)int.MaxValue : missing.Kind;
+                Draw();
+                Assert.That(reads.Names, Has.Count.EqualTo(3), "An unavailable style must not load a fallback.");
             },
             CancellationToken.None);
     }

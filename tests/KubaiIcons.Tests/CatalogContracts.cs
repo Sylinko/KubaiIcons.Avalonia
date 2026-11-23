@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using Avalonia;
@@ -13,6 +13,34 @@ namespace KubaiIcons.Tests;
 
 public partial class IconContracts
 {
+    [Test]
+    public void TypedKinds_MatchShippedFamilies_AndConvertOnlySharedMembers()
+    {
+        var catalog = KubaiIconCatalog.All;
+        Assert.That(
+            Enum.GetValues<KubaiLayeredIconKind>().Skip(1).Select(k => (int)k),
+            Is.EqualTo(catalog.Where(i => i.HasLayered).Select(i => (int)i.Kind)));
+        Assert.That(
+            Enum.GetValues<KubaiDuotoneIconKind>().Skip(1).Select(k => (int)k),
+            Is.EqualTo(catalog.Where(i => i.HasDuotone).Select(i => (int)i.Kind)));
+        foreach (var icon in catalog)
+        {
+            var expectedStyles = (icon.HasLayered ? KubaiIconStyles.Layered : KubaiIconStyles.None)
+                | (icon.HasDuotone ? KubaiIconStyles.Duotone : KubaiIconStyles.None);
+            Assert.That(icon.SupportedStyles, Is.EqualTo(expectedStyles));
+            var isShared = icon.HasDuotone && icon.HasLayered;
+            Assert.That(((KubaiLayeredIconKind)icon.Kind).TryToDuotone(out var duotone), Is.EqualTo(isShared));
+            Assert.That(((KubaiDuotoneIconKind)icon.Kind).TryToLayered(out var layered), Is.EqualTo(isShared));
+            if (isShared)
+            {
+                Assert.That((int)duotone, Is.EqualTo((int)layered).And.EqualTo((int)icon.Kind));
+            }
+        }
+
+        Assert.That(default(KubaiIconInfo).SupportedStyles, Is.EqualTo(KubaiIconStyles.None));
+        Assert.That(KubaiDuotoneIconKind.None.TryToLayered(out var empty) && empty == KubaiLayeredIconKind.None, Is.True);
+    }
+
     [Test, Order(-1)] // Check first use before the render tests populate the shared artwork cache.
     public async Task Duotone_WhenPlayingBeforeFirstRender_UsesUpstreamDurationsWithoutDecodingArt()
     {
@@ -52,7 +80,7 @@ public partial class IconContracts
             CancellationToken.None);
     }
 
-    [Test, Order(6)]
+    [Test, Explicit, Category("Artwork")]
     public async Task Duotone_WhenSamplingEveryTrack_MatchesThePinnedUpstreamMotion()
     {
         await _session.Dispatch(
@@ -133,7 +161,7 @@ public partial class IconContracts
             CancellationToken.None);
     }
 
-    [Test, Order(7)]
+    [Test, Explicit, Category("Artwork")]
     public async Task Duotone_WhenRenderingTheWholeCatalog_PreservesVisibleEndpointsAndRendersTravel()
     {
         await _session.Dispatch(
@@ -248,19 +276,6 @@ public partial class IconContracts
                 }
             },
             CancellationToken.None);
-    }
-
-    private static void Capture(Window window, string name)
-    {
-        var directory = Environment.GetEnvironmentVariable("KUBAI_CAPTURE_DIR");
-        if (directory is null)
-        {
-            return;
-        }
-
-        Directory.CreateDirectory(directory);
-        using var frame = window.CaptureRenderedFrame() ?? throw new AssertionException("No frame.");
-        frame.Save(Path.Combine(directory, name + ".png"), PngBitmapEncoderOptions.Default);
     }
 
     private static T ReadField<T>(object target, string name)

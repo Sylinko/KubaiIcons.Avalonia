@@ -14,7 +14,7 @@ public partial class IconContracts
 {
     // Chromium reference rendered from the unmodified pinned withBadge + renderSVG.
     // Row 1: entry; row 2: held and return; row 3: reverse before entry finishes.
-    [Test]
+    [Test, Explicit, Category("Artwork")]
     public async Task FolderAlert_MatchesUpstreamDiscGlyphKnockoutAndBaseDuringMotion()
     {
         await _session.Dispatch(
@@ -142,7 +142,7 @@ public partial class IconContracts
             CancellationToken.None);
     }
 
-    [Test]
+    [Test, Explicit, Category("Artwork")]
     public async Task Compositions_MatchPublishedGlyphsInMotionOnTheirNativeBases()
     {
         await _session.Dispatch(

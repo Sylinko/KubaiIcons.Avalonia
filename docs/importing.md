@@ -51,7 +51,7 @@ Enum stability is enforced at compile/import time and in CI:
   the shared ledger in place, declaring only shipped members; `KubaiIconKind` includes all reserved identities.
 - **`catalog/enum-baseline.json`** freezes the `0.14.0` baseline (`None = 0` followed by all 3,074 identities). Future imports must preserve this prefix
   verbatim.
-- **CI baseline check**: Both locally and in GitHub Actions (against the PR base or previous commit), pass `--baseline`:
+- **CI baseline check**: Both locally and in GitHub Actions (against the PR base or the last successful main check), pass `--baseline`:
 
 ```sh
 dotnet run --project tools/KubaiIcons.Importer -- check --source artifacts/upstream --baseline artifacts/base-ids.props
@@ -67,7 +67,7 @@ upstream rename or deletion requires an explicit compatibility decision—IDs ar
 - Artwork binaries strip names, labels, categories, and search tags (Studio search metadata stays strictly separated).
 - Paths use lossless numeric encoding rather than coordinate rounding.
 - Text outputs use UTF-8 without BOM and LF line endings; binaries follow the fixed `KBI v1` layout with no timestamps.
-- CI verifies byte-for-byte determinism across **Windows and Ubuntu**, and tests repeat generation across locales (`tr-TR`, `ar-SA`).
+- The importer tests repeat generation under `tr-TR` and `ar-SA`; the Ubuntu catalog check compares generated files with the committed outputs.
 
 ---
 
@@ -84,12 +84,12 @@ Copy-Item catalog/ids.props artifacts/base-ids.props
 node tools/ci/upstream.mjs pin X.Y.Z
 ./tools/ci/import.ps1 generate -Baseline artifacts/base-ids.props
 ./tools/ci/import.ps1 check -Baseline artifacts/base-ids.props
-dotnet test KubaiIcons.Avalonia.slnx -c Release
+dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory!=Artwork"
 ```
 
 The pin step verifies npm's `gitHead` against the source commit and extracts the two manifests from that exact package. The importer compiles Layered first, assigns shared IDs second, then generates Studio metadata. The independent test inventory comes from the published manifests; Duotone motion samples come from the upstream engine. Neither first-release ID snapshot is regenerated.
 
-Review the PR's new IDs, style backfills and license changes. Open `index.html` in the Windows Check artifact **upstream-artwork-comparison** to compare upstream and Avalonia at matching poses. A changed shared scene or badge also selects its dependent icons. Update version-specific claims in both READMEs and the NuGet README before release; historical benchmarks keep their original version and sample size.
+Review the PR's new IDs, style backfills and license changes. Update version-specific claims in both READMEs and the NuGet README before release; historical benchmarks keep their original version and sample size.
 
 Unknown motion/schema features or removed public members stop generation before the bot opens a PR. Fix the build-time adapter or make an explicit compatibility decision, then rerun. If an intentional artwork change breaks a manually curated pixel fixture, review the original before updating it.
 
@@ -114,28 +114,27 @@ ever modifying `catalog/ids.props`.
 
 ---
 
-## GitHub Actions & Visual Regression
+## What runs in GitHub Actions
 
-### CI Workflow (`.github/workflows/check.yml`)
+**Check** uses one Ubuntu runner for pull requests and pushes to `main`. Library changes run the core and importer contracts and pack the library for .NET 8, 10 and 11. Changes to catalog inputs or generated files also verify the pinned upstream import, including Studio’s generated catalog. Studio UI and ordinary documentation changes need no SDK setup. A manual **Check** runs both steps; **Sync upstream** generates update PRs.
 
-Runs Duotone, Layered, and Studio checks, builds, tests, and NuGet packing (`artifacts/package`) on **Windows and Ubuntu** with read-only permissions. Manual
-`workflow_dispatch` runs support `check` or `generate` (uploading generated outputs as review artifacts without pushing commits or publishing packages).
+## Local artwork comparisons
 
-### Layered Visual Comparison
+For the stored pixel fixtures and Duotone motion samples, run:
 
-For full pixel-level comparison against the upstream renderer using a local Chromium executable (`msedge.exe` / `chrome`):
-
-```powershell
-node tools/validation/layered-reference.mjs artifacts/upstream artifacts/studio-metadata/layered-icons.json artifacts/layered-validation $browser
-$env:KUBAI_REFERENCE_DIR = (Resolve-Path artifacts/layered-validation).Path
-dotnet test KubaiIcons.Avalonia.slnx -c Release
+```sh
+dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory=Artwork"
 ```
 
-For 0.14.0 this renders **5,005 poses** through Avalonia (rest, Soft entry, and interrupted return for every base design, plus one moving frame per composition) and
-produces contact sheets alongside `errors.tsv` ranked by mean RGB error and foreground IoU.
+To include the entire Layered inventory, fetch the pinned source and manifests as above, then generate its reference sheets with a local Chromium executable:
 
-### Duotone Motion Reference
+```powershell
+$browser = "${env:ProgramFiles(x86)}/Microsoft/Edge/Application/msedge.exe" # Or set the path to your Chromium executable.
+node tools/validation/layered-reference.mjs artifacts/upstream artifacts/studio-metadata/layered-icons.json artifacts/layered-validation $browser
+$env:KUBAI_REFERENCE_DIR = (Resolve-Path artifacts/layered-validation).Path
+dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory=Artwork"
+```
 
-`tests/KubaiIcons.Tests/Contracts/duotone-motion.json` records five time samples per track across all **502 Duotone** icons directly from upstream
-`packages/core/src/duotone.js`, verifying transforms, opacity, stroke reveal, and duration. Set `KUBAI_CAPTURE_DIR` before running tests to export rendered
-Duotone contact sheets and Studio screenshots.
+For 0.14.0 the Layered comparison renders 5,005 poses and writes native contact sheets and `errors.tsv` beside the browser references. Duotone motion samples cover all 502 icons, including transforms, opacity, stroke reveal, and duration.
+
+To generate a side-by-side gallery for an upstream update, run `python tools/ci/sync-review.py origin/main` on the update branch **before** the artwork tests. Set `KUBAI_DUOTONE_SHEETS` to the resulting `artifacts/review` directory as well as `KUBAI_REFERENCE_DIR` above. After the tests, run `node tools/validation/review-gallery.mjs` and open `artifacts/review/gallery/index.html`.

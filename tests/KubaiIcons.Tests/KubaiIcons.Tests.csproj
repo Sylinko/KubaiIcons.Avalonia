@@ -3,13 +3,14 @@
     <TargetFramework>net11.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <AvaloniaVersion>$(StudioAvaloniaVersion)</AvaloniaVersion>
+    <AvaloniaVersion>12.1.6</AvaloniaVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../samples/IconStudio/IconStudio.csproj"/>
+    <ProjectReference Include="../../src/KubaiIcons.Avalonia/KubaiIcons.Avalonia.csproj"/>
     <ProjectReference Include="../../tools/KubaiIcons.Importer/KubaiIcons.Importer.csproj"/>
     <PackageReference Include="Avalonia.Headless" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia.Skia" Version="$(AvaloniaVersion)"/>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.1"/>
     <PackageReference Include="NUnit" Version="4.4.0"/>
     <PackageReference Include="NUnit3TestAdapter" Version="6.3.1"/>

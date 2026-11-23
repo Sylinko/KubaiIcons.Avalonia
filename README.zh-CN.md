@@ -201,15 +201,13 @@ Studio 基于 [TKCode.Arc](https://github.com/AIDotNet/TKCode.Arc) `1.3.0`（Ava
 
 ## 测试与更多文档
 
-在仓库根目录执行完整测试：
+在仓库根目录运行核心库和导入器测试，无需构建 Studio：
 
 ```sh
-dotnet test KubaiIcons.Avalonia.slnx -c Release
+dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory!=Artwork"
 ```
 
-测试套件全面覆盖：枚举值与声明顺序不可变性（对齐 [`tests/KubaiIcons.Tests/Contracts/first-release.json`](tests/KubaiIcons.Tests/Contracts/first-release.json)
-）、跨区域性确定性导入、通过 `KubaiIcons-Avalonia` `EventSource` 验证按需解码、播放状态机生命周期、全量 502 个 Duotone 图标多姿态渲染与上游动效采样比对，以及 Studio
-UI 与剪贴板回归测试。
+日常测试覆盖枚举 ID 稳定性、已有图标补齐另一种风格、确定性导入、按需解码和播放行为。像素与动画采样需要对照时，再运行[本地图稿验证](docs/importing.md#local-artwork-comparisons)。
 
 ### 延伸文档（英文）
 

@@ -1,57 +1,79 @@
 name: Check
 on:
-  push:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
-    inputs:
-      mode:
-        description: Check committed output, or generate files for review
-        type: choice
-        options: [check, generate]
-        default: check
 
 permissions:
   contents: read
+  actions: read
+
+concurrency:
+  group: check-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   catalog:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: actions/setup-dotnet@v4
+
+      - name: Select checks
+        id: scope
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          base="$BASE"
+          if [[ "$GITHUB_EVENT_NAME" == push ]]; then
+            # A Studio-only commit must not turn a previously failed library check green.
+            base=$(gh run list --workflow check.yml --branch "$GITHUB_REF_NAME" --event push \
+              --status success --limit 1 --json headSha --jq '.[0].headSha // ""')
+          fi
+          core=false
+          catalog=false
+          if [[ -z "$base" ]] || ! git merge-base --is-ancestor "$base" HEAD; then
+            base="$BASE"
+            core=true
+            catalog=true
+          else
+            changed=$(git diff --no-renames --name-only "$base" HEAD)
+            while IFS= read -r file; do
+              case "$file" in
+                catalog/*|tools/KubaiIcons.Importer/*|tools/ci/import.ps1|tools/ci/upstream.mjs|tools/validation/scene-compiler.test.mjs|tools/validation/upstream-contracts.mjs|\
+                src/*/Art/*|src/*/*.g.cs|src/*/Rendering/DuotoneData.cs|src/*/Rendering/ArtReader.cs|src/*/Rendering/*Path.cs|\
+                samples/IconStudio/Catalog/catalog.json|tests/*/Contracts/duotone-motion.json|tests/*/Contracts/published-inventory.json|tests/*/Contracts/first-release.json|licenses/LICENSE-ICONS|\
+                .gitattributes|Directory.Build.*|global.json|.github/workflows/check.yml) catalog=true ;;
+                src/*|tests/*|LICENSE|docs/nuget.md) core=true ;;
+              esac
+            done <<< "$changed"
+          fi
+          if [[ "$catalog" == true ]]; then
+            core=true
+            echo "commit=$(jq -r .commit catalog/upstream.json)" >> "$GITHUB_OUTPUT"
+            mkdir -p artifacts
+            if [[ -n "$base" ]] && git cat-file -e "$base:catalog/ids.props" 2>/dev/null; then
+              git diff --exit-code "$base" HEAD -- catalog/enum-baseline.json tests/KubaiIcons.Tests/Contracts/first-release.json
+              git show "$base:catalog/ids.props" > artifacts/base-ids.props
+            fi
+          fi
+          echo "core=$core" >> "$GITHUB_OUTPUT"
+          echo "catalog=$catalog" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-dotnet@v6
+        if: steps.scope.outputs.core == 'true'
         with:
           global-json-file: global.json
           dotnet-version: 8.0.x
-      - name: Read the upstream pin and compatibility baseline
-        id: pin
-        shell: pwsh
-        env:
-          BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: |
-          $pin = Get-Content catalog/upstream.json -Raw | ConvertFrom-Json
-          "commit=$($pin.commit)" >> $env:GITHUB_OUTPUT
-          New-Item -ItemType Directory -Force artifacts | Out-Null
-          if ($env:BASE_REF -and $env:BASE_REF -notmatch '^0+$') {
-            git cat-file -e "$($env:BASE_REF):catalog/ids.props" 2>$null
-            if ($LASTEXITCODE -eq 0) {
-              git diff --exit-code $env:BASE_REF HEAD -- catalog/enum-baseline.json tests/KubaiIcons.Tests/Contracts/first-release.json
-              if ($LASTEXITCODE) { throw 'The first-release identity baselines are immutable.' }
-              $text = git show "$($env:BASE_REF):catalog/ids.props"
-              if ($LASTEXITCODE) { throw 'Could not read the base ID ledger.' }
-              [IO.File]::WriteAllText((Join-Path $PWD 'artifacts/base-ids.props'), ($text -join "`n") + "`n")
-            }
-          }
-          exit 0
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        if: steps.scope.outputs.catalog == 'true'
         with:
           repository: kubai087/kubai-icons
-          ref: ${{ steps.pin.outputs.commit }}
+          ref: ${{ steps.scope.outputs.commit }}
           path: artifacts/upstream
           persist-credentials: false
           sparse-checkout-cone-mode: false
@@ -63,71 +85,20 @@ jobs:
             /package.json
             /packages/core/src/
             /packages/core/package.json
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
+        if: steps.scope.outputs.catalog == 'true'
         with:
           node-version: 24
-      - name: Check Layered compiler boundaries
-        run: node --test tools/validation/scene-compiler.test.mjs
-      - name: Fetch matching npm manifests
-        run: node tools/ci/upstream.mjs fetch
-      - name: Verify artwork, Studio metadata and independent upstream contracts
-        shell: pwsh
-        env:
-          IMPORT_MODE: ${{ inputs.mode || 'check' }}
+      - name: Verify the pinned catalog and generated resources
+        if: steps.scope.outputs.catalog == 'true'
         run: |
-          $options = @{ Mode = $env:IMPORT_MODE }
-          if (Test-Path artifacts/base-ids.props) { $options.Baseline = 'artifacts/base-ids.props' }
-          ./tools/ci/import.ps1 @options
-      - name: Render the published Layered inventory for visual comparison
-        if: runner.os == 'Windows'
-        shell: pwsh
+          node --test tools/validation/scene-compiler.test.mjs
+          node tools/ci/upstream.mjs fetch
+          baseline=()
+          if [[ -f artifacts/base-ids.props ]]; then baseline=(-Baseline artifacts/base-ids.props); fi
+          pwsh -File tools/ci/import.ps1 check "${baseline[@]}"
+      - name: Test and pack the library
+        if: steps.scope.outputs.core == 'true'
         run: |
-          $browser = Join-Path ${env:ProgramFiles(x86)} 'Microsoft/Edge/Application/msedge.exe'
-          node tools/validation/layered-reference.mjs artifacts/upstream artifacts/studio-metadata/layered-icons.json artifacts/layered-validation $browser
-          if ($LASTEXITCODE) { exit $LASTEXITCODE }
-          "KUBAI_REFERENCE_DIR=$((Resolve-Path artifacts/layered-validation).Path)" >> $env:GITHUB_ENV
-      - name: Select artwork for PR review
-        if: runner.os == 'Windows' && github.event_name == 'pull_request'
-        id: review
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        shell: pwsh
-        run: |
-          git diff --quiet $env:BASE_SHA HEAD -- catalog/upstream.json
-          if ($LASTEXITCODE -eq 0) { exit 0 }
-          if ($LASTEXITCODE -ne 1) { exit $LASTEXITCODE }
-          python tools/ci/sync-review.py $env:BASE_SHA
-          if ($LASTEXITCODE) { exit $LASTEXITCODE }
-          "KUBAI_DUOTONE_SHEETS=$((Resolve-Path artifacts/review).Path)" >> $env:GITHUB_ENV
-          "enabled=true" >> $env:GITHUB_OUTPUT
-      - run: dotnet test KubaiIcons.Avalonia.slnx -c Release
-      - name: Pair changed upstream and native artwork
-        if: always() && steps.review.outputs.enabled == 'true'
-        run: node tools/validation/review-gallery.mjs
-      - name: Attach visual review
-        if: always() && steps.review.outputs.enabled == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: upstream-artwork-comparison
-          path: artifacts/review/gallery/
-          if-no-files-found: error
-      - run: dotnet pack src/KubaiIcons.Avalonia -c Release --no-restore -o artifacts/package
-      - name: Upload generated files for review
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'generate'
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-catalog-${{ runner.os }}
-          path: |
-            catalog/ids.props
-            catalog/layered-bases.json
-            catalog/layered-compositions.json
-            catalog/layered-labels.json
-            src/KubaiIcons.Avalonia/CatalogData.g.cs
-            src/KubaiIcons.Avalonia/Art/Duotone/
-            src/KubaiIcons.Avalonia/Art/Scenes/
-            src/KubaiIcons.Avalonia/Art/Badges/
-            src/KubaiIcons.Avalonia/Rendering/CompositionData.g.cs
-            licenses/LICENSE-ICONS
-            samples/IconStudio/Catalog/catalog.json
-            tests/KubaiIcons.Tests/Contracts/published-inventory.json
-            tests/KubaiIcons.Tests/Contracts/duotone-motion.json
+          dotnet test tests/KubaiIcons.Tests -c Release --filter 'TestCategory!=Artwork'
+          dotnet pack src/KubaiIcons.Avalonia -c Release --no-restore -o artifacts/package

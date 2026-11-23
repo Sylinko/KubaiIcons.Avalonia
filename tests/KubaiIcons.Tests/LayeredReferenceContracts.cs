@@ -16,7 +16,7 @@ public partial class IconContracts
 
     private sealed record ReferencePose(string Name, double From, bool To, double T, bool Soft);
 
-    [Test]
+    [Test, Explicit, Category("Artwork")]
     public async Task PublishedLayeredArtwork_WhenDrawn_MatchesUpstreamContactSheets()
     {
         var directory = Environment.GetEnvironmentVariable("KUBAI_REFERENCE_DIR");

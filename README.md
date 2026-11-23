@@ -210,15 +210,13 @@ and retains its **Avalonia 12.0.0** compatibility floor.
 
 ## Testing & Verification
 
-Run the test suite:
+Run the library and importer contracts without building Studio:
 
 ```sh
-dotnet test KubaiIcons.Avalonia.slnx -c Release
+dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory!=Artwork"
 ```
 
-The test suite verifies enum value and declaration-order immutability against [
-`tests/KubaiIcons.Tests/Contracts/first-release.json`](tests/KubaiIcons.Tests/Contracts/first-release.json), cross-culture deterministic imports, lazy block
-decoding via the `KubaiIcons-Avalonia` `EventSource`, playback lifecycles, all 502 Duotone poses and upstream motion samples, and Studio UI/clipboard contracts.
+These tests cover stable enum IDs, style backfills, deterministic imports, lazy decoding, and playback. For pixel and motion comparisons, use the [local artwork checks](docs/importing.md#local-artwork-comparisons).
 
 ### Further Documentation
 

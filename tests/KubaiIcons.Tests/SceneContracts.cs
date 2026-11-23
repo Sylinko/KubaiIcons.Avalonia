@@ -11,6 +11,7 @@ namespace KubaiIcons.Tests;
 
 public partial class IconContracts
 {
+    [Explicit, Category("Artwork")]
     [TestCase(0d, .18, true, 99)]
     [TestCase(.180103, .12, false, 86)]
     public async Task GrowingPolyline_WhenEnteringOrReversing_LeavesTheAuthoredInkOnTheTablet(
@@ -74,7 +75,7 @@ public partial class IconContracts
             CancellationToken.None);
     }
 
-    [Test]
+    [Test, Explicit, Category("Artwork")]
     public async Task SceneBases_WhenRetargetedAndSaved_MatchUpstream()
     {
         await _session.Dispatch(
