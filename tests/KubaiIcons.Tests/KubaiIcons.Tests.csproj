@@ -16,6 +16,5 @@
     <None Update="Contracts/*.png" CopyToOutputDirectory="PreserveNewest"/>
     <None Update="Contracts/*.json" CopyToOutputDirectory="PreserveNewest"/>
     <None Update="Inputs/*.json" CopyToOutputDirectory="PreserveNewest"/>
-    <None Include="../../catalog/layered-compositions.json" Link="Inputs/layered-compositions.json" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
 </Project>

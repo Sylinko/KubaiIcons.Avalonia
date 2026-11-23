@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Headless;
@@ -27,8 +27,9 @@ public partial class IconContracts
             {
                 using var reads = new DecodeListener();
                 var catalog = new StudioCatalog();
-                Assert.That(catalog.Categories.Count, Is.EqualTo(26));
-                Assert.That(catalog.Icons.Count, Is.EqualTo(3074));
+                var published = PublishedInventory.Current;
+                Assert.That(catalog.Categories.Select(c => c.Id), Is.EquivalentTo(published.Categories));
+                Assert.That(catalog.Icons.Select(i => i.Name), Is.EquivalentTo(published.Layered.Union(published.Duotone)));
                 Assert.That(catalog.Icons.Count(i => i.SearchScore(["calculate"]) >= 0), Is.GreaterThan(0));
                 Assert.That(reads.Names, Is.Empty, "Loading and searching Studio metadata must not decode artwork.");
                 var window = new StudioWindow();
@@ -63,7 +64,7 @@ public partial class IconContracts
                     window.Show();
                     Pump();
                     Assert.That(host.Content, Is.Null, "The inspector is not constructed before selection.");
-                    Assert.That(Results().Length, Is.EqualTo(3071));
+                    Assert.That(Results().Select(i => i.Name), Is.EquivalentTo(published.Layered));
                     Assert.That(family.SelectedIndex, Is.Zero);
                     Assert.That(Results().Select(i => i.Style), Is.All.EqualTo(KubaiIconStyle.Layered));
                     Assert.That(palette.IsEnabled && palette.SelectedIndex == 0, Is.True);
@@ -98,17 +99,18 @@ public partial class IconContracts
                     Capture(window, "studio-grid");
                     family.SelectedIndex = 1;
                     Pump();
-                    Assert.That(Results().Length, Is.EqualTo(502));
+                    Assert.That(Results().Select(i => i.Name), Is.EquivalentTo(published.Duotone));
+                    var lastName = Results()[^1].Name;
                     Assert.That(palette.IsEnabled, Is.False);
                     Find<Arc.Slider>("IconSize").Value = 41;
                     grid.ScrollIntoView(grid.ItemCount - 1);
                     Pump();
-                    var lastGlyph = Tile("zoom-out").GetVisualDescendants().OfType<KubaiIcon>().Single();
+                    var lastGlyph = Tile(lastName).GetVisualDescendants().OfType<KubaiIcon>().Single();
                     Assert.That(lastGlyph.Size, Is.EqualTo(41), "Newly realized tiles use the current slider value.");
                     Assert.That(grid.GetVisualDescendants().OfType<KubaiIcon>().Count(), Is.LessThan(150));
-                    Assert.That(grid.GetVisualDescendants().OfType<Button>().Any(b => b.DataContext is StudioEntry { Name: "zoom-out" }), Is.True);
+                    Assert.That(grid.GetVisualDescendants().OfType<Button>().Any(b => b.DataContext is StudioEntry entry && entry.Name == lastName), Is.True);
 
-                    var lastTile = BoundsInWindow(Tile("zoom-out"));
+                    var lastTile = BoundsInWindow(Tile(lastName));
                     Assert.That(lastTile.Bottom, Is.LessThanOrEqualTo(BoundsInWindow(scroll).Bottom));
                     var shortcut = Find<Border>("SearchShortcut");
                     Assert.That(shortcut.IsEffectivelyVisible && !shortcut.IsHitTestVisible, Is.True);
@@ -219,25 +221,26 @@ public partial class IconContracts
                     window.Resources.Remove(Arc.DesignTokens.ArcDesignTokenKind.ReduceTransparency);
                     scroll.ScrollToHome();
                     Pump();
-                    Tile("activity").Focus();
+                    var firstName = Results()[0].Name;
+                    Tile(firstName).Focus();
                     window.KeyPress(Key.End, RawInputModifiers.None, PhysicalKey.End, null);
                     window.KeyRelease(Key.End, RawInputModifiers.None, PhysicalKey.End, null);
                     Pump();
-                    Assert.That(window.FocusManager.GetFocusedElement(), Is.SameAs(Tile("zoom-out")));
+                    Assert.That(window.FocusManager.GetFocusedElement(), Is.SameAs(Tile(lastName)));
                     Assert.That(
-                        BoundsInWindow(Tile("zoom-out")).Bottom,
+                        BoundsInWindow(Tile(lastName)).Bottom,
                         Is.LessThanOrEqualTo(BoundsInWindow(inspector).Top + 1),
                         "End must reveal the full focused tile above the inspector.");
                     scroll.ScrollToEnd();
                     Pump();
                     Assert.That(
-                        BoundsInWindow(Tile("zoom-out")).Bottom,
+                        BoundsInWindow(Tile(lastName)).Bottom,
                         Is.LessThanOrEqualTo(BoundsInWindow(inspector).Top + 1),
                         "At the end of the gallery the overlay must not hide the last tile.");
                     window.KeyPress(Key.Home, RawInputModifiers.None, PhysicalKey.Home, null);
                     window.KeyRelease(Key.Home, RawInputModifiers.None, PhysicalKey.Home, null);
                     Pump();
-                    Assert.That(BoundsInWindow(Tile("activity")).Top, Is.GreaterThanOrEqualTo(headerBounds.Bottom));
+                    Assert.That(BoundsInWindow(Tile(firstName)).Top, Is.GreaterThanOrEqualTo(headerBounds.Bottom));
                     search.Text = "calendar";
                     Pump();
 
@@ -350,7 +353,7 @@ public partial class IconContracts
                     categories.SelectedKey = "";
                     family.SelectedIndex = 0;
                     Pump();
-                    Assert.That(Results().Length, Is.EqualTo(3071));
+                    Assert.That(Results().Select(i => i.Name), Is.EquivalentTo(published.Layered));
                     Assert.That(host.Content, Is.SameAs(inspector), "A shared icon keeps its inspector across families.");
                     search.Text = "bookmark";
                     Pump();

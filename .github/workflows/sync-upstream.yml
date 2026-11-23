@@ -1,0 +1,149 @@
+name: Sync upstream
+on:
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Next stable npm version (empty to discover)
+        type: string
+
+permissions:
+  contents: read
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      version: ${{ steps.pending.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - id: next
+        env:
+          REQUESTED: ${{ inputs.version }}
+        run: node tools/ci/upstream.mjs next "$REQUESTED"
+      - id: pending
+        if: steps.next.outputs.version != ''
+        env:
+          VERSION: ${{ steps.next.outputs.version }}
+          BASE: ${{ github.event.repository.default_branch }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh pr list --base "$BASE" --head "sync/kubai-icons-$VERSION" --json url --jq '.[0].url // empty')
+          if [[ -z "$existing" ]]; then
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          else
+            echo "Already under review: $existing" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  generate:
+    needs: discover
+    if: needs.discover.outputs.version != ''
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.discover.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: kubai087/kubai-icons
+          ref: refs/tags/kubai-icons@${{ needs.discover.outputs.version }}
+          path: artifacts/upstream
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /icons-duotone/
+            /LICENSE-ICONS
+            /icons/
+            /badges/
+            /package.json
+            /packages/core/src/
+            /packages/core/package.json
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+          dotnet-version: 8.0.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Pin the published version and regenerate against the existing IDs
+        shell: pwsh
+        run: |
+          Copy-Item catalog/ids.props artifacts/base-ids.props
+          node tools/ci/upstream.mjs pin $env:VERSION
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ./tools/ci/import.ps1 generate -Baseline artifacts/base-ids.props
+      - name: Prepare the generated patch and review notes
+        run: |
+          git add -- catalog src/KubaiIcons.Avalonia/Art src/KubaiIcons.Avalonia/CatalogData.g.cs \
+            src/KubaiIcons.Avalonia/Rendering/CompositionData.g.cs licenses/LICENSE-ICONS \
+            samples/IconStudio/Catalog/catalog.json tests/KubaiIcons.Tests/Contracts/{duotone-motion,published-inventory}.json
+          python tools/ci/sync-review.py HEAD
+          git diff --cached --binary --output=artifacts/review/catalog.patch
+          cat artifacts/review/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sync-proposal
+          path: |
+            artifacts/review/catalog.patch
+            artifacts/review/summary.md
+          if-no-files-found: error
+
+  propose:
+    needs: [discover, generate]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      VERSION: ${{ needs.discover.outputs.version }}
+      BASE: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: sync-proposal
+          path: artifacts/proposal
+      - name: Open the review PR without running upstream code
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          branch="sync/kubai-icons-$VERSION"
+          existing=$(gh pr list --base "$BASE" --head "$branch" --json url --jq '.[0].url // empty')
+          if [[ -n "$existing" ]]; then
+            echo "Already under review: $existing" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git fetch origin "$BASE"
+          test "$(git rev-parse HEAD)" = "$(git rev-parse FETCH_HEAD)" || { echo 'Base advanced; rerun sync.'; exit 1; }
+          git switch -c "$branch"
+          git apply --cached artifacts/proposal/catalog.patch
+          python tools/ci/check-proposal.py "$VERSION"
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -qm "feat(catalog): sync kubai-icons@$VERSION"
+          # Never force-push over a maintainer's changes. Recover an earlier push whose PR creation failed.
+          remote=$(git ls-remote --heads origin "refs/heads/$branch" | cut -f1)
+          if [[ -z "$remote" ]]; then
+            git push origin "HEAD:refs/heads/$branch"
+          else
+            git fetch origin "refs/heads/$branch"
+            git diff --quiet HEAD FETCH_HEAD || { echo 'Existing branch differs; review it manually.'; exit 1; }
+          fi
+          gh pr create --base "$BASE" --head "$branch" --title "Sync kubai-icons@$VERSION" \
+            --body-file artifacts/proposal/summary.md

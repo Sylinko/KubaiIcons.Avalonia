@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -77,7 +77,19 @@ public sealed partial class CatalogImport
 
         if (baseline is not null)
         {
-            CheckPrefix(ReadIds(XDocument.Load(baseline)), ids);
+            var previous = XDocument.Load(baseline);
+            CheckPrefix(ReadIds(previous), ids);
+            var families = new[] { "Duotone", "Layered" };
+            foreach (var (oldRow, newRow) in previous.Descendants("KubaiId").Zip(ledger.Descendants("KubaiId")))
+            {
+                foreach (var family in families)
+                {
+                    if ((bool?)oldRow.Attribute(family) == true && (bool?)newRow.Attribute(family) != true)
+                    {
+                        throw new InvalidDataException($"Previously shipped {family} member '{oldRow.Attribute("Include")?.Value}' was removed.");
+                    }
+                }
+            }
         }
 
         var definitions = new Dictionary<string, DuotoneSource>(StringComparer.Ordinal);

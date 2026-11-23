@@ -233,7 +233,8 @@ public partial class IconContracts
                                 }
                             }
 
-                            var directory = Environment.GetEnvironmentVariable("KUBAI_CAPTURE_DIR");
+                            var directory = Environment.GetEnvironmentVariable("KUBAI_DUOTONE_SHEETS")
+                                ?? Environment.GetEnvironmentVariable("KUBAI_CAPTURE_DIR");
                             if (directory is not null)
                             {
                                 frame.Save(Path.Combine(directory, $"catalog-{page}-{pose}.png"), PngBitmapEncoderOptions.Default);

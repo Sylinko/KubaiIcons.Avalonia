@@ -73,13 +73,25 @@ upstream rename or deletion requires an explicit compatibility decision—IDs ar
 
 ## Updating the Upstream Version
 
-1. Update `version`, `commit`, `duotoneCount`, and `layeredCount` in `catalog/upstream.json`.
-2. Check out the pinned commit and fetch the Studio metadata JSON files (see below).
-3. Run `layered-generate --source artifacts/upstream`, then `generate --source artifacts/upstream --metadata artifacts/studio-metadata` (so both families are
-   inspected before allocating new IDs).
-4. Review ledger additions, artwork diffs, notice updates, and any unsupported-feature diagnostics.
-5. Run `check` and `dotnet test KubaiIcons.Avalonia.slnx -c Release`.
-6. Visually inspect rest, travel, and held poses for modified icons while keeping prior compatibility baselines intact.
+**Sync upstream** checks the npm registry daily. It opens one PR for the next stable `kubai-icons` release in version order. Use **Actions → Sync upstream → Run workflow** to start it sooner. If the PR already exists, the workflow leaves it and any maintainer edits alone. Merging does not publish a package.
+
+Enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**. The workflow only creates PRs; it does not approve or merge them. If GitHub asks for approval to run Check on a bot-created PR, approve the run from the PR.
+
+To reproduce a candidate locally, start on a clean branch with the candidate's exact `kubai-icons@X.Y.Z` tag checked out at `artifacts/upstream`:
+
+```powershell
+Copy-Item catalog/ids.props artifacts/base-ids.props
+node tools/ci/upstream.mjs pin X.Y.Z
+./tools/ci/import.ps1 generate -Baseline artifacts/base-ids.props
+./tools/ci/import.ps1 check -Baseline artifacts/base-ids.props
+dotnet test KubaiIcons.Avalonia.slnx -c Release
+```
+
+The pin step verifies npm's `gitHead` against the source commit and extracts the two manifests from that exact package. The importer compiles Layered first, assigns shared IDs second, then generates Studio metadata. The independent test inventory comes from the published manifests; Duotone motion samples come from the upstream engine. Neither first-release ID snapshot is regenerated.
+
+Review the PR's new IDs, style backfills and license changes. Open `index.html` in the Windows Check artifact **upstream-artwork-comparison** to compare upstream and Avalonia at matching poses. A changed shared scene or badge also selects its dependent icons. Update version-specific claims in both READMEs and the NuGet README before release; historical benchmarks keep their original version and sample size.
+
+Unknown motion/schema features or removed public members stop generation before the bot opens a PR. Fix the build-time adapter or make an explicit compatibility decision, then rerun. If an intentional artwork change breaks a manually curated pixel fixture, review the original before updating it.
 
 ---
 
@@ -91,12 +103,7 @@ library NuGet package:
 ```powershell
 git -C artifacts/upstream sparse-checkout add /icons/categories.json /icons/keywords.json
 
-$pin = Get-Content catalog/upstream.json -Raw | ConvertFrom-Json
-New-Item -ItemType Directory -Force artifacts/studio-metadata | Out-Null
-$url = "https://unpkg.com/$( $pin.version )"
-Invoke-WebRequest "$url/package.json" -OutFile artifacts/studio-metadata/package.json
-Invoke-WebRequest "$url/dist/icons.json" -OutFile artifacts/studio-metadata/layered-icons.json
-Invoke-WebRequest "$url/dist/duotone/icons.json" -OutFile artifacts/studio-metadata/duotone-icons.json
+node tools/ci/upstream.mjs fetch
 
 dotnet run --project tools/KubaiIcons.Importer -- studio-generate --source artifacts/upstream --metadata artifacts/studio-metadata
 dotnet run --project tools/KubaiIcons.Importer -- studio-check --source artifacts/upstream --metadata artifacts/studio-metadata
@@ -124,7 +131,7 @@ $env:KUBAI_REFERENCE_DIR = (Resolve-Path artifacts/layered-validation).Path
 dotnet test KubaiIcons.Avalonia.slnx -c Release
 ```
 
-This renders **5,005 poses** through Avalonia (rest, Soft entry, and interrupted return for every base design, plus one moving frame per composition) and
+For 0.14.0 this renders **5,005 poses** through Avalonia (rest, Soft entry, and interrupted return for every base design, plus one moving frame per composition) and
 produces contact sheets alongside `errors.tsv` ranked by mean RGB error and foreground IoU.
 
 ### Duotone Motion Reference

@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using Avalonia;
 using Avalonia.Controls;
@@ -152,7 +152,10 @@ public partial class IconContracts
                     }
 
                     Assert.That(WhiteMarks(Tile(2, 0)), Is.EqualTo(WhiteMarks(Tile(2, 2))));
-                    var numeric = (KubaiDuotoneIconKind)(int)KubaiLayeredIconKind.AlignJustify;
+                    var numeric = KubaiIconCatalog.All.Where(icon => !icon.HasDuotone && icon.HasLayered)
+                        .Select(icon => (KubaiDuotoneIconKind)(int)icon.Kind)
+                        .DefaultIfEmpty((KubaiDuotoneIconKind)int.MaxValue)
+                        .First();
                     var missing = new KubaiDuotoneIcon
                     {
                         Kind = numeric,

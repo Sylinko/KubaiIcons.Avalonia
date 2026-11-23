@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -44,7 +44,9 @@ public sealed class ImporterContracts
         Assert.That(KubaiIconCatalog.Get(KubaiIconKind.None), Is.Null);
         Assert.That(KubaiIconCatalog.Get((KubaiIconKind)int.MinValue), Is.Null);
         Assert.That(KubaiIconCatalog.Get((KubaiIconKind)int.MaxValue), Is.Null);
-        Assert.That(KubaiIconCatalog.Get(KubaiIconKind.FolderAlert) is { HasLayered: true, HasDuotone: false }, Is.True);
+        var alert = KubaiIconCatalog.Get(KubaiIconKind.FolderAlert);
+        Assert.That(alert?.HasLayered, Is.True);
+        Assert.That(alert?.HasDuotone, Is.EqualTo(PublishedInventory.Current.Duotone.Contains("folder-alert")));
     }
 
     [Test]
@@ -145,6 +147,7 @@ public sealed class ImporterContracts
     [TestCase("duplicate")]
     [TestCase("renumber")]
     [TestCase("reorder")]
+    [TestCase("unship")]
     [TestCase("rename")]
     [TestCase("remove")]
     public void Import_WhenAnExistingIdentityChanges_FailsBeforeWriting(string change)
@@ -161,6 +164,9 @@ public sealed class ImporterContracts
         {
             case "duplicate":
                 rows[^1].SetAttributeValue("Value", 4);
+                break;
+            case "unship":
+                rows[^1].Attribute("Duotone")?.Remove();
                 break;
             case "renumber":
                 rows[^1].SetAttributeValue("Value", 12);
@@ -292,7 +298,12 @@ public sealed class ImporterContracts
         var assembly = typeof(KubaiIcon).Assembly;
         Assert.That(assembly.GetManifestResourceNames(), Does.Not.Contain("StudioCatalog"));
         var resources = assembly.GetManifestResourceNames().Where(n => n.StartsWith("KubaiArt.", StringComparison.Ordinal)).ToArray();
-        Assert.That(resources.Length, Is.EqualTo(502 + 967 + 1 + 18));
+        var published = PublishedInventory.Current;
+        var scenes = published.HasSlash ? published.Bases.Append("overlay-slash") : published.Bases;
+        var expectedResources = published.Duotone.Select(name => "KubaiArt.duotone-" + name)
+            .Concat(scenes.Select(name => "KubaiArt.scene-" + name))
+            .Concat(published.Badges.Select(name => "KubaiArt.badge-" + name));
+        Assert.That(resources, Is.EquivalentTo(expectedResources));
         Assert.That(assembly.GetReferencedAssemblies().Select(a => a.Name), Does.Not.Contain("System.Text.Json"));
         foreach (var name in resources)
         {
@@ -315,17 +326,9 @@ public sealed class ImporterContracts
     public void LayeredInventory_CoversEveryPublishedIdentityWithSharedResources()
     {
         var catalog = KubaiIconCatalog.All.Where(x => x.HasLayered).ToDictionary(x => x.Name);
-        var composites = JsonSerializer.Deserialize<string[]>(
-            File.ReadAllText(
-                Path.Combine(TestContext.CurrentContext.TestDirectory, "Inputs/layered-compositions.json")))!;
-        var bases = catalog.Keys.Except(composites).ToArray();
-        var resources = typeof(KubaiIcon).Assembly.GetManifestResourceNames();
-        Assert.That(catalog, Has.Count.EqualTo(3071));
-        Assert.That(composites.Distinct().Count(), Is.EqualTo(2104));
-        Assert.That(bases, Has.Length.EqualTo(967));
-        Assert.That(
-            resources.Where(n => n.StartsWith("KubaiArt.scene-")).Select(n => n[15..]),
-            Is.EquivalentTo(bases.Append("overlay-slash")));
+        Assert.That(catalog.Keys, Is.EquivalentTo(PublishedInventory.Current.Layered));
+        Assert.That(KubaiIconCatalog.All.Where(icon => icon.HasDuotone).Select(icon => icon.Name),
+            Is.EquivalentTo(PublishedInventory.Current.Duotone));
         Assert.That(
             Enum.GetValues<KubaiLayeredIconKind>().Select(x => (int)x),
             Is.EquivalentTo(catalog.Values.Select(x => (int)x.Kind).Append(0)));
