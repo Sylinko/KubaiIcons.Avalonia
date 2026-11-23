@@ -5,7 +5,7 @@ internal static class CatalogData
 {
     internal static KubaiIconInfo[] Create()
     {
-        var byId = new KubaiIconInfo[3074];
+        var byId = new KubaiIconInfo[3081];
         Add(new(KubaiIconKind.Abacus, "abacus", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Accessibility, "accessibility", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Accordion, "accordion", KubaiIconStyles.Layered));
@@ -628,6 +628,7 @@ internal static class CatalogData
         Add(new(KubaiIconKind.CloudLock, "cloud-lock", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudMinus, "cloud-minus", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudMoon, "cloud-moon", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
+        Add(new(KubaiIconKind.CloudMoonRain, "cloud-moon-rain", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudOff, "cloud-off", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudPlus, "cloud-plus", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudRain, "cloud-rain", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
@@ -635,6 +636,7 @@ internal static class CatalogData
         Add(new(KubaiIconKind.CloudSnow, "cloud-snow", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.CloudSun, "cloud-sun", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudSunAlert, "cloud-sun-alert", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.CloudSunRain, "cloud-sun-rain", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudSync, "cloud-sync", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudUp, "cloud-up", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudUpload, "cloud-upload", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
@@ -644,6 +646,7 @@ internal static class CatalogData
         Add(new(KubaiIconKind.CloudUploadLock, "cloud-upload-lock", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudUploadX, "cloud-upload-x", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.CloudX, "cloud-x", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.Clouds, "clouds", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Clover, "clover", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Club, "club", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Cocktail, "cocktail", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
@@ -2552,6 +2555,7 @@ internal static class CatalogData
         Add(new(KubaiIconKind.SmokeDetectorCheck, "smoke-detector-check", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Snail, "snail", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Snowflake, "snowflake", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.Snowman, "snowman", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Soap, "soap", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.SoccerBall, "soccer-ball", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.Sock, "sock", KubaiIconStyles.Layered));
@@ -3051,6 +3055,7 @@ internal static class CatalogData
         Add(new(KubaiIconKind.Windmill, "windmill", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.WindowFrame, "window-frame", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.WindowFrameLock, "window-frame-lock", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.Windsock, "windsock", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.Wine, "wine", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.WineHeart, "wine-heart", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.WinePlus, "wine-plus", KubaiIconStyles.Layered));
@@ -3078,6 +3083,8 @@ internal static class CatalogData
         Add(new(KubaiIconKind.YarnBallHeart, "yarn-ball-heart", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.YoYo, "yo-yo", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.YogaMat, "yoga-mat", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.Zap, "zap", KubaiIconStyles.Layered));
+        Add(new(KubaiIconKind.ZapOff, "zap-off", KubaiIconStyles.Layered));
         Add(new(KubaiIconKind.ZoomIn, "zoom-in", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         Add(new(KubaiIconKind.ZoomOut, "zoom-out", KubaiIconStyles.Layered | KubaiIconStyles.Duotone));
         return byId;
@@ -3085,7 +3092,7 @@ internal static class CatalogData
         void Add(KubaiIconInfo icon) => byId[(int)icon.Kind - 1] = icon;
     }
 
-    internal const int Count = 3074;
+    internal const int Count = 3081;
 
     internal static int SlotAt(int index) => index;
 
