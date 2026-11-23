@@ -5,11 +5,12 @@ Avalonia's managed path parser without requiring a GUI, native renderer, browser
 
 ## Build & Verify Resources
 
-Build with the **.NET 11 SDK** pinned in `global.json` (running the importer also uses the .NET 8 runtime). Check out the pinned upstream commit from
-`catalog/upstream.json`:
+Build with the **.NET 11 SDK** pinned in `global.json` (running the importer also uses the .NET 8 runtime). From the repository root, clone the tag recorded in
+[`catalog/upstream.json`](../catalog/upstream.json). The importer verifies that the checkout matches the pinned commit.
 
-```sh
-git clone --filter=blob:none --depth 1 --sparse --branch kubai-icons@0.14.0 https://github.com/kubai087/kubai-icons.git artifacts/upstream
+```powershell
+$pin = Get-Content -Raw catalog/upstream.json | ConvertFrom-Json
+git clone --filter=blob:none --depth 1 --sparse --branch $pin.version $pin.repository artifacts/upstream
 git -C artifacts/upstream sparse-checkout set --no-cone /icons-duotone/ /LICENSE-ICONS /icons/ /badges/ /packages/core/src/ /packages/core/package.json /package.json
 
 dotnet run --project tools/KubaiIcons.Importer -- generate --source artifacts/upstream
@@ -89,7 +90,7 @@ dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory!=Artwork"
 
 The pin step verifies npm's `gitHead` against the source commit and extracts the two manifests from that exact package. The importer compiles Layered first, assigns shared IDs second, then generates Studio metadata. The independent test inventory comes from the published manifests; Duotone motion samples come from the upstream engine. Neither first-release ID snapshot is regenerated.
 
-Review the PR's new IDs, style backfills and license changes. Update version-specific claims in both READMEs and the NuGet README before release; historical benchmarks keep their original version and sample size.
+Review the PR's new IDs, style backfills and license changes. The pin records the exact version, commit, and counts by family; adding icons alone requires no README edits.
 
 Unknown motion/schema features or removed public members stop generation before the bot opens a PR. Fix the build-time adapter or make an explicit compatibility decision, then rerun. If an intentional artwork change breaks a manually curated pixel fixture, review the original before updating it.
 
@@ -135,6 +136,6 @@ $env:KUBAI_REFERENCE_DIR = (Resolve-Path artifacts/layered-validation).Path
 dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory=Artwork"
 ```
 
-For 0.14.0 the Layered comparison renders 5,005 poses and writes native contact sheets and `errors.tsv` beside the browser references. Duotone motion samples cover all 502 icons, including transforms, opacity, stroke reveal, and duration.
+The Layered comparison writes native contact sheets and `errors.tsv` beside the browser references. In `0.14.0`, it covered 5,005 Layered poses; the Duotone samples covered transforms, opacity, stroke reveal, and duration across all 502 Duotone icons.
 
 To generate a side-by-side gallery for an upstream update, run `python tools/ci/sync-review.py origin/main` on the update branch **before** the artwork tests. Set `KUBAI_DUOTONE_SHEETS` to the resulting `artifacts/review` directory as well as `KUBAI_REFERENCE_DIR` above. After the tests, run `node tools/validation/review-gallery.mjs` and open `artifacts/review/gallery/index.html`.

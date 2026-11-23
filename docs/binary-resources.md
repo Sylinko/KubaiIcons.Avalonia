@@ -17,7 +17,7 @@ Compilation performs:
   deduplication.
 - Resolution of named motion tracks to compact zero-based indices, including whole-icon tracks.
 - Layer mask membership, cut-path references, keyline fitting, and rounded stroke/gap widths.
-- Identification of stroked layers that require contour-length measurement for reveal animations (only 97 of 288 stroked Duotone layers require measurement).
+- Identification of stroked layers that require contour-length measurement for reveal animations (97 of 288 stroked Duotone layers in `0.14.0`).
 - Precompiled Layered scene expression trees, rounded endpoints, Bookmark star/ribbon states, and shared badge placements.
 
 All non-essential metadata (human labels, categories, search keywords) is stripped from binary artwork. The runtime library carries **zero `System.Text.Json`
@@ -25,8 +25,7 @@ dependency** and **never parses SVG markup, JSON, or JavaScript**.
 
 ### 2. Deduplicated Package Footprint
 
-Through shared base scenes and reusable disc badges, **3,573 shipped icon variants** (502 Duotone + 3,071 Layered) compile down to **1,488 independent `.kbi`
-embedded resources**:
+In `0.14.0`, shared base scenes and badges let **3,573 icon variants** (502 Duotone + 3,071 Layered) fit in **1,488 embedded `.kbi` resources**:
 
 | Resource Group             | Embedded `.kbi` Files |           Uncompressed Size | Serves                                         |
 |----------------------------|----------------------:|----------------------------:|------------------------------------------------|
@@ -35,7 +34,7 @@ embedded resources**:
 | `Art/Badges/*.kbi`         |                    18 |        10,958 B (~10.7 KiB) | 2,033 badge combinations (via placement table) |
 | **Total embedded artwork** |             **1,488** | **4,768,333 B (~4.55 MiB)** | **3,573 icon variants**                        |
 
-The complete multi-targeted NuGet package (`.NET 8`, `.NET 10`, and `.NET 11`) is **4,615,327 B (~4.40 MiB)**.
+The complete `0.14.0` NuGet package (`.NET 8`, `.NET 10`, and `.NET 11`) is **4,615,327 B (~4.40 MiB)**.
 
 ### 3. On-Demand Decoding & Shared Native Geometry
 
@@ -56,7 +55,7 @@ lightweight per-instance state.
 
 ## Measured Performance (502 Duotone Icons)
 
-Benchmarked locally on Windows x64, **.NET 8.0.34**, and **Avalonia/Skia 12.1.6**, loading all **502 Duotone blocks** from memory-backed streams with the
+Benchmarked locally on Windows x64, **.NET 8.0.34**, and **Avalonia/Skia 12.1.6**, loading the **502 Duotone blocks** from `0.14.0` using memory-backed streams with the
 artwork cache bypassed and tiered compilation disabled on both builds. Each stage runs 3 warmups followed by 21 measured iterations; reported values are medians
 (excluding process startup, disk I/O, drawing, and layout; allocations reflect managed heap bytes only).
 

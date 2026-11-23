@@ -10,12 +10,13 @@
 
 </div>
 
-[Kubai Icons](https://icons.kubai.design/)（`0.14.0`，原作者 @Kubai087）的非官方 Avalonia 原生移植版，由 @Sylinko 维护。
+[Kubai Icons](https://icons.kubai.design/)（原作者 @Kubai087）的非官方 Avalonia 原生移植版，由 @Sylinko 维护。
 
 ![四个原生 Avalonia 图标的展开、状态切换与回落动画](media/motion.gif)
 
-可以让工具栏按钮在悬停时展开文件夹，切换书签收藏状态后移开指针也不会丢失姿态，在应用繁忙时循环播放加载动效。`0.14.0` 版本共收录 **3,573 个图标变体**（**502 个 Duotone 双色图标** 与
-**3,071 个 Layered 多层图标**：含 967 个基础设计、2,033 个徽章组合及 71 个斜线变体），全部以原生自绘 Avalonia 控件实现，支持 **.NET 8 / .NET 10 / .NET 11**（`Avalonia >= 12.0.0`）。
+可以让工具栏按钮在悬停时展开文件夹，切换书签收藏状态后移开指针也不会丢失姿态，在应用繁忙时循环播放加载动效。
+
+图标库提供 **3,000+ 个 Layered 多层图标变体**和 **500+ 个 Duotone 双色图标变体**，由 Avalonia 原生绘制，支持 **.NET 8 / .NET 10 / .NET 11**（`Avalonia >= 12.0.0`）。
 
 ---
 
@@ -27,11 +28,10 @@
   **不解析任何 SVG 文本、不执行 JavaScript、无 `System.Text.Json` 依赖，也不为图层创建额外子控件树**。
 - **真正按需解码，冷启动极轻**：访问 `KubaiIconCatalog.All`、读取 `Count`、设置控件属性乃至仅测量未渲染图标时，均**不会解码任何图形数据**。只有在控件首次执行
   `Render()` 时，才会读取对应的 `.kbi` 嵌入式资源并在 UI 线程一次性生成原生 `StreamGeometry`，随后在同类型实例间全局共享复用。
-- **小巧包体积与低内存占用**：全库 **3,573 个图标** 经基础图形与徽章去重复用后，仅包含 **1,488 个 `.kbi` 二进制块**（502 个 Duotone + 968 个 Layered 场景 + 18
-  个共享圆形徽章）。未压缩图形总体积仅 ~4.55 MiB，同时包含 `.NET 8 / 10 / 11` 三个目标框架的完整 NuGet 包也只有 **~4.40 MiB**（4,615,327 B）。
+- **共享图形资源**：Layered 变体复用底图、徽章或斜线，不必为每种组合单独打包一份图形。
 - **静默态零帧开销**：静止、隐藏、禁用或脱离可视树的图标不请求任何帧回调；循环播放的间隔等待仅使用单次 `DispatcherTimer` 唤醒，杜绝轮询。
 
-以下为全量 502 个 Duotone 图标的实测数据（基于 Windows x64 / .NET 8.0.34 / Avalonia 12.1.6，禁用分层编译、绕过图形缓存、内存流直读，取 3 次预热后 21
+以下数据测自 `0.14.0` 的全部 502 个 Duotone 图标（基于 Windows x64 / .NET 8.0.34 / Avalonia 12.1.6，禁用分层编译、绕过图形缓存、内存流直读，取 3 次预热后 21
 轮采样中位数，详见 [二进制资源与基准测试](docs/binary-resources.md)）：
 
 | 指标（全部 502 个 Duotone 图标） |    JSON 基线 | `KBI v1` 二进制 |                            提升幅度 |
@@ -172,7 +172,7 @@ if (KubaiLayeredIconKind.Activity.TryToDuotone(out var duotoneKind))
 }
 ```
 
-- 读取 `KubaiIconCatalog.All.Count`（`3074`）甚至不会初始化元数据表。
+- `KubaiIconCatalog.All.Count` 返回不重复的图标名称总数，不会初始化元数据表。
 - `KubaiIconCatalog.Get(kind)` 基于永久 ID 直接执行 `O(1)` 槽位索引，无运行时排序或字典构建开销。
 - 如需持久化保存图标标识，请始终序列化 `(int)kind`，而不要保存 `KubaiIconCatalog.All` 的索引位置。
 
@@ -188,8 +188,7 @@ dotnet run --project samples/IconStudio
 
 ![带有分类导航与调色工具栏的 Layered 图标图库](media/studio.png)
 
-- **中英双语界面与搜索**：一键切换 **English** / **简体中文**，支持按英文名、中文标签、C# 枚举名、图形特征或语义跨 26 个分类检索全部 3,573 个图标变体（快捷键 `/` 或
-  `Ctrl/Cmd+K`）。
+- **中英双语界面与搜索**：一键切换 **English** / **简体中文**，按分类浏览，或用英文名、中文标签、C# 枚举名、图形特征或语义搜索（快捷键 `/` 或 `Ctrl/Cmd+K`）。
 - **实时检视与代码复制**：支持 `16–64` DIP 尺寸滑块、`Color`/`Soft` 调色板、自定义取色（`+`）或稳定随机色（`Mixed`）、`Hold pose`、`Active` 以及循环/倍速设置，随时一键复制
   **AXAML** 或 **C#** 示例。
 - **虚拟化与按需解码**：列表采用行级虚拟化，搜索仅检索元数据不加载任何图形，仅当前可视区域内的图块会触发 `.kbi` 懒加载。
@@ -222,7 +221,7 @@ dotnet test tests/KubaiIcons.Tests -c Release --filter "TestCategory!=Artwork"
 ## 开源许可
 
 - **移植与运行时库**：采用 [MIT License](LICENSE)，Copyright © 2026 Sylinko。
-- **原始图标与动效算法**：改编自 [kubai-icons@0.14.0](https://github.com/kubai087/kubai-icons/tree/kubai-icons%400.14.0)，Copyright © 2026 Kubai087
+- **原始图标与动效算法**：改编自 [Kubai Icons](https://github.com/kubai087/kubai-icons)，Copyright © 2026 Kubai087
   及贡献者，遵循 [原始 MIT 许可](licenses/LICENSE-ICONS)。两份声明均包含在 NuGet 包中（详见 [致谢与来源说明](licenses/README.md)）。
 - **Icon Studio 示例**：使用了 MIT 许可的 `TKCode.Arc` 与 SIL OFL 字体（`Inter`、`Geist`、`Geist Mono`），相关声明位于 [`licenses/studio`](licenses/studio/README.md)
   ，不会打包进入图标库 NuGet 包。

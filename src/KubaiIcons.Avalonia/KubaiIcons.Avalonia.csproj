@@ -5,7 +5,8 @@
     <PackageId>KubaiIcons.Avalonia</PackageId>
     <Version>$(KubaiUpstreamVersion)</Version>
     <Authors>Sylinko</Authors>
-    <Description>An unofficial Avalonia port of Kubai Icons by Kubai087, maintained by Sylinko.</Description>
+    <Description>Full-color, animated vector icons for Avalonia, loaded on demand. Unofficial port of Kubai Icons by Kubai087, maintained by Sylinko.</Description>
+    <PackageTags>avalonia;icons;animated-icons;colored-icons;vector-icons;icon-pack;duotone;kubai-icons</PackageTags>
     <RepositoryUrl>https://github.com/Sylinko/KubaiIcons.Avalonia</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>

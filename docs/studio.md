@@ -44,7 +44,7 @@ Following [Arc guidance](https://docs.tkcode.si/skills/tkcode-arc/SKILL.md) and 
 - Supports **English** and **简体中文**, defaulting to the OS UI language on first launch and persisting user preference thereafter. Language switching updates
   realized tiles and UI in place without rebuilding search results or re-decoding artwork.
 - Metadata in `samples/IconStudio/Catalog/catalog.json` merges upstream categories, tags, Chinese labels, and base keyword groups (shape, object, meaning,
-  action, and Chinese synonyms) across all 3,074 identities—staying strictly inside the Studio sample executable.
+  action, and Chinese synonyms) for each icon. This search data ships only with Studio.
 
 ## Windows x64 single executable
 

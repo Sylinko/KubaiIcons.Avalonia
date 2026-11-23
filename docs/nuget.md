@@ -1,7 +1,7 @@
 # KubaiIcons.Avalonia
 
-High-performance, animated vector icons for Avalonia (**502 Duotone** and **3,071 Layered** variants from Kubai Icons `0.14.0`), targeting **.NET 8, .NET 10,
-and .NET 11** (`Avalonia >= 12.0.0`).
+**3,000+ Layered** and **500+ Duotone** animated icon variants for Avalonia, drawn natively and loaded on demand.
+Supports **.NET 8, .NET 10, and .NET 11** (`Avalonia >= 12.0.0`).
 
 ## Why KubaiIcons.Avalonia
 
@@ -9,9 +9,9 @@ and .NET 11** (`Avalonia >= 12.0.0`).
   The runtime parses **no SVG text, no JSON, and no JavaScript**, and has no `System.Text.Json` dependency. Inspecting `KubaiIconCatalog`, binding properties,
   or measuring unrendered icons decodes **zero** artwork—only the first render opens the needed `.kbi` block and caches shared native `StreamGeometry` on the UI
   thread.
-- **Small package, fast cold start, low managed memory**: Base-icon and badge deduplication packs **3,573** icon variants into **1,488** `.kbi` blocks (~4.40
-  MiB multi-targeted `.nupkg`). Against the prior JSON pipeline across all 502 Duotone icons, `KBI v1` cuts decode time by **94.4%** (10.06 ms → 0.56 ms),
-  decode + native geometry prep by **78.9%** (28.08 ms → 5.92 ms), and managed allocations by **74.0%** (12.30 MB → 3.19 MB).
+- **Shared artwork**: Layered variants reuse base scenes, badges, and slash overlays.
+- **Decode performance**: In the `0.14.0` benchmark (502 Duotone icons), `KBI v1` reduced decode time by **94.4%** (10.06 ms → 0.56 ms),
+  decode + native geometry prep by **78.9%** (28.08 ms → 5.92 ms), and managed allocations by **74.0%** (12.30 MB → 3.19 MB) compared with JSON.
 - **Permanent, `int`-serializable enum IDs**: `KubaiIconKind`, `KubaiLayeredIconKind`, and `KubaiDuotoneIconKind` share a frozen, append-only integer ledger.
   Existing names and values never change or get recycled—future releases only append new IDs after the current maximum, so you can safely persist `(int)Kind` in
   databases, configs, and protocols.

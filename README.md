@@ -10,13 +10,13 @@
 
 </div>
 
-An unofficial Avalonia port of [Kubai Icons](https://icons.kubai.design/) (`0.14.0`) by @Kubai087, maintained by @Sylinko.
+An unofficial Avalonia port of [Kubai Icons](https://icons.kubai.design/) by @Kubai087, maintained by @Sylinko.
 
 ![Four native Avalonia icons opening, changing state, and returning to rest](media/motion.gif)
 
-Let a toolbar button open its folder icon on hover. Toggle a bookmark's saved state without losing it when the pointer leaves. Loop a loader while your app is busy. The `0.14.0` release
-ships **3,573 icon variants** (**502 Duotone** and **3,071 Layered**: 967 base designs, 2,033 badge combinations, and 71 slash overlays) as native, custom-drawn
-Avalonia controls targeting **.NET 8, .NET 10, and .NET 11** (`Avalonia >= 12.0.0`).
+Let a toolbar button open its folder icon on hover. Toggle a bookmark's saved state without losing it when the pointer leaves. Loop a loader while your app is busy.
+
+Choose from **3,000+ Layered** and **500+ Duotone** icon variants, drawn natively in Avalonia on **.NET 8, .NET 10, and .NET 11** (`Avalonia >= 12.0.0`).
 
 ---
 
@@ -30,12 +30,10 @@ Avalonia controls targeting **.NET 8, .NET 10, and .NET 11** (`Avalonia >= 12.0.
 - **True on-demand loading & minimal cold start**: Reading `KubaiIconCatalog.All`, checking `Count`, setting properties, or even measuring an unrendered icon
   decodes **zero** artwork. Only the first `Render()` call opens and decodes the requested `.kbi` resource, builds native `StreamGeometry` once on the UI
   thread, and shares it across all instances.
-- **Compact package & low memory footprint**: All **3,573** shipped icons are deduplicated into just **1,488 `.kbi` blocks** (502 Duotone + 968 Layered scenes +
-  18 shared disc badges). Total uncompressed artwork is ~4.55 MiB, and the entire multi-targeted NuGet package (`.NET 8 / 10 / 11`) is **~4.40 MiB** (4,615,327
-  B).
+- **Shared artwork**: Layered variants reuse the same base scene, badge, or slash instead of shipping a separate drawing for every combination.
 - **Zero idle overhead**: Static or hidden icons never schedule animation frames; repeat delays use a single `DispatcherTimer` wakeup rather than polling.
 
-Measured across all 502 Duotone icons (uncached memory streams, median of 21 samples on .NET 8.0.34 / Avalonia 12.1.6 —
+Measured across the 502 Duotone icons in `0.14.0` (uncached memory streams, median of 21 samples on .NET 8.0.34 / Avalonia 12.1.6 —
 see [Binary Resources & Benchmarks](docs/binary-resources.md)):
 
 | Metric (all 502 Duotone icons) | JSON baseline | `KBI v1` binary |                   Improvement |
@@ -51,7 +49,7 @@ see [Binary Resources & Benchmarks](docs/binary-resources.md)):
 
 - **Append-only ID manifest**: Every icon in `KubaiIconKind`, `KubaiLayeredIconKind`, and `KubaiDuotoneIconKind` is backed by a frozen manifest ([
   `catalog/ids.props`](catalog/ids.props) and [`catalog/enum-baseline.json`](catalog/enum-baseline.json)).
-- **Guaranteed compatibility**: Once published, an enum member's name and numeric `int` value. Future upstream updates
+- **Guaranteed compatibility**: Once published, an enum member keeps its name and integer value. Future upstream updates
   only append new identities after the existing maximum.
 - **Safe for persistence**: Store `(int)iconKind` directly in databases, JSON/binary configs, user preferences, or network protocols.
 - **Cross-family ID alignment**: When an icon exists in both families (e.g., `Activity = 8`), `KubaiLayeredIconKind`, `KubaiDuotoneIconKind`, and
@@ -181,7 +179,7 @@ if (KubaiLayeredIconKind.Activity.TryToDuotone(out var duotoneKind))
 }
 ```
 
-- `KubaiIconCatalog.All.Count` returns `3074` without even initializing the metadata table.
+- Read `KubaiIconCatalog.All.Count` to count distinct icon identities without initializing the metadata table.
 - `KubaiIconCatalog.Get(kind)` performs direct `O(1)` slot indexing without runtime sorting or dictionary construction.
 - Always serialize `(int)kind` rather than an index into `KubaiIconCatalog.All`.
 
@@ -197,8 +195,7 @@ dotnet run --project samples/IconStudio
 
 ![The Layered gallery with category navigation and the color toolbar](media/studio.png)
 
-- **Bilingual Search & UI**: Switch between **English** and **简体中文**; search all 3,573 variants across 26 categories by English name, Chinese label, C# enum
-  name, shape, or meaning (`/` or `Ctrl/Cmd+K`).
+- **Bilingual Search & UI**: Switch between **English** and **简体中文**; browse by category or search by English name, Chinese label, C# enum name, shape, or meaning (`/` or `Ctrl/Cmd+K`).
 - **Live Inspector & Snippet Copy**: Adjust size (`16–64` DIP), `Color`/`Soft` palette, custom accent (`+`) or deterministic `Mixed` colors, `Hold pose`,
   `Active`, `LoopMode`, `SpeedRatio`, and `RepeatDelay`, then copy ready-to-paste **AXAML** or **C#**.
 - **Virtualized & Lazy**: Searching filters metadata only; only visible gallery tiles decode `.kbi` artwork, and closing the inspector detaches its player.
@@ -231,7 +228,7 @@ These tests cover stable enum IDs, style backfills, deterministic imports, lazy 
 ## License
 
 - **Port & Runtime Library**: [MIT License](LICENSE), copyright © 2026 Sylinko.
-- **Original Artwork & Motion Routines**: Adapted from [kubai-icons@0.14.0](https://github.com/kubai087/kubai-icons/tree/kubai-icons%400.14.0), copyright © 2026
+- **Original Artwork & Motion Routines**: Adapted from [Kubai Icons](https://github.com/kubai087/kubai-icons), copyright © 2026
   Kubai087 and contributors under the [original MIT license](licenses/LICENSE-ICONS). Both notices ship in the NuGet package
   (see [source credits](licenses/README.md)).
 - **Icon Studio**: Uses MIT-licensed `TKCode.Arc` and SIL OFL fonts (`Inter`, `Geist`, `Geist Mono`); notices are kept under [

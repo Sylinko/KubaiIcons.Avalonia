@@ -1,6 +1,6 @@
 # Porting Architecture
 
-`KubaiIcons.Avalonia` ports [kubai-icons@0.14.0](https://github.com/kubai087/kubai-icons/tree/kubai-icons%400.14.0) (502 Duotone and 3,071 Layered icons) to
+`KubaiIcons.Avalonia` ports Layered and Duotone artwork from [Kubai Icons](https://github.com/kubai087/kubai-icons) to
 native Avalonia controls with precompiled binary resources and a shared playback engine. See [Importing & Enum Compatibility](importing.md) for the sync
 workflow and [Binary Resources (`KBI v1`)](binary-resources.md) for the compiled format.
 
