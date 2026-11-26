@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <KubaiUpstreamVersion>0.15.0</KubaiUpstreamVersion>
+    <KubaiUpstreamVersion>0.16.0</KubaiUpstreamVersion>
   </PropertyGroup>
   <ItemGroup>
     <KubaiId Include="None" Value="0" Doc="No artwork." />
